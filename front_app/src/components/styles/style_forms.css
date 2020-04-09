@@ -1,0 +1,211 @@
+
+.root-newmbr {
+    background: url("./../../assets/fonds/background_forms_v2.png") no-repeat center fixed;
+
+    min-height: 100vh;
+}
+
+.form-body {
+    display: inline-block;
+    min-height: 100vh;
+    width: 75%;
+    background-image: linear-gradient(to right,
+     rgba(255,255,255,0), rgba(255,255,255,0.3) 100%);
+    padding-bottom: 100px;
+}
+
+.form-logo-div {
+    text-align: center;
+    padding-top: 50px;
+}
+.form-logo-img {
+    height: 100px;
+}
+
+.form-title-div {
+    text-align: center;
+}
+.form-title-text {
+    color: aliceblue;
+    font-size: 2em;
+    margin-top: 20px
+}
+.form-title-text-hd {
+    font-size: 2.1em
+}
+.form-title-text-tl {
+    display: inline-block;
+    color: aliceblue;
+}
+
+.form-title-line-hr {
+  width: 30%;
+  height: 1px;
+  background-color: aliceblue;
+  margin-bottom: 60px;
+  border: none; /*on supprime le style par défaut*/
+}
+
+.form-data {
+    padding-left: 80px;
+}
+
+.form-p {
+    color: aliceblue;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-right: 150px;
+}
+
+.form-input-grp {
+    margin-bottom:20px;
+    height: 70px;
+}
+.form-label {
+    display: block;
+    /* color: #00e4ff; */
+    color: darkcyan;
+    height: 20px;
+    transition: transform 150ms ease-out, font-size 150ms ease-out
+}
+.inside-input {
+    padding-top: 0; 
+    font-size: 20px;
+    height: 20px;
+    transform: translateY(35px);
+}
+.form-input {
+    display: inline-block;
+    width: 70%;
+    background: transparent;
+    color: aliceblue;
+    font-size: 20px;
+    border: 1px;
+    /* box-shadow: 0 1px 0 0 #00e4ff; */
+    box-shadow: 0 1px 0 0 darkcyan;
+    padding: 10px 0 5px 0;
+}
+.form-input:focus {
+    outline: none;
+}
+
+.form-question-div {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    height: 20px;
+    /* width: 20px; */
+    transform: translate(-20px,0)
+
+}
+.form-question-img {
+    height : 20px;
+}
+.form-question-info {
+    position: absolute;
+    display: inline-block;
+    width: 275px;
+    margin-left: 10px;
+    padding: 5px;
+
+    background-color: rgba(53, 75, 94, 0.9);
+    border-style: solid;
+    border-width:2px;
+    border-color: white;
+/*    border-color: rgb(53, 75, 94); */
+    border-radius: 5px;
+    color: white;
+}
+.form-question-info-hidden {
+    display: none;
+}
+
+.form-invalid-input {
+    box-shadow: 0 1px 0 0 #be1e37;
+}
+.form-invalid-label {
+    color: #be1e37;
+}
+.form-input-error {
+    font-size: 0.8em;
+    color: #be1e37;
+}
+
+.form-label-date {
+    display: inline-block;
+    color: darkcyan;
+    box-shadow: 0 1px 0 0 darkcyan;
+    font-size: 20px;
+    padding-bottom: 23px;
+    padding-top: 30px;
+    height: 20px;
+}
+
+.form-date {
+    display: inline-block
+}
+
+.form-date-select{
+    display: inline-block;
+    color: darkcyan;
+    font-size: 20px;
+    margin-left: 10px;
+    background-color: transparent;
+    border: hidden;
+    box-shadow: 0 1px 0 0 darkcyan;
+}
+
+.form-button-ok {
+    margin-top: 40px;
+}
+
+.form-vertical-border {
+    position: fixed;
+    height: 100vh;
+    background-color: white;
+    box-shadow: 0px 0px 20px 10px white;
+    width: 3px;
+    margin-top: 0;
+    margin-left: 75%;
+    border: none; /*on supprime le style par défaut*/
+}
+
+
+.div-animation {
+    position: fixed;
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+}
+.form-circle-img {
+    margin-top: 50vh;
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%, -50%);
+}
+
+/* Les animations d'entrée (« enter ») et de sortie (« leave »)  */
+/* peuvent utiliser différentes fonctions de durée et de temps.  */
+
+
+.slide-fade-enter-active {
+    transition: opacity 3s ease, transform 3s ease;
+}
+
+.slide-fade-enter{
+    transform: translateX(-100px);
+    opacity: 0;
+}
+
+.slide-fade-enter-to{
+    opacity: 1;
+}
+
+.slide-fade-leave-active {
+    transition: opacity 3s ease, transform 3s ease;
+}
+
+.slide-fade-leave-to{
+    transform: translateX(-100px);
+    opacity: 0;
+  }
