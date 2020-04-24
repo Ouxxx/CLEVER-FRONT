@@ -1,9 +1,9 @@
 <template>
     <div class="form-data"  >
 
-        <input-form input-id="codemail" input-type="text" 
+        <input-form input-id="codeemail" input-type="text" 
             info-label="Code reçu par email" 
-            event="codemail" @codemail="saveCodeEmail" >
+            event="codeemail" @codeemail="saveCodeEmail" >
         </input-form>
 
         <input-form input-id="codephone" input-type="text" 
@@ -42,18 +42,11 @@ export default {
         saveCodePhone (code) {
             this.phoneCode = code.value
         },
-        
-        checkCodes () {
-            /* 
-            TODO: faire en sorte de verifier le token et les codes.
-                  Si codes === OK => creation du user plus go page suivante
-            */
-           
-            this.$router.push('confirmation');
-        },
 
+        // TODO: Me renommer
         checkCodes2 () {
-            console.log('on entre dans checkCode2');
+
+
             axios({
                 method: 'post',
                 url: this.$store.getters.getAddr + ':' + this.$store.getters.getPort + '/api/user/signup',
@@ -66,8 +59,19 @@ export default {
                 }
             })
             .then(response => {
-                console.log(response);
-                // this.$router.push('/create/user/verification');                
+                console.log('userID :' + response.data.userId);
+                if(response.data.userId){
+                    // Enrichissement du store
+                    console.log("normal")
+
+                    this.$store.commit( 'setUserId', response.data.userId);
+
+                } else {
+                    console.log("whatttttt")
+                    // TODO: signaler un panic
+                }
+
+                this.$router.push('/create/user/confirmation');
             })
             .catch(error => {
                  // TODO : afficher une erreur pour le client

@@ -1,5 +1,10 @@
 <template>
     <div class="form-data" >
+
+        <!-- TODO: A faire au propre -->
+        <div v-if="isBadEmail" >
+            <p>L'email n'est associé à aucun compte existant</p>
+        </div>
         
         <input-form input-id="useremail" input-type="text" 
             info-label="Adresse email" 
@@ -15,9 +20,11 @@
 </template>
 
 <script>
-import dataValidater from './../../services/api/data_validator'
 
 import inputForm from './../inputs/input_form_v1'
+
+const axios = require('axios').default
+
 
 export default {
     components: { inputForm },
@@ -25,7 +32,10 @@ export default {
         return {
             // data associe au champs 'adresse mail'
             savedEmail: '',
-            isValidEmail: false
+            isValidEmail: false,
+            
+            // affiche en fonction la div de notification
+            isBadEmail: false
         }
     },
 
@@ -36,15 +46,34 @@ export default {
         },
 
         searchData () {
-            // TODO : verifier qu'il n existe pas deja un user avec ce numero ou cette adresse mail
 
-            var token = dataValidater.findUser({
-                email: this.savedEmail
-            });
-            this.$emit('tokenized', token);
-            console.log('phoneCode : ' + dataValidater.getSearchCode());
+            // envoyer l'adresse mail au backend.
+            axios({
+                method: 'post',
+                url: this.$store.getters.getAddr + ':' + this.$store.getters.getPort + '/api/user/search/email',
+                data: {
+                    email: this.savedEmail,
+                }
+            })
+            .then( user => {
+                // resultat : { isFound :true ou false }
+                console.log('user : ')
+                console.log(user)
 
-            this.$router.push('/forgot/password/verification')
+                if(user.data.isFound){
+                    // ajout du mail dans le store
+                    this.$store.commit( 'setEmail', {
+                        email: this.savedEmail                  
+                    });
+
+                    this.$router.push('/forgot/password/verification')
+                } else {
+                    this.isBadEmail = true
+                }
+            })
+            .catch(error => {
+                console.log(error)
+            })            
         }
     },
 

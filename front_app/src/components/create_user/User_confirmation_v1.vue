@@ -1,6 +1,6 @@
 <template>
     <div class="form-data">
-        <p class="form-p">Votre compte a bien été créé, félicitations 1.AAA.341 ! 
+        <p class="form-p">Votre compte a bien été créé, félicitations {{$store.getters.getId}} ! 
             "Ton matricule, précédemment cité, sera ton identité de Héro. Il est unique alors fais-en bon usage." 
         </p>
     </div>
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    
+
 }
 </script>
 

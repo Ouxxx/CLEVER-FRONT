@@ -43,8 +43,7 @@ export default {
 
     /* Renvoie true si la chaine correspond a un code postal, false sinon */
     testCode (code) {
-        var regexcode =/^(email|phone)Code\d+$/;
+        var regexcode =/^\d{10}$/;
         return regexcode.test(code)
     }
 }
-

@@ -119,29 +119,19 @@ export default {
                 }
             })
             .then(() => {
-                
 
                 // Enrichissement du store
                 this.$store.commit( 'setUser', {
-                    email: this.saveEmail,
+                    email: this.savedEmail,
                     password: this.savedPassword,
                     phone: this.savedPhone                    
                 });
-
-
-                console.log('----------------------------'); 
-                console.log('getEmail : ' + this.$store.getters.getEmail); 
-                console.log('----------------------------'); 
-                 
-
-                
 
 
                 this.$router.push('/create/user/verification');                
             })
             .catch(error => {
                  // TODO : afficher une erreur pour le client
-                console.log('on rentre dans le catch');            
                 console.log(error);            
             })
         }
