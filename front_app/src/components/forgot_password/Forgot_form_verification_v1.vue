@@ -22,6 +22,8 @@
 
 <script>
 import inputForm from './../inputs/input_form_v1'
+const axios = require('axios').default
+
 
 export default {
     components: {inputForm},
@@ -40,25 +42,17 @@ export default {
         },
         
         checkCodes () {
-            /* 
-            TODO: faire en sorte de verifier et les codes.
-                  Si codes === OK => changement de mdp plus go page suivante
-            */
            // envoyer le code au backend.
             axios({
                 method: 'post',
-                url: this.$store.getters.getAddr + ':' + this.$store.getters.getPort + '/api/user/search/checkemail',
+                url: this.$store.getters.getAddr + ':' + this.$store.getters.getPort + '/api/user/search/email/check',
                 data: {
                     email: this.$store.getters.getEmail,
                     code: this.emailCode,
                 }
             })
             .then( response => {
-                // resultat : { checked :true ou false }
-                console.log('response : ')
-                console.log(response)
-
-                if(response.data.checked){
+                if(response.status == 200){
                     this.$router.push('/forgot/password/new')
                 } else {
                     this.isBadCode = true
@@ -68,11 +62,7 @@ export default {
                 console.log(error)
             })
 
-
-
-
-            this.$router.push('/forgot/password/new');
-        },
+        }
 
     }
 

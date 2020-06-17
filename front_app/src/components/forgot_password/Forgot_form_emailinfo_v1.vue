@@ -50,7 +50,7 @@ export default {
             // envoyer l'adresse mail au backend.
             axios({
                 method: 'post',
-                url: this.$store.getters.getAddr + ':' + this.$store.getters.getPort + '/api/user/search/email',
+                url: this.$store.getters.getAddr + ':' + this.$store.getters.getPort + '/api/user/search/email/find',
                 data: {
                     email: this.savedEmail,
                 }
