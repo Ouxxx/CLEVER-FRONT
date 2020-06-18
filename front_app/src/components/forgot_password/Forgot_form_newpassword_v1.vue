@@ -1,5 +1,12 @@
 <template>
     <div class="form-data" >
+
+
+        <!-- TODO: A faire au propre -->
+        <div v-if="callError" >
+            <p>Un probleme est survenu. Veuillez retentez ulterieurement</p>
+        </div>
+
         <!-- TODO : 2x à définir. Pas de chiffre pour le moment. -->
         <input-form input-id="password" input-type="password" 
             info-label="Nouveau mot de passe" 
@@ -35,7 +42,10 @@ export default {
             isValidPwd: false,
 
             // data associe au champs 'confirmation de mot de passe'
-            savedSamePwd: ''
+            savedSamePwd: '',
+
+            // callError vaut true si un probleme est survenue lors de l'appel
+            callError: false,
         }
     },
 
@@ -51,7 +61,7 @@ export default {
             // TODO
             axios({
                 method: 'post',
-                url: this.$store.getters.getAddr + ':' + this.$store.getters.getPort + '/api/user/search/email/changePwd',
+                url: this.$store.getters.getAddr + ':' + this.$store.getters.getPort + '/api/user/search/email/replace',
                 data: { 
                     email: this.$store.getters.getEmail, 
                     newPwd: this.savedPassword 
@@ -61,13 +71,13 @@ export default {
                 if(response.data.state == 'SUCCESS'){
                     this.$router.push('/forgot/password/confirmation')
                 } else {
-                    this.isBadCode = true
+                    this.callError = true
                 }
+
             })
             .catch(error => {
                 console.log(error)
             })
-            
         }
     },
 

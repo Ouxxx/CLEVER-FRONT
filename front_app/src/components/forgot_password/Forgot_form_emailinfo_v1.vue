@@ -57,14 +57,9 @@ export default {
             })
             .then( user => {
                 // resultat : { isFound :true ou false }
-                console.log('user : ')
-                console.log(user)
-
                 if(user.data.isFound){
                     // ajout du mail dans le store
-                    this.$store.commit( 'setEmail', {
-                        email: this.savedEmail                  
-                    });
+                    this.$store.commit( 'setEmail',this.savedEmail);
 
                     this.$router.push('/forgot/password/verification')
                 } else {

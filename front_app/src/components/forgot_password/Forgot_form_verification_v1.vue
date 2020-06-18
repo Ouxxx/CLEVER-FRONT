@@ -11,8 +11,6 @@
             event="codeemail" @codeemail="saveCodeEmail" >
         </input-form>
 
-            <p style="color : white">Code email : {{emailCode}}</p>
-
         <button class="form-button-ok" @click="checkCodes()">
             <p>Suivant</p>
         </button>
