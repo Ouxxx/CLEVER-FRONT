@@ -11,8 +11,25 @@
     <div class="main-welcome">
       <div class="connexion-div">
         <div class="inputs-main">
+          <!--
           <input class="input-connexion login-input" type=text name=user placeholder="Utilisateur">
           <input class="input-connexion password-input" type="password" name=pwd placeholder="Mot de passe">
+          -->
+          <input-form class="input-connexion login-input"
+            input-id="user" input-type="text" 
+            info-label="Utilisateur" 
+            info-error="TODO : à définir. Pas de chiffre pour le moment."
+            event="user" @user="saveUser" >
+          </input-form>
+          <input-form class="input-connexion password-input"
+            input-id="password" input-type="password" 
+            info-label="Mot de passe" 
+            info-error="TODO : à définir. Pas de chiffre pour le moment."
+            event="password" @password="savePwd" >
+          </input-form>
+          <button  @click="connexion()" v-bind:disabled="isButtonDisable">
+            <p>Connexion</p>
+          </button>
         </div>
         <router-link class="button-visitor" to="/visitor">
           <p class="p-welcome">Se connecter en tant que visiteur</p>
@@ -34,14 +51,63 @@
 </template>
 
 <script>
+
+import inputForm from './inputs/input_form_v1'
 export default {
   name: 'Welcome',
+  components: { inputForm },
+  data () {
+    return {
+      // data associe au champs 'Utilisateur'
+      savedUser: '',
+      isValidUser: false,
+
+      // data associe au champs 'mot de passe'
+      savedPassword: '',
+      isValidPwd: false,
+    }
+  },
   methods: {
     createUser () {
       console.log('Clic sur le bouton de creation de user');
     },
     goHome() {
       this.$router.go(0)
+    },
+    saveUser (user) {
+      this.savedUser = user.value
+      this.isValidUser = user.isValid
+    },
+    savePwd (pwd) {
+      this.savedPassword = pwd.value
+      this.isValidPwd = pwd.isValid
+    },
+    connexion() {
+      axios({
+        method: 'post',
+        url: this.$store.getters.getAddr + ':' + this.$store.getters.getPort + '/api/user/signin',
+        data: { 
+          email: this.savedUser, 
+          password: this.savedPassword 
+        }})
+        .then( response => {
+          // TODO pour demain
+
+          // enrichir le store
+          if(response.data.state == 'SUCCESS'){
+            this.$router.push('/forgot/password/confirmation')
+          } else {
+            this.callError = true
+          }
+        })
+        .catch(error => {
+          console.log(error)
+        })
+      }
+  },
+  computed: {
+    isButtonDisable () {
+      return !(this.isValidPwd && this.isValidUser)
     }
   }
     

@@ -1,7 +1,7 @@
 <template>
     <div class="form-data">
         <p class="form-p">
-            Votre modification de mot de passe a bien été pris en compte.
+            Votre modification de mot de passe a bien été prise en compte.
         </p>
     </div>
 </template>
