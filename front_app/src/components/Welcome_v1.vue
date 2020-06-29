@@ -53,6 +53,7 @@
 <script>
 
 import inputForm from './inputs/input_form_v1'
+const axios = require('axios').default
 export default {
   name: 'Welcome',
   components: { inputForm },
@@ -92,12 +93,23 @@ export default {
         }})
         .then( response => {
           // TODO pour demain
-
+          // response :{ userId, token }
           // enrichir le store
-          if(response.data.state == 'SUCCESS'){
-            this.$router.push('/forgot/password/confirmation')
-          } else {
-            this.callError = true
+          console.log(response)
+          if(response.status == 200){
+            // Enrichissement du store
+            this.$store.commit( 'loadUser', {
+                id: response.data.register,
+                email: response.data.userId,
+                token: response.data.token,
+            });
+
+
+            this.$router.push('/home')
+          } else if(response?.status == 401){
+            //TODO not implemented yet
+          }else { // cas erreur 500
+            //TODO not implemented yet
           }
         })
         .catch(error => {

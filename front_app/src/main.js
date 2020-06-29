@@ -18,6 +18,9 @@ const router = new VueRouter({
     path: '/',
     component: require('./components/Welcome_v1').default,
   },{
+    path: '/home',
+    component: require('./components/Home_v1').default,
+  },{
     path: '/visitor',
     component: require('./components/Home_v1').default,
   },{

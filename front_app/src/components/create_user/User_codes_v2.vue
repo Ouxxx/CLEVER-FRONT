@@ -11,7 +11,7 @@
             event="codephone" @codephone="saveCodePhone" >
         </input-form>
 
-        <button class="form-button-ok" @click="checkCodes2()">
+        <button class="form-button-ok" @click="checkCodes()">
             <p>Suivant</p>
         </button>
     </div>
@@ -44,7 +44,7 @@ export default {
         },
 
         // TODO: Me renommer
-        checkCodes2 () {
+        checkCodes () {
 
 
             axios({
@@ -62,7 +62,6 @@ export default {
                 console.log('userID :' + response.data.userId);
                 if(response.data.userId){
                     // Enrichissement du store
-                    console.log("normal")
 
                     this.$store.commit( 'setUserId', response.data.userId);
 

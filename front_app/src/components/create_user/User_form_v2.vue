@@ -123,7 +123,6 @@ export default {
                 // Enrichissement du store
                 this.$store.commit( 'setUser', {
                     email: this.savedEmail,
-                    password: this.savedPassword,
                     phone: this.savedPhone                    
                 });
 

@@ -3,7 +3,7 @@
 const state = {
     id : '',
     email : '',
-    password : '',
+    token : '',
     phone : ''
 
 }
