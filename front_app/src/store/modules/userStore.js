@@ -11,7 +11,8 @@ const state = {
 const getters = {
     getId (state) { return state.id },
     getEmail (state) { return state.email },
-    getPhone (state) { return state.phone } 
+    getPhone (state) { return state.phone },
+    getToken (state) { return state.token } 
 }
 
 const mutations = {
@@ -19,16 +20,14 @@ const mutations = {
     // userData : {id, email, password, phone}
     loadUser (state, userData) {
         state.id = userData.id;
+        state.token = userData.token;
         state.email = userData.email;
-        state.password = userData.password;
-        state.phone = userData.phone;
     },
 
     // cette fonction permet de stocker les donnée de l'utilisateur lors de la creation du compte
     // userData : {email, password, phone}
     setUser (state, transitionData) {
         state.email = transitionData.email;
-        state.password = transitionData.password;
         state.phone = transitionData.phone;
     },
 
@@ -40,6 +39,10 @@ const mutations = {
 
     setEmail (state, email) {
         state.email = email
+    },
+
+    setToken (state, token) {
+        state.token = token
     }
 }
 
