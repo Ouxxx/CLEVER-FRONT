@@ -8,6 +8,7 @@
         <div class="home-main">
             <element-list category="Catégorie 1"></element-list>
             <element-list category="Catégorie 2"></element-list>
+            
         </div>
 
     </div>
@@ -36,14 +37,15 @@ export default {
 
 
 .home-root {
-    background: url("./../assets/fonds/background_home_v1.png") no-repeat center fixed;
+    background: url("./../assets/fonds/background_home_v1.png") no-repeat fixed;
     min-height: 100vh;
+    position: relative;
 }
 
 
 .home-main {
     padding-top: 50px;
-    min-height: 100vh;
+    min-height: 200vh;
 }
 
 </style>

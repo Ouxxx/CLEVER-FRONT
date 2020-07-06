@@ -14,20 +14,16 @@
             <div class="header-elem header-avatar">
                 <div v-if="$store.getters.getToken">
 
-
-                    <div class="header-avatar-register" >
-                        <p>{{$store.getters.getId}}</p>
-                    </div>
-                    <img class="header-avatar-img" src="../../assets/img/forms_bouton.png" alt="avatar">
-
-
+                    <img class="header-avatar-img" src="../../assets/img/exampleimg_home_v1.png" alt="avatar" style='width:100px'>
 
                 </div>
                 <div v-else>
                     <p>Connexion</p>
                 </div>
             </div>
-            
+            <div class="header-avatar-register" >
+                <p>{{$store.getters.getId}}</p>
+            </div>
 
         </div>
     </div>
@@ -62,6 +58,7 @@ export default {
 
 .header-home {
     position: relative;
+    top : 5px;
 }
 
 .header-elem {
@@ -108,17 +105,19 @@ export default {
 }
 
 .header-avatar-register{
-    display: inline-block;
-}
-
-.header-avatar-register{
-    display: inline-block;
+    float: right;
+    position: relative;
+    right: 20px;
+    color : whitesmoke;
 }
 
 .header-avatar{
-    float: right;
+    float: right;  
 }
 
+.header-avatar-img{
+    clip-path: ellipse(50% 50%);
+}
 
 </style>
 
