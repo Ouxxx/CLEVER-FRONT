@@ -80,19 +80,19 @@ export default {
     border-radius: 6px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1300px) {
     .header-search-width {
         width: 900px;
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
     .header-search-width {
         width: 600px;
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
     .header-search-width {
         width: 300px;
     }
