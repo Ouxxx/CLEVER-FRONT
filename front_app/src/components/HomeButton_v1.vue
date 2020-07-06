@@ -1,6 +1,6 @@
 <template>
 <div>
-        <img alt="CHlogo" :src='tamere'>
+    <img alt="CHlogo" :src='tamere'>
 </div>
 </template>
 

@@ -12,9 +12,22 @@
             </div>
 
             <div class="header-elem header-avatar">
-                <img class="header-avatar-img" 
-                        src="../../assets/img/forms_bouton.png" alt="avatar">
+                <div v-if="$store.getters.getToken">
+
+
+                    <div class="header-avatar-register" >
+                        <p>{{$store.getters.getId}}</p>
+                    </div>
+                    <img class="header-avatar-img" src="../../assets/img/forms_bouton.png" alt="avatar">
+
+
+
+                </div>
+                <div v-else>
+                    <p>Connexion</p>
+                </div>
             </div>
+            
 
         </div>
     </div>
@@ -92,6 +105,14 @@ export default {
     .header-search-width {
         width: 100px;
     }
+}
+
+.header-avatar-register{
+    display: inline-block;
+}
+
+.header-avatar-register{
+    display: inline-block;
 }
 
 .header-avatar{

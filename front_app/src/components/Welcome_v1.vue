@@ -92,10 +92,6 @@ export default {
           password: this.savedPassword 
         }})
         .then( response => {
-          // TODO pour demain
-          // response :{ userId, token }
-          // enrichir le store
-          console.log(response)
           if(response.status == 200){
             // Enrichissement du store
             this.$store.commit( 'loadUser', {

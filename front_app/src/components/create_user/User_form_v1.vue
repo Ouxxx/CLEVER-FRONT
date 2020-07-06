@@ -1,6 +1,7 @@
 <template>
     <transition name="slide-fade">
     <div class="form-data" >
+
         <div class="form-input-grp">
             <label class="form-label inside-input" id="labusermail" for="usermail">Adresse mail</label>
             <input class="form-input" id="usermail" type="text" name="usermail" v-model="savedEmail"
@@ -16,7 +17,8 @@
 
             </div>
             <p class="form-input-error" v-if="isBadEmail">
-                Veuillez entrer une adresse e-mail valide.</p>
+                Veuillez entrer une adresse e-mail valide.
+            </p>
         </div>
 
         <div class="form-input-grp">
