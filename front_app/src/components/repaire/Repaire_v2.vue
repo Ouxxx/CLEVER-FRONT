@@ -7,14 +7,10 @@
 
         <div class="list-elem-repaire">
             <div class="banner">
-                <div class="header-avatar-register" >
-                    <p>{{$store.getters.getId}}</p>
-                </div>
-                <div class="header-avatar-img">
-                <p>{{$store.getters.getToken}}</p>
-                    
-                    <img class="header-avatar-img" src="../../assets/img/exampleimg_home_v1.png" alt="avatar" style='width:100px'> 
-
+                <div class="repaire-avatar">
+                    <img class="repaire-avatar-img" src="../../assets/img/exampleimg_home_v1.png" alt="avatar" style='width:100px'>
+                    <p class="repaire-avatar-register"> 
+                        {{$store.getters.getId}} </p>
                 </div>
             </div>
             <div class="introduce-yourself">
@@ -48,7 +44,6 @@ export default {
 
 .banner {
     display: inline-block;
-    position: relative;
     top: 70px;
     width: 1100px;
     border-color: aliceblue;
@@ -59,27 +54,31 @@ export default {
     padding-bottom: 10px;
     min-height: 150px;
     min-width: 250px;
-    
-
 }
 
-.header-avatar-img{
-    clip-path:circle(40%);
-    position: relative;
+
+.repaire-avatar{
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.repaire-avatar-img{
+    display: block;
     bottom: 15px;
-    margin-left: 15px;
+    margin-right:auto;
+    margin-left: auto;
 }
 
-.header-avatar-register{
-    float: right;
-    position: relative;
-    right: 20px;
-    color : whitesmoke;
+.repaire-avatar-register{
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    color : rgb(220,183,102);
+    margin: 0;
 }
 
 .introduce-yourself{
     display: inline-block;
-    position: relative;
     width: 1100px;
     border-color: aliceblue;
     border-style: dotted;
@@ -93,7 +92,6 @@ export default {
 
 .thread-repaire{
     display: inline-block;
-    position: relative;
     width: 1100px;
     background-color: aliceblue;
     margin: 50px;
@@ -105,7 +103,6 @@ export default {
 
 .hero-contents{
     display: inline-block;
-    position: relative;
     width: 1000px;
     background-color: aliceblue;
     margin: 50px;
