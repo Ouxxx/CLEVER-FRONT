@@ -1,7 +1,7 @@
 <template>
     <div class="home-root">
 
-        <header-ch></header-ch>
+        <header-ch class="header"></header-ch>
 
         <sidebar-ch></sidebar-ch>
 
@@ -37,25 +37,31 @@ export default {
 
 <style scoped>
 
+.list-elem-repaire{
+    padding-top: 50px;
+    
+}
+
 .home-root {
+    position: relative;
     background-color: rgb(7,15,24);
     min-height: 100vh;
+    
 }
 
 .banner {
-    display: inline-block;
-    top: 70px;
+    
     width: 1100px;
     border-color: aliceblue;
     border-style: dotted;
     border-width: 1px;
-    margin: 50px;
+    
+    margin-left: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
     min-height: 150px;
     min-width: 250px;
 }
-
 
 .repaire-avatar{
     width: 150px;
@@ -78,12 +84,14 @@ export default {
 }
 
 .introduce-yourself{
+    
     display: inline-block;
     width: 1100px;
     border-color: aliceblue;
     border-style: dotted;
     border-width: 1px;
-    margin: 50px;
+    margin-top: 10px;
+    margin-left: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
     min-height: 150px;
@@ -94,8 +102,9 @@ export default {
     display: inline-block;
     width: 1100px;
     background-color: aliceblue;
-    margin: 50px;
-    padding-right: 1000px;
+    margin-top: 10px;
+    margin-left: 50px;
+    padding-top: 10px;
     padding-bottom: 10px;
     min-height: 150px;
     min-width: 250px;
@@ -103,12 +112,14 @@ export default {
 
 .hero-contents{
     display: inline-block;
-    width: 1000px;
+    width: 1100px;
     background-color: aliceblue;
-    margin: 50px;
+    margin-top: 10px;
+    margin-left: 50px;
     padding-right: 1100px;
     padding-bottom: 10px;
     min-height: 150px;
     min-width: 250px;
 }
+
 </style>

@@ -47,7 +47,7 @@ export default {
 <style scoped>
 
 .header-root {
-    position: fixed;
+    
     background-color: rgb(22,24,35);
     width: 100%;
 }
