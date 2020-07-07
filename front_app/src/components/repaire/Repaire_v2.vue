@@ -10,7 +10,7 @@
                 <div class="header-avatar-register" >
                     <p>{{$store.getters.getId}}</p>
                 </div>
-                <div class="header-avatar-img"
+                <div class="header-avatar-img">
                 <p>{{$store.getters.getToken}}</p>
                     
                     <img class="header-avatar-img" src="../../assets/img/exampleimg_home_v1.png" alt="avatar" style='width:100px'> 
