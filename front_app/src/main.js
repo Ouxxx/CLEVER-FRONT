@@ -24,6 +24,9 @@ const router = new VueRouter({
     path: '/visitor',
     component: require('./components/Home_v1').default,
   },{
+    path: '/repaire',
+    component: require('./components/repaire/Repaire_v2').default,
+  },{
     path: '/create/user',
     component: require('./components/create_user/Create_user_v1').default,
     children: [

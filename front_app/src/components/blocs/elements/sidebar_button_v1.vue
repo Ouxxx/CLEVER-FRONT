@@ -50,9 +50,7 @@ export default {
     methods: {
         move () {
             console.log(this)
-            if(this.moveTo === ''){
-                //this.$router.go(0)
-            }else{
+            if(this.moveTo != ''){
                 this.$router.push(this.moveTo)
             }
         }

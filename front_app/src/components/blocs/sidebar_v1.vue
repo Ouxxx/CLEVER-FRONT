@@ -3,7 +3,7 @@
             @mouseenter="open" @mouseleave="close" >
         <div class="sidebar-opened" v-if="opened">
             <div class="sidebar-group-fonctions" >
-                <sidebar-button name="Mon repaire" moveTo="" >
+                <sidebar-button name="Mon repaire" moveTo="/repaire" >
                     <img class="button-img" src="../../assets/img/forms_bouton.png" alt="Mon repaire">
                 </sidebar-button>
                 <sidebar-button name="Ajout" moveTo="" >
