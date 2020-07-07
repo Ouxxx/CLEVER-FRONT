@@ -116,7 +116,7 @@ export default {
 }
 
 .header-avatar-img{
-    clip-path: ellipse(50% 50%);
+    clip-path: circle(40%);
 }
 
 </style>
