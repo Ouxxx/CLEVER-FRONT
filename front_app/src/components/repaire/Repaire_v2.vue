@@ -1,34 +1,42 @@
 <template>
-    <div class="home-root">
+    <div class="repaire-root">
 
         <header-ch class="header"></header-ch>
-
         <sidebar-ch></sidebar-ch>
 
-        <div class="list-elem-repaire">
-            <div class="banner">
-                <div class="repaire-avatar">
-                    <img class="repaire-avatar-img" src="../../assets/img/exampleimg_home_v1.png" alt="avatar" style='width:100px'>
-                    <p class="repaire-avatar-register"> 
-                        {{$store.getters.getId}} </p>
+        <div class="repaire-body">
+            <div class=banner> 
+                <div class="banner-block content-block-property content-width">
+                    <div class="repaire-avatar">
+                        <img class="repaire-avatar-img" src="../../assets/img/exampleimg_home_v1.png" alt="avatar" style='width:100px'>
+                        <p class="repaire-avatar-register">{{$store.getters.getId}} </p>
+                    </div>
                 </div>
-                <div class="infopoints-repaire">
+                <div class="points-menu">
                     <img class="infopoints-repaire-img" src="../../assets/img/infopoints-repaire.png" alt="infopoints">
                 </div>
 
             </div>
-            <div class="introduce-yourself">
-                <div class="infopoints-repaire">
+
+            <div>
+                <div class="introduce-yourself content-block-property content-width">
+                </div>
+                <div class="points-menu">
                     <img class="infopoints-repaire-img" src="../../assets/img/infopoints-repaire.png" alt="infopoints">
                 </div>
             </div>
-            <div class="thread-repaire">
-                <div class="infopoints-repaire">
+            
+            <div>
+                <div class="thread-repaire content-block-property content-block-property content-width">
+                </div>
+                <div class="points-menu">
                     <img class="infopoints-repaire-img" src="../../assets/img/infopoints-repaire.png" alt="infopoints">
                 </div>
             </div>
-            <div class="hero-contents">
-                <div class="infopoints-repaire">
+            <div>
+                <div class="hero-contents content-block-property content-width">
+                </div>
+                <div class="points-menu">
                     <img class="infopoints-repaire-img" src="../../assets/img/infopoints-repaire.png" alt="infopoints">
                 </div>
             </div>
@@ -44,37 +52,52 @@ import sidebarCh from '../blocs/sidebar_v1'
 export default {
     components: { headerCh, sidebarCh },
    
-    
 }
 </script>
 
 <style scoped>
 
-.list-elem-repaire{
-    padding-top: 50px;
+
+@media screen and (min-width: 1500px) {
+    .content-width{
+        width: 1100px;        
+    }
+}
+@media screen and (max-width: 1500px) {
+    .content-width{
+        width: 75%;        
+    }
     
 }
 
-.home-root {
+.repaire-body{
+    padding-left: 250px;
+    padding-top: 50px;
+}
+
+.repaire-root {
     position: relative;
     background-color: rgb(7,15,24);
     min-height: 100vh;
-    
+}
+
+.content-block-property{
+    display: inline-block;
+    min-height: 150px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 
 
 /*TO DO: User devra pouvoir personnaliser sa banniere par un chgt de couleur ou une image apportée*/
-.banner {
-    width: 1100px;
+.banner-block {
+    display: inline-block;
     border-color: aliceblue;
     border-style: dotted;
     border-width: 1px;
-    margin-left: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    min-height: 150px;
-    min-width: 250px;
+    
 }
 
 .repaire-avatar{
@@ -83,10 +106,6 @@ export default {
     width: 150px;
     margin-bottom: 15px;
     
-}
-
-.infopoints-repaire{
-    float: right;  
 }
 
 .repaire-avatar-img{
@@ -104,53 +123,30 @@ export default {
     margin: 0;
 }
 
-.infopoints-repaire{
+.points-menu{
     display: inline-block;
-    border-color: aliceblue;
-    border-style: outset;
+    vertical-align: top;
+    border-style: dotted;
     border-width: 1px;
-
+    border-color: aliceblue;
+    padding: 5px;
 }
 
-/*TO DO: User devra pouvoir personnaliser par écrit*/
+/* TO DO: User devra pouvoir personnaliser par écrit */
 .introduce-yourself{
-    
-    display: block;
-    width: 1100px;
     border-color: aliceblue;
     border-style: dotted;
     border-width: 1px;
-    margin-top: 10px;
-    margin-left: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    min-height: 150px;
-    min-width: 250px;
 }
-/*TO DO: actualisation de la page avec des dernières actualités. Actualités = capacité d'interagir avec les gens qui regardent/suivent en mettant des posts.*/
+/* TO DO: actualisation de la page avec des dernières actualités. Actualités = capacité d'interagir 
+  avec les gens qui regardent/suivent en mettant des posts. */
 .thread-repaire{
-    display: block;
-    width: 1100px;
     background-color: aliceblue;
-    margin-top: 10px;
-    margin-left: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    min-height: 150px;
-    min-width: 250px;
 }
-/*TO DO: Actualisation du contenu du Hero*/
+/* TO DO: Actualisation du contenu du Hero */
 .hero-contents{
-    display: block;
-    width: 1100px;
     height: 500px;
     background-color: aliceblue;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-top: 10px;
-    margin-left: 50px;
-    min-height: 150px;
-    min-width: 250px;
 }
 
 </style>
