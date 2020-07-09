@@ -26,6 +26,23 @@
             info-error="Veuillez entrer un numero de téléphone valide."
             event="phone" @phone="savePhone" >
         </input-form>
+    
+    <label class="form-label-radio">
+        <input type="radio"
+            name="gender"
+            value="homme"
+            checked>  Homme
+    </label>
+    <label class="form-label-radio">
+        <input type="radio"
+            name="gender"
+            value="femme">  Femme
+    </label>
+    <label class="form-label-radio">
+        <input type="radio"
+            name="gender"
+            value="autre">  Autre
+    </label>
 
         <input-date info-label="Date de naissance : "
             event="birthday" @birthday="saveBirthday" >
@@ -69,6 +86,8 @@ export default {
             // data associe au champs 'telephone'
             savedPhone: '',
             isValidPhone: false,
+
+            //TO DO: Envoi BDD du genre
 
             // data associe au champs 'date de naissance'
             savedBirthday: '',

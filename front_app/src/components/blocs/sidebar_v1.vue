@@ -3,6 +3,10 @@
             @mouseenter="open" @mouseleave="close" >
         <div class="sidebar-opened" v-if="opened">
             <div class="sidebar-group-fonctions" >
+                <div class="shortcut-bar">
+                <div class="home-icon">
+                    <img class="example-home-img" src="../../assets/img/example-home.png" alt="home-icon" style='width:30px'></div>
+                </div>
                 <sidebar-button name="Mon repaire" moveTo="/repaire" >
                     <img class="button-img" src="../../assets/img/forms_bouton.png" alt="Mon repaire">
                 </sidebar-button>

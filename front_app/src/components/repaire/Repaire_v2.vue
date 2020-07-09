@@ -5,10 +5,11 @@
         <sidebar-ch></sidebar-ch>
 
         <div class="repaire-body">
+            
             <div class=banner> 
                 <div class="banner-block content-block-property content-width">
                     <div class="repaire-avatar">
-                        <img class="repaire-avatar-img" src="../../assets/img/avatar-circle-user.png" alt="avatar" style='width:100px'>
+                        <img class="repaire-avatar-img" src="../../assets/img/avatar-circle-user.png" alt="avatar" style='width:90px'>
                         <p class="repaire-avatar-register">{{$store.getters.getId}} </p>
                     </div>
                 </div>
@@ -66,8 +67,7 @@ export default {
 @media screen and (max-width: 1500px) {
     .content-width{
         width: 75%;        
-    }
-    
+    }  
 }
 
 .repaire-body{
@@ -110,6 +110,7 @@ export default {
 
 .repaire-avatar-img{
     display: block;
+    padding-top:5px;
     bottom: 15px;
     margin-right: auto;
     margin-left: auto;
@@ -117,6 +118,7 @@ export default {
 
 .repaire-avatar-register{
     display: block;
+    padding-top:10px;
     text-align: center;
     font-size: 22px;
     color : rgb(255, 255, 255);

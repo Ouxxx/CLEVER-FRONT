@@ -61,6 +61,18 @@
     margin-bottom:20px;
     height: 70px;
 }
+
+.form-label-radio{
+    display: inline-block;
+    /* color: #00e4ff; */
+    color: darkcyan;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 20px;
+    margin-right: 40px;
+
+}
+
 .form-label {
     display: block;
     /* color: #00e4ff; */
@@ -135,6 +147,8 @@
     display: inline-block;
     color: darkcyan;
     box-shadow: 0 1px 0 0 darkcyan;
+    margin-right:20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
     font-size: 20px;
     padding-bottom: 23px;
     padding-top: 30px;
@@ -148,6 +162,7 @@
 .form-date-select{
     display: inline-block;
     color: darkcyan;
+    font-family: 'Times New Roman',Cambria, Cochin, Georgia, Times, serif; 
     font-size: 20px;
     margin-left: 10px;
     background-color: transparent;

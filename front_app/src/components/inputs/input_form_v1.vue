@@ -32,6 +32,7 @@ export default {
             type: String,
             required: true
         },
+
         inputId: {
             type: String,
             required: true
@@ -45,7 +46,7 @@ export default {
             required: true
         },
         infoError: String,
-        infoQuestion: String
+        infoQuestion: String,
     },
     data () {
         return {
