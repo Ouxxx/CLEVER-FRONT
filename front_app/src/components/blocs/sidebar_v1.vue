@@ -9,14 +9,17 @@
                 <sidebar-button name="Ajout" moveTo="" >
                     <img class="button-img" src="../../assets/img/forms_bouton.png" alt="Ajout">
                 </sidebar-button>
+                <sidebar-button name="Favoris" moveTo="" >
+                    <img class="button-img" src="../../assets/img/forms_bouton.png" alt="Favoris">
+                </sidebar-button>
                 <sidebar-button name="Mes soutiens" moveTo="" >
                     <img class="button-img" src="../../assets/img/forms_bouton.png" alt="Mes soutiens">
                 </sidebar-button>
                 <sidebar-button name="Liste des achats" moveTo="" >
                     <img class="button-img" src="../../assets/img/forms_bouton.png" alt="Liste des achats">
                 </sidebar-button>
-                <sidebar-button name="Paramètre" moveTo="" >
-                    <img class="button-img" src="../../assets/img/forms_bouton.png" alt="Paramètre">
+                <sidebar-button name="Paramètres" moveTo="" >
+                    <img class="button-img" src="../../assets/img/forms_bouton.png" alt="Paramètres">
                 </sidebar-button>
             </div>
 

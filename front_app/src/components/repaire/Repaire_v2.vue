@@ -8,7 +8,7 @@
             <div class=banner> 
                 <div class="banner-block content-block-property content-width">
                     <div class="repaire-avatar">
-                        <img class="repaire-avatar-img" src="../../assets/img/circle-user.png" alt="avatar" style='width:100px'>
+                        <img class="repaire-avatar-img" src="../../assets/img/avatar-circle-user.png" alt="avatar" style='width:100px'>
                         <p class="repaire-avatar-register">{{$store.getters.getId}} </p>
                     </div>
                 </div>

@@ -14,7 +14,7 @@
             <div class="header-elem header-avatar">
                 <div v-if="$store.getters.getToken">
 
-                    <img class="header-avatar-img" src="../../assets/img/exampleimg_home_v1.png" alt="avatar" style='width:100px'>
+                    <img class="header-avatar-img" src="../../assets/img/avatar-circle-user.png" alt="avatar" style='width:50px'>
 
                 </div>
                 <div v-else>
@@ -108,15 +108,11 @@ export default {
     float: right;
     position: relative;
     right: 20px;
-    color : whitesmoke;
+    color : rgb(189, 178, 28);
 }
 
 .header-avatar{
     float: right;  
-}
-
-.header-avatar-img{
-    clip-path: circle(40%);
 }
 
 </style>

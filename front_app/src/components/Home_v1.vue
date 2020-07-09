@@ -6,6 +6,7 @@
         <sidebar-ch></sidebar-ch>
 
         <div class="home-main">
+            <element-list category="En cours de visionnage"></element-list>
             <element-list category="Catégorie 1"></element-list>
             <element-list category="Catégorie 2"></element-list>
             
