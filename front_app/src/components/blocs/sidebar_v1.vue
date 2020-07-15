@@ -3,10 +3,9 @@
             @mouseenter="open" @mouseleave="close" >
         <div class="sidebar-opened" v-if="opened">
             <div class="sidebar-group-fonctions" >
-                <div class="shortcut-bar">
-                <div class="home-icon">
-                    <img class="example-home-img" src="../../assets/img/example-home.png" alt="home-icon" style='width:30px'></div>
-                </div>
+                <sidebar-button name="Accueil" moveTo="" >
+                    <img class="example-home-img" src="../../assets/img/example-home.png" alt="home-icon" style='width:30px'>
+                </sidebar-button>
                 <sidebar-button name="Mon repaire" moveTo="/repaire" >
                     <img class="button-img" src="../../assets/img/forms_bouton.png" alt="Mon repaire">
                 </sidebar-button>
@@ -15,12 +14,6 @@
                 </sidebar-button>
                 <sidebar-button name="Favoris" moveTo="" >
                     <img class="button-img" src="../../assets/img/forms_bouton.png" alt="Favoris">
-                </sidebar-button>
-                <sidebar-button name="Mes soutiens" moveTo="" >
-                    <img class="button-img" src="../../assets/img/forms_bouton.png" alt="Mes soutiens">
-                </sidebar-button>
-                <sidebar-button name="Liste des achats" moveTo="" >
-                    <img class="button-img" src="../../assets/img/forms_bouton.png" alt="Liste des achats">
                 </sidebar-button>
                 <sidebar-button name="Paramètres" moveTo="" >
                     <img class="button-img" src="../../assets/img/forms_bouton.png" alt="Paramètres">
