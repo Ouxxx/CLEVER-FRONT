@@ -6,10 +6,10 @@
 
         <div class="repaire-body">
             <div class="ch-topbar">
-                <div class="ch-topbar-button" @mouseenter="hover = true" @mouseleave="hover = false">
+                <div class="ch-topbar-button" :class="{'ch-topbar-button-selected': selected}">
                     <p class="ch-topbar-button-p">Mes soutiens</p>
                 </div>
-                <div class="ch-topbar-button" @mouseover="hover = true" @mouseleave="hover = false">
+                <div class="ch-topbar-button" :class="{'ch-topbar-button-selected': selected}">
                     <p class="ch-topbar-button-p">Historique des achats</p>
                 </div>
             </div>
@@ -77,8 +77,20 @@ export default {
     text-decoration: none;
     background: linear-gradient(0turn, transparent 15%, #e66465 20%, transparent 10%) no-repeat;
     background-size: 0 100%;
-    transition: linear .3s;
+    transition: background-size .3s;
 }
+
+.ch-topbar-button:hover {
+    cursor: pointer;
+    background-size: 100% 100%;
+    
+}
+/*
+.ch-topbar-button-hover{
+    background: linear-gradient(0turn, transparent 15%, #e66465 20%, transparent 10%) no-repeat;
+    background-size: 100% 100%;
+}
+*/
 
 /*.p {
     
@@ -89,10 +101,6 @@ export default {
         
     linear-gradient(0.50turn, transparent 10%, #e66465 70%, transparent 10%) no-repeat;*/
 
-
-.ch-topbar-button :hover{
-    background-size: 100% 100%;
-}
 
 @media screen and (min-width: 1500px) {
     .content-width{

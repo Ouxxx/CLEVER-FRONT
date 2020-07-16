@@ -13,18 +13,16 @@
 
             <div class="header-elem header-avatar">
                 <div v-if="$store.getters.getToken">
-
                     <img class="header-avatar-img" src="../../assets/img/avatar-circle-user.png" alt="avatar" style='width:50px'>
-
+                    <div class="header-avatar-register" >
+                        <p>{{$store.getters.getId}}</p>
+                    </div>
                 </div>
                 <div v-else>
                     <p>Connexion</p>
                 </div>
             </div>
-            <div class="header-avatar-register" >
-                <p>{{$store.getters.getId}}</p>
-            </div>
-
+            
         </div>
     </div>
 </template>
