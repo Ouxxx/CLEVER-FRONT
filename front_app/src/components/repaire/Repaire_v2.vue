@@ -5,7 +5,14 @@
         <sidebar-ch></sidebar-ch>
 
         <div class="repaire-body">
-            
+            <div class="ch-topbar">
+                <div class="ch-topbar-button" @mouseenter="hover = true" @mouseleave="hover = false">
+                    <p class="ch-topbar-button-p">Mes soutiens</p>
+                </div>
+                <div class="ch-topbar-button" @mouseover="hover = true" @mouseleave="hover = false">
+                    <p class="ch-topbar-button-p">Historique des achats</p>
+                </div>
+            </div>
             <div class=banner> 
                 <div class="banner-block content-block-property content-width">
                     <div class="repaire-avatar">
@@ -52,12 +59,40 @@ import sidebarCh from '../blocs/sidebar_v1'
 
 export default {
     components: { headerCh, sidebarCh },
-   
+    data () {
+        return {
+            hover: false,
+        }
+    }
 }
+
 </script>
 
 <style scoped>
 
+.ch-topbar-button {
+    display: inline-block;
+    padding: 10px 15px 10px 15px;
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(0turn, transparent 15%, #e66465 20%, transparent 10%) no-repeat;
+    background-size: 0 100%;
+    transition: linear .3s;
+}
+
+/*.p {
+    
+    background: linear-gradient(0turn, transparent 15%, #e66465 20%, transparent 10%) no-repeat;
+    background-size: 0 100%;
+    transition: linear;
+
+        
+    linear-gradient(0.50turn, transparent 10%, #e66465 70%, transparent 10%) no-repeat;*/
+
+
+.ch-topbar-button :hover{
+    background-size: 100% 100%;
+}
 
 @media screen and (min-width: 1500px) {
     .content-width{
