@@ -167,6 +167,7 @@ export default {
 
 .connexion-div {
   text-align: center;
+  cursor: pointer;
 }
 
 .inputs-main {

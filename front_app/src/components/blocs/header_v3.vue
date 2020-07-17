@@ -103,7 +103,7 @@ export default {
 }
 
 .header-avatar-register{
-    float: right;
+    float: left;
     position: relative;
     right: 20px;
     color : rgb(189, 178, 28);

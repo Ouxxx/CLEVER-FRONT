@@ -3,15 +3,11 @@
 
         <header-ch class="header"></header-ch>
         <sidebar-ch></sidebar-ch>
-
+        <div class="repaire-topbar">
+            <topbarButton buttonName="Mes soutiens"></topbarButton>
+            <topbarButton buttonName="Historique des achats"></topbarButton>
+        </div>
         <div class="repaire-body">
-            <div class="ch-topbar">
-                <topbar-button/>
-                <topbar-button/>
-                <div class="ch-topbar-button">
-                    <p class="ch-topbar-button-p">Historique des achats</p>
-                </div>
-            </div>
             <div class=banner> 
                 <div class="banner-block content-block-property content-width">
                     <div class="repaire-avatar">
@@ -70,37 +66,9 @@ export default {
 
 <style scoped>
 
-.ch-topbar-button {
-    display: inline-block;
-    padding: 10px 15px 10px 15px;
-    color: white;
-    text-decoration: none;
-    background: linear-gradient(0turn, transparent 15%, #e66465 20%, transparent 10%) no-repeat;
-    background-size: 0 100%;
-    transition: background-size .3s;
+.repaire-topbar {
+    padding-left: 240px;
 }
-
-.ch-topbar-button:hover {
-    cursor: pointer;
-    background-size: 100% 100%;
-    
-}
-/*
-.ch-topbar-button-hover{
-    background: linear-gradient(0turn, transparent 15%, #e66465 20%, transparent 10%) no-repeat;
-    background-size: 100% 100%;
-}
-*/
-
-/*.p {
-    
-    background: linear-gradient(0turn, transparent 15%, #e66465 20%, transparent 10%) no-repeat;
-    background-size: 0 100%;
-    transition: linear;
-
-        
-    linear-gradient(0.50turn, transparent 10%, #e66465 70%, transparent 10%) no-repeat;*/
-
 
 @media screen and (min-width: 1500px) {
     .content-width{
@@ -115,7 +83,7 @@ export default {
 
 .repaire-body{
     padding-left: 250px;
-    padding-top: 50px;
+    
 }
 
 .repaire-root {
