@@ -68,13 +68,14 @@ export default {
 
 .header-search {
     margin-left: 40px;
+    margin-bottom: 15px;
 }
 
 .header-search-input {
     font-size: 1.2em;
     padding: 5px 0px 5px 5px;
     border-style: solid;
-    border-color: black;
+    border-color: rgb(0, 0, 0);
     border-radius: 6px;
 }
 
@@ -107,10 +108,11 @@ export default {
     position: relative;
     right: 20px;
     color : rgb(189, 178, 28);
+    
 }
 
 .header-avatar{
-    float: right;  
+    float: right;
 }
 
 </style>
