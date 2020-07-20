@@ -26,23 +26,6 @@
             info-error="Veuillez entrer un numero de téléphone valide."
             event="phone" @phone="savePhone" >
         </input-form>
-    
-    <label class="form-label-radio">
-        <input type="radio"
-            name="gender"
-            value="homme"
-            checked>  Homme
-    </label>
-    <label class="form-label-radio">
-        <input type="radio"
-            name="gender"
-            value="femme">  Femme
-    </label>
-    <label class="form-label-radio">
-        <input type="radio"
-            name="gender"
-            value="autre">  Autre
-    </label>
 
         <input-date info-label="Date de naissance : "
             event="birthday" @birthday="saveBirthday" >
@@ -58,6 +41,13 @@
             <p>Suivant</p>
         </button>
 
+        <input type="radio" id="two" value="Femme" name="gender" v-model="picked">
+            <label for="two">Femme</label>
+        <input type="radio" id="one" value="Homme" name="gender" v-model="picked">
+            <label for="one">Homme</label>
+
+
+
     </div>
 </template>
 
@@ -70,6 +60,7 @@ const axios = require('axios').default
 
 export default {
     components: { inputForm, inputDate },
+
     data () {
         return {
             // data associe au champs 'adresse mail'
@@ -88,6 +79,33 @@ export default {
             isValidPhone: false,
 
             //TO DO: Envoi BDD du genre
+            picked:'nothing',
+
+
+            //savedGender:''
+            //value: ''
+            /*<input class="form-input" :id="this.inputId" :type="inputType"
+                v-model="value" ref="input" :class="{'form-invalid-input': error}"
+                @focus="focusInputTransition()" @blur="blurInputTransition()" >
+            <div class="form-label-radio">
+                <input type="radio"
+                name="gender"
+                value="homme">
+                <label for="choice1">Homme</label>
+            </div>
+            <div class="form-label-radio">
+                <input type="radio"
+                    name="gender"
+                    value="femme">
+                <label for="choice2">Femme</label>
+            </div>
+            <div class="form-label-radio">
+                <input type="radio"
+                    name="gender"
+                    value="autre">
+                <label for="choice3">Autre</label>
+            </div>
+        </input>*/
 
             // data associe au champs 'date de naissance'
             savedBirthday: '',
@@ -100,6 +118,11 @@ export default {
     },
 
     methods: {
+
+        /*testButtonForGender (picked){
+            this.value.checked =     
+        },*/
+
         saveEmail (email) {
             this.savedEmail = email.value
             this.isValidEmail = email.isValid
@@ -115,6 +138,7 @@ export default {
             this.savedPhone = phone.value
             this.isValidPhone = phone.isValid
         },
+    
         saveZip (zip) {
             this.savedZip = zip.value
             this.isValidZip = zip.isValid
@@ -123,6 +147,8 @@ export default {
             this.savedBirthday = date.value
             this.isValidBirthday = date.isValid
         },
+        
+
 
         postForm () {
 
@@ -134,9 +160,11 @@ export default {
                     password: this.savedPassword,
                     phone: this.savedPhone,
                     zip: this.savedZip,
-                    birthday: this.savedBirthday
+                    birthday: this.savedBirthday,
+                    gender: this.picked
                 }
             })
+
             .then(() => {
 
                 // Enrichissement du store
@@ -160,7 +188,8 @@ export default {
         isButtonDisable () {
             return !(this.isValidEmail && this.isValidPwd && this.isValidPhone 
                 && this.isValidBirthday && this.isValidZip 
-                && this.savedPassword === this.savedSamePwd)
+                && this.savedPassword === this.savedSamePwd 
+                && (this.picked === "Femme" || this.picked === "Homme"))
         } 
         
 
