@@ -8,43 +8,48 @@
             <topbarButton buttonName="Historique des achats"></topbarButton>
         </div>
         <div class="repaire-body">
+            <div class="barelem-repaire">
+                <div class="barelem-repaire" @click="openFunctions()">
+                </div>
+                <div class="openwindow" v-if="isOpen">
+                    <div class="window-with-elem">
+                        <p>Hey</p>
+                    </div>
+                </div>
+
+            </div>
+               
             <div class=banner> 
                 <div class="banner-block content-block-property content-width">
                     <div class="repaire-avatar">
                         <img class="repaire-avatar-img" src="../../assets/img/avatar-circle-user.png" alt="avatar" style='width:90px'>
                         <p class="repaire-avatar-register">{{$store.getters.getId}} </p>
                     </div>
-                </div>
-                <div class="points-menu">
-                    <img class="infopoints-repaire-img" src="../../assets/img/infopoints-repaire.png" alt="infopoints">
-                </div>
 
             </div>
 
             <div>
                 <div class="introduce-yourself content-block-property content-width">
                 </div>
-                <div class="points-menu">
-                    <img class="infopoints-repaire-img" src="../../assets/img/infopoints-repaire.png" alt="infopoints">
+                <div class="barelem-repaire">
                 </div>
             </div>
             
             <div>
                 <div class="thread-repaire content-block-property content-block-property content-width">
                 </div>
-                <div class="points-menu">
-                    <img class="infopoints-repaire-img" src="../../assets/img/infopoints-repaire.png" alt="infopoints">
+                <div class="barelem-repaire">
                 </div>
             </div>
             <div>
                 <div class="hero-contents content-block-property content-width">
                 </div>
-                <div class="points-menu">
-                    <img class="infopoints-repaire-img" src="../../assets/img/infopoints-repaire.png" alt="infopoints">
+                <div class="barelem-repaire">
                 </div>
             </div>
         </div>
 
+    </div>
     </div>
 </template>
 
@@ -58,6 +63,13 @@ export default {
     data () {
         return {
             hover: false,
+            isOpen: false,
+        }
+    },
+    methods : {
+        openFunctions () {
+            this.isOpen = !this.isOpen
+        
         }
     }
 }
@@ -101,6 +113,57 @@ export default {
 }
 
 
+.barelem-repaire {
+    position: absolute;
+    width: 24px;
+    height: 4px; 
+}
+
+.barelem-repaire::before, .barelem-repaire::after {
+    content: "";
+    display: block;
+    overflow: hidden;
+}
+
+.barelem-repaire, .barelem-repaire::before, .barelem-repaire::after {
+    position: absolute;
+    width: 24px;
+    height: 4px;
+    background: rgb(48, 75, 161);
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    cursor: pointer;
+
+}
+
+.barelem-repaire::before {
+    margin-top: -8px;
+}
+.barelem-repaire::after {
+    margin-top: 8px;
+}
+
+.barelem-repaire:hover {
+    background: transparent;
+}
+
+.barelem-repaire:hover::before {
+    margin-top: 0px;
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.barelem-repaire:hover::after {
+    margin-top: 0px;
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
 
 /*TO DO: User devra pouvoir personnaliser sa banniere par un chgt de couleur ou une image apportée*/
 .banner-block {
@@ -143,6 +206,7 @@ export default {
     border-width: 1px;
     border-color: aliceblue;
     padding: 5px;
+    cursor: pointer;
 }
 
 /* TO DO: User devra pouvoir personnaliser par écrit */

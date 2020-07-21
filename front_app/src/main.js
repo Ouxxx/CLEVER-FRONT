@@ -26,6 +26,15 @@ const router = new VueRouter({
   },{
     path: '/repaire',
     component: require('./components/repaire/Repaire_v1').default,
+    children: [
+      {
+        path: '/Mes-soutiens',
+        component: require('./components/repaire/Mes_soutiens_v1').default,
+      },{
+        path: '/Historique-des-achats',
+        component: require('./components/repaire/Historique_des_achats_v1').default,
+      }
+    ]
   },{
     path: '/create/user',
     component: require('./components/create_user/Create_user_v1').default,
