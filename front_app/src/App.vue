@@ -29,6 +29,17 @@ body {
     min-height: 100vh;
 }
 
+h1 {
+    background-color: rgb(22,24,35);
+    font-size: 1.35em;
+    color: #ffffff;
+    padding: 8px;
+    padding-left: 55px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
 #app {
   min-height: 100vh;
 

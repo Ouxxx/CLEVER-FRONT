@@ -1,6 +1,6 @@
 <template>
     <div class="list-root">
-        <div class="list-about">{{ this.category }}</div>
+        <h1>{{ this.category }}</h1>
         <div class="list-grp">
             <div class="list-elem"
                     v-for="elem in elems" :key="elem.id" >{{ elem.id }}</div>
@@ -85,21 +85,7 @@ export default {
 }
 </script>
 
-
 <style scoped>
-
-
-.list-about {
-    background-color: rgb(22,24,35);
-    font-size: 1.35em;
-    color: #ffffff;
-    padding: 8px;
-    padding-left: 55px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    
-
-}
 
 .list-grp {
     padding-left: 50px;
