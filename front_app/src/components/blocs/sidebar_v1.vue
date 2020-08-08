@@ -12,7 +12,7 @@
                 <sidebar-button name="Ajout" moveTo="" >
                     <img class="button-img" src="../../assets/img/forms_bouton.png" alt="Ajout">
                 </sidebar-button>
-                <sidebar-button name="Favoris" moveTo="/soutiens" >
+                <sidebar-button name="Favoris" moveTo="/repaire/soutiens" >
                     <img class="button-img" src="../../assets/img/forms_bouton.png" alt="Favoris">
                 </sidebar-button>
                 <sidebar-button name="Paramètres" moveTo="" >

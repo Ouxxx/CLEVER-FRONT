@@ -1,10 +1,10 @@
 <template>
     <div class="home-root">
+        <sidebar-ch></sidebar-ch>
         
         <header-ch></header-ch>
 
 
-        <sidebar-ch></sidebar-ch>
         <notification message="Cool c'est OK" isErr="false"></notification>
         <notification message="Cool c'est KO" isErr="true"></notification>
         <notification message="Cool je sais pas" ></notification>

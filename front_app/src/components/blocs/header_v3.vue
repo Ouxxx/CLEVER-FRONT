@@ -45,7 +45,6 @@ export default {
 <style scoped>
 
 .header-root {
-    
     background-color: rgb(22,24,35);
     width: 100%;
 }
