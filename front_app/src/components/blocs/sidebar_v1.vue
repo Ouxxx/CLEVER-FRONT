@@ -6,7 +6,7 @@
                 <sidebar-button name="Accueil" moveTo="" >
                     <img class="example-home-img" src="../../assets/img/example-home.png" alt="home-icon" style='width:30px'>
                 </sidebar-button>
-                <sidebar-button name="Mon repaire" moveTo="/repaire" >
+                <sidebar-button name="Mon repaire" moveTo="/repaire/profil" >
                     <img class="button-img" src="../../assets/img/forms_bouton.png" alt="Mon repaire">
                 </sidebar-button>
                 <sidebar-button name="Ajout" moveTo="" >

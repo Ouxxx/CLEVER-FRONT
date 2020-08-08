@@ -28,11 +28,14 @@ const router = new VueRouter({
     component: require('./components/repaire/Repaire_v1').default,
     children: [
       {
-        path: '/Mes-soutiens',
-        component: require('./components/repaire/Mes_soutiens_v1').default,
+        path: 'profil',
+        component: require('./components/repaire/mon_profile/Mon_profile_v1').default,
       },{
-        path: '/Historique-des-achats',
-        component: require('./components/repaire/Historique_des_achats_v1').default,
+        path: 'soutiens',
+        component: require('./components/repaire/soutiens/Mes_soutiens_v1').default,
+      },{
+        path: 'historique/achats',
+        component: require('./components/repaire/historique_achats/Historique_des_achats_v1').default,
       }
     ]
   },{
