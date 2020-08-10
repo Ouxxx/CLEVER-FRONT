@@ -1,30 +1,46 @@
 <template>
     <div class="desc-soutien-root">
         <div class="avatar">
-            <div class="avatar-img">
-                <img  src="../../assets/testing/avatarY.png">
+            <div class="avatar-img" :class="{'news': news }">
+                <img  src="../../../assets/testing/avatarY.png">
             </div>
             <div class="avatar-matricule">
-                <p class="avatar-p">100.A.1</p>
+                <p class="avatar-p">{{ matricul }}</p>
             </div>
         </div>
         <div class="description">
-            <p>
-                Caesarem adhibitis interrogationibus adhibitis inde aulaeum agenda equitum quidve diluere quaesitum 
-                cuius interrogationibus subinde defensi aurem reginae notarii essent praedoctis.
-            </p>
+            <p>{{ description }}</p>
         </div>
         <div class="gestions">
-            <img class="button-img" src="../../assets/img/forms_bouton.png" alt="Notifications">
-            <img class="button-img" src="../../assets/img/forms_bouton.png" alt="Supprimer">
+            <img class="button-img" src="../../../assets/img/forms_bouton.png" alt="Notifications">
+            <img class="button-img" src="../../../assets/img/forms_bouton.png" alt="Supprimer">
         </div>
     </div>
 </template>
 
 <script>
 export default {
+    props:{
+        matricul : {
+            type: String,
+            required: true
+        },
+        avatar: {
+            // TODO:  je ne sais pas comment representer une image ni comment elles sont stocke pour le moment
+            type: String
+        },
+        description: {
+            type: String,
+            required: true
+        },
+        news: {
+            type: Boolean,
+            required: true
+        }
+    },
     data () {
         return {
+            is_new: false,
 
             soutiens : []
         }
@@ -49,8 +65,9 @@ export default {
     display: table-cell;
     border-radius: 50%;
     padding: 5px;
-   /* background: radial-gradient(rgba(0,139,139,1) 50%, rgba(0,139,139,0.3) 60%, rgba(0,139,139,0.1) 70%, rgba(0,139,139,0) 100%); */
-   background: radial-gradient(rgba(218,165, 32,1) 50%, rgba(218,165, 32,0) 75%);
+}
+.news {
+    background: radial-gradient(rgba(218,165, 32,1) 50%, rgba(218,165, 32,0) 75%);
 }
 
 .avatar-img img{

@@ -14,13 +14,18 @@
             </div>
         </div>
              
-        <div class="repaire-first">
-            <div class="repaire-first-message"> <span class='bold-message'>C'est parti pour l'aventure !</span> <br>Commencez à gérer votre repaire.
+            <div class="dropdown-introduce">
+                <div class="introduce-yourself content-block-property">
+                </div>
+            </div>
+            
+            <div class="dropdown-thread">
+                <div class="thread-repaire content-block-property content-block-property">
+                </div>
             </div>
             <div class="repaire-first-img">
                 <img class="entree-repaire-img" src="@/assets/img/entree_repaire_img.png">
             </div>
-        </div>
     </div>
 </template>
 

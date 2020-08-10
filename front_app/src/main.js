@@ -32,7 +32,7 @@ const router = new VueRouter({
         component: require('./components/repaire/mon_profil/Mon_profil_v1').default,
       },{
         path: 'soutiens',
-        component: require('./components/repaire/soutiens/Mes_soutiens_v1').default,
+        component: require('./components/repaire/soutiens/Soutiens_v1').default,
       },{
         path: 'historique/achats',
         component: require('./components/repaire/historique_achats/Historique_des_achats_v1').default,
