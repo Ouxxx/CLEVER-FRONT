@@ -1,9 +1,6 @@
 <template>
     <div class="soutiens-root">
-        <sidebar-ch></sidebar-ch>
-        <header-ch></header-ch>
-    
-        <div class="page-content">
+        <div v-if="soutiens.length > 0">
             <div class="soutiens-functions">
                 <div class="soutiens-sort">
                     <select class="ch-select" v-model="sorting">
@@ -19,23 +16,25 @@
                     :matricul="soutien.matricul" :description="soutien.description" :news="soutien.some_news" />
             </div>
         </div>
+        <div v-else class="soutiens-empty">
+            <p>Vous n'avez pas encore de soutiens. Lorsque vous en aurez vous trouverez l'ensemble des soutiens ici.
+                Il sera ainsi possible de suivre leurs actualités. </p>
+        </div>
     </div>
 </template>
 
 <script>
-import headerCh from '../../blocs/header_v3'
-import sidebarCh from '../../blocs/sidebar_v1'
 import descSoutien from './Description_soutien_v1'
 
 /*
     TODO:
-    + hook created -> devra remplir le tableau soutien
+    + hook created -> devra remplir le tableau soutiens
     + les fonctions de tri
 */
 
 
 export default {
-    components: { headerCh, sidebarCh, descSoutien },
+    components: { descSoutien },
     data () {
         return {
             sorting : 'date',
@@ -89,23 +88,17 @@ export default {
 <style scoped>
 
 @media screen and (max-width: 1200px){
-    .page-content {
+    .soutiens-root {
         margin: 100px auto 0;
         width: 80%;
     }    
 }
 
 @media screen and (min-width: 1200px){
-    .page-content {
+    .soutiens-root {
         margin: 0 auto;
         width: 1000px;
     }    
-}
-
-.soutiens-root {
-    background: url("../../../assets/fonds/background_home_v1.png") no-repeat fixed;
-    min-height: 100vh;
-    position: relative;
 }
 
 .soutiens-functions {
@@ -120,6 +113,11 @@ export default {
     border-color: rgba(218,165, 32, 1);
     font-size: 1.1em;
     padding: 5px;
+}
+
+.soutiens-empty p{
+    color: rgba(218,165, 32, 1);
+    margin-left: 10px;    
 }
 
 </style>
