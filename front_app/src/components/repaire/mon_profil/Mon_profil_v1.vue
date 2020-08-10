@@ -12,18 +12,13 @@
                 <topbarButton buttonName="Dashboard"></topbarButton>
                 <topbarButton buttonName="Mes soutiens"></topbarButton>
             </div>
+        </div>
              
-            <div class="dropdown-introduce">
-                <div class="introduce-yourself content-block-property">
-                </div>
+        <div class="repaire-first">
+            <div class="repaire-first-message"> <span class='bold-message'>C'est parti pour l'aventure !</span> <br>Commencez à gérer votre repaire.
             </div>
-                 
-            <div class="dropdown-thread">
-                <div class="thread-repaire content-block-property content-block-property">
-                </div>
-            </div>
-
-            <div class="hero-contents content-block-property">
+            <div class="repaire-first-img">
+                <img class="entree-repaire-img" src="@/assets/img/entree_repaire_img.png">
             </div>
         </div>
     </div>
@@ -62,16 +57,17 @@ export default {
 /* Body */
 .repaire-body {
     display: block;
-    margin-left: 20px;
+    margin-left: 60px;
 }
 
 .content-block-property{
     display: inline-block;
-    width: 100%;
+    width: 98%;
     min-height: 150px;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 20px;
+    background-color: aliceblue;
 }
 
 .options {
@@ -79,29 +75,31 @@ export default {
     display: inline-block;
 }
 
+/* image entree repaire */
+.entree-repaire-img{
+    position: relative;
+    
+    top: 100px;
+    left: 100px;
+}
+
+.repaire-first{
+    margin-top: 20px;
+    height: 600px;
+    background-color:rgb(22,24,35);
+}
+
+.repaire-first-message{
+    
+    color:rgb(209, 129, 71);
+    margin: auto;
+}
+
+.bold-message{
+    font-size: 2.1em;
+    color:rgb(209, 129, 71);
+}
 /*TO DO: User devra pouvoir personnaliser sa banniere par un chgt de couleur ou une image apportée*/
-.banner-block {
-
-
-}
-
-
-
-
-.banner-avatar{
-
-}
-
-.banner-avatar-img img{
-}
-
-.banner-supports{
-
-}
-
-.banner-supports img{
-}
-
 
 /* Avatar (image + matricule) en haut à droite */
 .repaire-avatar{
@@ -137,18 +135,16 @@ export default {
 }
 
 /* TO DO: User devra pouvoir personnaliser par écrit */
-.introduce-yourself{
-    background-color: aliceblue;
+.introduce-yourself{    
 }
 /* TO DO: actualisation de la page avec des dernières actualités. Actualités = capacité d'interagir 
   avec les gens qui regardent/suivent en mettant des posts. */
-.thread-repaire{
-    background-color: aliceblue;
+.thread-repaire{ 
+
 }
 /* TO DO: Actualisation du contenu du Hero */
 .hero-contents{
     height: 500px;
-    background-color: aliceblue;
 }
 
 

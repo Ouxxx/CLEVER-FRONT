@@ -29,7 +29,7 @@ const router = new VueRouter({
     children: [
       {
         path: 'profil',
-        component: require('./components/repaire/mon_profile/Mon_profile_v1').default,
+        component: require('./components/repaire/mon_profil/Mon_profil_v1').default,
       },{
         path: 'soutiens',
         component: require('./components/repaire/soutiens/Mes_soutiens_v1').default,
