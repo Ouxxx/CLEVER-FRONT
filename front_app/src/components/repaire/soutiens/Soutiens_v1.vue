@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import descSoutien from './Description_soutien_v1'
+import descSoutien from './Soutien_description_v1'
 
 /*
     TODO:

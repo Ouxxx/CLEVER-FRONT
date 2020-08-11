@@ -47,6 +47,9 @@ export default {
 .header-root {
     background-color: rgb(22,24,35);
     width: 100%;
+    border-bottom-style: solid;
+    border-color:rgb(71, 71, 71);
+    border-width: 1px;
 }
 
 .header-root img {

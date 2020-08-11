@@ -1,7 +1,7 @@
 <template>
     <div class="repaire-root">
-        <sidebar-ch></sidebar-ch>
-        <header-ch></header-ch>
+        <ch-sidebar></ch-sidebar>
+        <ch-header></ch-header>
         <menu-haut>
             <menu-haut-button @button-selected="selectPage(0)" 
                     buttonName="Mon profil" :selected="pageSelected === 0" />
@@ -12,9 +12,7 @@
             <menu-haut-button @button-selected="selectPage(3)" 
                     buttonName="Mes soutiens" :selected="pageSelected === 3" />
         </menu-haut>
-        <div class="repaire-banner">
-
-        </div>
+        <ch-banner ></ch-banner>
         <div class="repaire-content">
             <router-view ></router-view>
         </div>
@@ -22,14 +20,15 @@
 </template>
 
 <script>
-import headerCh from '../blocs/header_v3'
-import sidebarCh from '../blocs/sidebar_v1'
+import chHeader from '../blocs/header_v3'
+import chSidebar from '../blocs/sidebar_v1'
 import menuHaut from '../common/menu_haut/Menu_haut_v1'
 import menuHautButton from '../common/menu_haut/Menu_haut_button_v1'
+import chBanner from '../common/banner/Banner_v1'
 
 
 export default {
-    components: { headerCh, sidebarCh, menuHaut, menuHautButton },
+    components: { chHeader, chSidebar, menuHaut, menuHautButton, chBanner },
     data () {
         return {
             pageSelected: 0
