@@ -1,14 +1,7 @@
 <template>
     <div class="home-root">
         <sidebar-ch></sidebar-ch>
-        
         <header-ch></header-ch>
-
-
-        <notification message="Cool c'est OK" isErr="false"></notification>
-        <notification message="Cool c'est KO" isErr="true"></notification>
-        <notification message="Cool je sais pas" ></notification>
-
 
         <div class="home-main">
             <element-list category="En cours de visionnage"></element-list>
@@ -24,7 +17,7 @@
 import headerCh from './blocs/header_v3'
 import sidebarCh from './blocs/sidebar_v1'
 import elementList from './blocs/list_elements_v1'
-import notification from './blocs/notification_v1'
+import notification from './common/notification/Notification_v1'
 
 export default {
     components: { headerCh, sidebarCh, elementList, notification },

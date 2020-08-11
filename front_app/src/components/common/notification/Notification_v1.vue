@@ -1,7 +1,7 @@
 <template>
-<div class="notification-root" :class="[ err == null || err ? 'notification-root-error' : '']">
-    <p class="notification-p" :class="[ err == null || err ? 'notification-p-error' : '']">
-        {{ err == null || err + ':' + message }}
+<div class="notification-root" :class="{ 'notification-root-error' : isErr }">
+    <p class="notification-p" :class="{ 'notification-p-error' : isErr }">
+        {{ message }}
     </p>
 </div>    
 </template>
@@ -52,6 +52,5 @@ export default {
 .notification-p-error {
     color: red;
 }
-
 
 </style>
