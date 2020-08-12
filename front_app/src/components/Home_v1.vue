@@ -17,10 +17,9 @@
 import headerCh from './blocs/header_v3'
 import sidebarCh from './blocs/sidebar_v1'
 import elementList from './blocs/list_elements_v1'
-import notification from './common/notification/Notification_v1'
 
 export default {
-    components: { headerCh, sidebarCh, elementList, notification },
+    components: { headerCh, sidebarCh, elementList },
     data () {
         return {}
     }
