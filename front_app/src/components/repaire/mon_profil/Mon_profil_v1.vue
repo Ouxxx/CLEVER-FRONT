@@ -1,17 +1,7 @@
 <template>
     <div class="repaire-root">
 
-        <sidebar-ch></sidebar-ch>
-
-        <header-ch></header-ch>
-
         <div class="repaire-body">
-            <div class="repaire-topbar">
-                <topbarButton buttonName="Mon repaire"></topbarButton>
-                <topbarButton buttonName="Gérer ma page"></topbarButton>
-                <topbarButton buttonName="Dashboard"></topbarButton>
-                <topbarButton buttonName="Mes soutiens"></topbarButton>
-            </div>
         </div>
              
             <div class="dropdown-introduce">
@@ -23,19 +13,13 @@
                 <div class="thread-repaire content-block-property content-block-property">
                 </div>
             </div>
-            <div class="repaire-first-img">
-                <img class="entree-repaire-img" src="@/assets/img/entree_repaire_img.png">
-            </div>
+            
     </div>
 </template>
 
 <script>
-import headerCh from '../../blocs/header_v3'
-import sidebarCh from '../../blocs/sidebar_v1'
-import topbarButton from '../repaire_button_v1'
 
 export default {
-    components: { headerCh, sidebarCh, topbarButton },
     data () {
         return {
             hover: false,
@@ -71,6 +55,7 @@ export default {
     min-height: 150px;
     padding-top: 10px;
     padding-bottom: 10px;
+    margin-top: 20px;
     margin-bottom: 20px;
     background-color: aliceblue;
 }
