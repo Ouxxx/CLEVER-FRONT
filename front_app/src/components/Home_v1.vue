@@ -14,9 +14,10 @@
 </template>
 
 <script>
-import headerCh from './blocs/header_v3'
+//import headerCh from './blocs/header_v3'
 import sidebarCh from './blocs/sidebar_v1'
 import elementList from './blocs/list_elements_v1'
+import headerCh from './common/header/Header_v4'
 
 export default {
     components: { headerCh, sidebarCh, elementList },
