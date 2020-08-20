@@ -20,8 +20,8 @@
 </template>
 
 <script>
-import chHeader from '../blocs/header_v3'
-import chSidebar from '../blocs/sidebar_v1'
+import chHeader from '../common/header/Header_v4'
+import chSidebar from '../common/sidebar/Sidebar_v2'
 import menuHaut from '../common/menu_haut/Menu_haut_v1'
 import menuHautButton from '../common/menu_haut/Menu_haut_button_v1'
 import chBanner from '../common/banner/Banner_v1'

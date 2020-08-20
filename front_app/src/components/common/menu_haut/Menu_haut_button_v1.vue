@@ -25,7 +25,6 @@ export default {
     methods: {
         setIsOver(over) {
             this.isOver = over
-            console.log('isOver =' + this.isOver)
         }
     }
 }

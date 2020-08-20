@@ -1,5 +1,5 @@
 <template>
-    <table class="sidebar-button-root" @click="move()">
+    <table class="sidebar-button-root" @click="move()" >
         <tr>
             <td>
                 <slot></slot>
@@ -14,7 +14,8 @@
 
 <style scoped>
 .sidebar-button-root {
-    padding-right: auto
+    padding-right: auto;
+    cursor: pointer;
 }
 
 .button-name {

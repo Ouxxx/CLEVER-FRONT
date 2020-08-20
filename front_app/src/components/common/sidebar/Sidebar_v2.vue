@@ -3,22 +3,23 @@
             @mouseenter="open" @mouseleave="close" >
         <div class="sidebar-opened" v-if="opened">
             <div class="sidebar-group-fonctions" >
-                <sidebar-button name="Accueil" moveTo="/home" >
-                    <img class="button-img" src="../../assets/img/forms_bouton.png" alt="home-icon" >
+                <sidebar-button name="Accueil" moveTo="/home" :selected="$route.matched[0].path === '/home'">
+                    <img class="button-img" src="../../../assets/img/forms_bouton.png" alt="home-icon" >
                 </sidebar-button>
-                <sidebar-button name="Mon repaire" moveTo="/repaire/profil" >
-                    <img class="button-img" src="../../assets/img/forms_bouton.png" alt="Mon repaire">
+                <sidebar-button name="Mon repaire" moveTo="/repaire/profil" :selected="$route.matched[0].path === '/repaire'">
+                    <img class="button-img" src="../../../assets/img/forms_bouton.png" alt="Mon repaire">
                 </sidebar-button>
                 <sidebar-button name="Ajout" moveTo="" >
-                    <img class="button-img" src="../../assets/img/forms_bouton.png" alt="Ajout">
+                    <img class="button-img" src="../../../assets/img/forms_bouton.png" alt="Ajout">
                 </sidebar-button>
-                <sidebar-button name="Favoris" moveTo="/repaire/soutiens" >
-                    <img class="button-img" src="../../assets/img/forms_bouton.png" alt="Favoris">
+                <sidebar-button name="Favoris" moveTo="/favoris" :selected="$route.matched[0].path === '/favoris'">
+                    <img class="button-img" src="../../../assets/img/forms_bouton.png" alt="Favoris">
                 </sidebar-button>
                 <sidebar-button name="Paramètres" moveTo="" >
-                    <img class="button-img" src="../../assets/img/forms_bouton.png" alt="Paramètres">
+                    <img class="button-img" src="../../../assets/img/forms_bouton.png" alt="Paramètres">
                 </sidebar-button>
             </div>
+            
 
         </div>
         <div class="sidebar-closed" v-else></div>
@@ -78,7 +79,7 @@
 
 
 <script>
-import sidebarButton from './elements/sidebar_button_v1'
+import sidebarButton from './Sidebar_button_v2'
 export default {
     components: { sidebarButton },
     data () {

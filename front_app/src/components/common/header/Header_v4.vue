@@ -1,12 +1,12 @@
 <template>
     <div class="header-root">
-        <div class="header-left header-items" >
-            <img src="../../../assets/img/logoCH.png" alt="Logo CH" >
+        <div class="header-left" >
+            <img src="../../../assets/img/logoCH.png" alt="Logo CH" @click="goHome()">
         </div>
-        <div class="header-center header-items" >
+        <div class="header-center" >
             <input type="text" v-model="search" >
         </div>
-        <div class="header-right header-items" >
+        <div class="header-right" >
             <div v-if="$store.getters.getToken">
                 <div class="header-avatar" >
                     <div class="header-avatar-img" >
@@ -18,7 +18,10 @@
                 </div>
             </div>
             <div v-else>
-                <p>Connexion</p>
+                <div class="header-connexion">
+                    <p>Connexion</p>
+                </div>
+                
             </div>
         </div>
     </div>
@@ -41,14 +44,10 @@ export default {
 
 <style scoped>
 
-
 .header-root {
     position: relative;
-
     display: flex;
     align-items: center;
-
-
     background-color: rgb(22,24,35);
     border-bottom-style: solid;
     border-color:rgb(71, 71, 71);
@@ -57,6 +56,7 @@ export default {
 
 .header-left img{
     height: 40px;
+    cursor: pointer;
 }
 
 .header-center {
@@ -80,30 +80,24 @@ export default {
     display: flex;
     align-items: center;
     margin: 0 5px;
+    cursor: pointer;
 }
 
-.header-avatar-img{
-
-}
 .header-avatar-img img{
     width: 40px;
 }
 
-..header-avatar-register {
-
-}
 .header-avatar-register p{
     padding: 0 10px;
     color : rgb(189, 178, 28);
 }
-/*
-.header-avatar-register{
-    float: left;
-    position: relative;
-    right: 20px;
-    color : rgb(189, 178, 28);
+
+.header-connexion {
+    cursor: pointer;
+    padding: 0 10px;
+    color: white;
 }
-*/
+
 </style>
 
 
