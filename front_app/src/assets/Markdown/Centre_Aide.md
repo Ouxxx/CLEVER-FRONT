@@ -28,15 +28,16 @@
 
 ## Evaluations et communications
 
-### Comment fonctionne le système d'évaluations ? TD
+### Comment fonctionne le système d'évaluations ?
 
-<p>Afin de créer une expérience d'achat positive, nous avons mis en place un système d'évaluations. A vous, Hero, de noter avec justesse le contenu auquel vous avez eu accès. <br>Pour ce faire, rien de plus simple ! <br>Rendez-vous sur la page</p>
+Afin de créer une expérience d'achat la plus complète possible, nous avons mis en place un système d'évaluations. A vous, Hero, de noter le contenu auquel vous avez eu accès. Pour ce faire, rien de plus simple ! Si vous n'avez pas noté directement après avoir visionné le contenu, rendez-vous sur la page
 
- [**Historique des Achats**](http://www.HISTORIQUEACHATS/HOME.)
+[**Historique des Achats**](http://www.HISTORIQUEACHATS/HOME.)
  
- <p>dans votre repaire.</p>
+dans votre **Repaire**. Puis cliquez sur la **Barre de points** à droite du contenu obtenu. Sélectionnez **Evaluer** et commencez votre évaluation.
 
- Toutefois 
+Pour palier à l'absence de notation, le système d'évaluations prévoit d'attribuer une note positive de 5 étoiles par défaut. Vous pouvez modifier cette note à tout moment en retournant sur les commentaires sous le contenu obtenu.
+A droite de votre commentaire vous trouverez une icône **Crayon**, cliquez dessus et modifier votre notation.
 
 ### Puis-je entrer en contact avec un Hero ?
 
@@ -89,6 +90,22 @@ Vous souhaitez ajouter un écrit ? Laissez-vous guider par ce pas-à-pas :
 
 Bonne route sur CleverHero, notre ressource à tous est Votre Savoir.
 
+### Qu'est-ce le format ED-Book ?
+
+**Alliance d'un écrit et d'un fond sonore immersif**
+
+Le format ED-Book offre une expérience de pleine immersion visuelle et auditive. Plongez au gré de votre lecture dans une stimulation de vos sens et laissez-vous être submergé par vos émotions.
+
+Pour les Heros qui aspirent à réaliser ce format, voici un pas-à-pas 
+
+  1. Ajoutez un Ecrit. Si vous ne savez pas le faire, suivez ce pas-à-pas [**Ajout d'un Ecrit : le pas à pas**](http://www.LIEN-PASAPAS-ECRIT/CENTRE-AIDE.)
+  2. Puis dans vos paramètres, cochez l'option **Ed-Book**.
+  3. Importez et intégrer l'audio où vous le souhaitez dans votre contenu **Ecrit**.
+  4. Vous pouvez voir le rendu en cliquant sur **Rendu** sous le format **Ed-Book** coché. Si tout est bon pour vous, validez. 
+  5. Voilà, c'est fait.
+
+Bonne route sur CleverHero, notre ressource à tous est Votre Savoir.
+
 ### Ajout d'une Image : le pas à pas
 
 Vous souhaitez ajouter un contenu Image ? Laissez-vous guider par ce pas à pas :
@@ -103,16 +120,15 @@ Vous souhaitez ajouter un contenu Image ? Laissez-vous guider par ce pas à pas 
 
 Bonne route sur CleverHero, notre ressource à tous est Votre Savoir.
 
-### Quelles sont les catégories ? TD
+### Quelles sont les catégories ?
 
-Vous avez la possibilité de créer à partir de 6 catégories bien distinctes. Voici comment elles se définissent :
+Vous avez la possibilité de créer à partir de 5 catégories bien distinctes. Voici comment elles se définissent :
+
 *  **Cours** :  Contenu unique sur un sujet unique. 
 *  **Formation** : Vous souhaitez créer un contenu composé de plusieurs cours axés autour d'un sujet unique ? Alors cette catégorie sera préférée. 
-*  **Tutoriel** : 
-*  **Vulgarisation** :
-*  **Exercices** :
-*  **Portail** : Proposez avec cette catégorie un atelier interactif dédié au sujet de ce choix. 
-
+*  **Tutoriel** : Guide favorisant la transmission directe d'un savoir au travers d'un enchaînement d'étapes.
+*  **Vulgarisation** : Si vous préférez faire découvrir et rendre accessible un sujet unique à un public non-spécialiste alors cette catégorie sera privilégiée.  
+*  **Exercices** : Proposez une source d'entrainement. Nous vous conseillons de le faire sur sujet unique.  
 
 ### Comment masquer mon contenu ?
 
@@ -135,14 +151,25 @@ Pour remettre un contenu en ligne et qu'il soit à nouveau visible, suivez ces �
 Quatre supports - **Vidéo** / **Ecrit** / **Contenu Images** - ont été développés pour permettre à chaque Hero de se rapprocher au mieux de ses attentes et au plus près de ce qu'il peut enseigner à la communauté. Un moyen d'encourager un enseignement plus fonctionnel et abouti. 
   Pensez-y ! C'est l'occasion de tester des supports auxquels vous n'auriez pas pensé. 
 
-### Un Portail, c'est quoi ? TD
+### Un Portail, c'est quoi ?
 
-L'onglet **Portail** apporte la possibilité d'interagir par le son et l'image **en direct** avec les Heros qui le désirent. 
+L'onglet **Portail** apporte la possibilité d'interagir par le son et l'image **en direct** avec les Heros qui le désirent en passant par une inscription.
+
 * Pour les Heros créateurs de portails :
-Sachez que c'est un vrai plus de livrer 
+
+C'est un vrai plus de livrer un atelier interactif dédié au sujet de votre choix. Cela permet de lier avec les Héros qui vous soutiennent. Si vous souhaitez tenter l'aventure des **Portails** suivez ce pas-à-pas :
+  1. Après vous être connecté, passez la souris sur la barre d'informations à gauche et cliquez sur [**Mon repaire**](http://www.LIEN-DE-MONREPAIRE/HOME.).
+  2. Dans cet espace, cliquez sur **Créer un portail**.
+  3. Remplissez le formulaire de création. Pour plus de détails sur celui-ci, cliquez sur ce lien [**Créer un portail**](http://www.LIEN-DE-CREATIONPORTAIL/CENTRE-AIDE.)
+
 * Pour les Heros qui ont soif de connaissances :
-C'est un outil parfait pour lier directement avec le Créateur et
-<br>C'est un vrai plus pour lier avec les Heros qui vous soutiennent.
+
+Les portails sont accessibles par une inscription au préalable. En cliquant directement sur **Je m'inscris** sur la page du portail.
+Pour une meilleure organisation possible, n'oubliez pas de prendre en compte la planification.
+
+### Créer un portail
+
+
 
 ### Quelles sont les options dans l'ajout d'un contenu ?
 
@@ -169,15 +196,6 @@ A titre d'exemple : Si votre support principal est une vidéo mais que vous avez
 * Planifier un contenu
 
 La planification est possible pour tout contenu et est préférée pour les Heros qui prévoient de soumettre leur travail à une date précise. 
-
-### Qu'est-ce le format ED-Book ? TD
-
-Le format ED-Book offre une expérience de pleine immersion visuelle et auditive. Plongez au gré de la lecture dans une stimulation de vos sens et laissez-vous être submergé par vos émotions.
-<br>Pour les Heros qui aspirent à réaliser ce format, voici un pas à pas 
-
-Ajout d'un ED-Book TD
-
-[**Qu'est-ce que le format ED-Book ?**](http://www.LIEN-EDBOOK-KESAKO/CENTRE-AIDE.) 
 
 ### Pourquoi ai-je besoin d'avoir des soutiens ?
 
