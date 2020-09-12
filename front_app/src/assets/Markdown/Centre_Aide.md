@@ -7,24 +7,24 @@
 
 ### Qu'est ce que je peux vendre comme contenu ?
 
-<p>Vous pouvez vendre tout type de contenu écrit, filmé ou imagé entrant dans une démarche de transmission de connaissances, d'apprentissage et/ou d'enrichissement de l'esprit.</p>
+Vous pouvez vendre tout type de contenu écrit, filmé ou imagé entrant dans une démarche de transmission de connaissances, d'apprentissage et/ou d'enrichissement de l'esprit.
 
 ### Est-ce gratuit de vendre ?
 
-<p>Oui cela est gratuit de vendre si vous ne prenez pas d'option payante.</p>
+Oui cela est gratuit de vendre si vous ne prenez pas d'option payante.
 
 ### Recevoir son paiement
 
-<p>L'envoi du paiement est instantané après la demande de transfert. Cependant, il est possible qu'il apparaisse sur votre relevé de compte sous 7 jours ouvrés au plus tard.
+L'envoi du paiement est instantané après la demande de transfert. Cependant, il est possible qu'il apparaisse sur votre relevé de compte sous 7 jours ouvrés au plus tard.
 
-<br>S'il s'agit d'un premier transfert, vous devez activer votre compte de paiement avant de transférer le montant disponible. Voici les étapes :</p>
+S'il s'agit d'un premier transfert, vous devez activer votre compte de paiement avant de transférer le montant disponible. Voici les étapes :
 
 1. Passez la souris sur la barre d'informations et cliquez sur [**Paramètres**](http://www.LIEN-DE-PARAMETRES/HOME.).
 2. Cliquez sur [**Facturation et paiements**](http://www.LIEN-DE-FACTURATIONETPAIEMENTS/PARAMETRES.)
 3. Sélectionnez **Compte de paiements** et saisissez les informations demandées. Veuillez noter que ce sont ces coordonnées bancaires qui recevront les futurs paiements. Sauvegardez.
 4. Maintenant que l'activation a été effectuée, vous devez cliquer sur **Transfert du solde disponible vers mon compte enregistré**.
 
-<br> A noter que les montants inférieurs à 1€ ne peuvent être transférés.
+ A noter que les montants inférieurs à 1€ ne peuvent être transférés.
 
 ## Evaluations et communications
 
@@ -158,7 +158,7 @@ L'onglet **Portail** apporte la possibilité d'interagir par le son et l'image *
 * Pour les Heros créateurs de portails :
 
 C'est un vrai plus de livrer un atelier interactif dédié au sujet de votre choix. Cela permet de lier avec les Héros qui vous soutiennent. Si vous souhaitez tenter l'aventure des **Portails** suivez ce pas-à-pas :
-  1. Après vous être connecté, passez la souris sur la barre d'informations à gauche et cliquez sur [**Mon repaire**](http://www.LIEN-DE-MONREPAIRE/HOME.).
+  1. Après vous être connecté, passez la souris sur la barre d'informations à gauche et cliquez sur **Portail**.
   2. Dans cet espace, cliquez sur **Créer un portail**.
   3. Remplissez le formulaire de création. Pour plus de détails sur celui-ci, cliquez sur ce lien [**Créer un portail**](http://www.LIEN-DE-CREATIONPORTAIL/CENTRE-AIDE.)
 
@@ -167,7 +167,7 @@ C'est un vrai plus de livrer un atelier interactif dédié au sujet de votre cho
 Les portails sont accessibles par une inscription au préalable. En cliquant directement sur **Je m'inscris** sur la page du portail.
 Pour une meilleure organisation possible, n'oubliez pas de prendre en compte la planification.
 
-### Créer un portail
+### Créer un portail TD
 
 
 
@@ -179,12 +179,12 @@ Pour se rapprocher au mieux d'une expérience instructive et attrayante, des opt
 * Vendre votre contenu
 
 Vous pouvez estimer votre contenu et le vendre avec cette option totalement gratuite. Un bon moyen de gagner de l'argent grâce à vos connaissances.
-<br>A noter que le prix ne peut être inférieur à 0.10 €.
+A noter que le prix ne peut être inférieur à 0.10 €.
 
 * ED-Book
 
 C'est un format optionnel propre à l'**Ecrit** alliant le plaisir de la lecture à un support audio de type musique de fond ou d'ambiance. Vous pouvez paramétrer et intégrer l'audio où vous le souhaitez.
-<br>Pour plus d'informations sur ce format, continuez sur ce lien
+Pour plus d'informations sur ce format, continuez sur ce lien
 
 [**Qu'est-ce que le format ED-Book ?**](http://www.LIEN-EDBOOK-KESAKO/CENTRE-AIDE.)   
 
@@ -214,7 +214,7 @@ Les conditions générales de vente et d'utilisation sont accessibles en cliquan
 
 [**Conditions générales de vente et d'utilisation**](http://www.LIEN-CONDITIONS-DUTILISATION/CONDITIONS-DUTILISATION.)
 
-<br>Toutefois si vous n'avez pas reçu de message de notre part dans les 48H suivants la suppression et que ce n'est pas de votre fait, nous vous invitons à écrire votre problèmatique directement sur le forum communautaire dont le lien est 
+Toutefois si vous n'avez pas reçu de message de notre part dans les 48H suivants la suppression et que ce n'est pas de votre fait, nous vous invitons à écrire votre problèmatique directement sur le forum communautaire dont le lien est 
 
 [**Consulter le forum communautaire**](http://www.LIEN-DE-FORUM-COMMU/FORUMCOMMU.). Un membre de notre équipe se chargera de vous répondre.  
 
@@ -259,7 +259,7 @@ Assurez-vous que le fichier n'est pas impliqué dans l'un de ces problèmes rép
 * " Format de fichier non reconnu "
 * " Un problème est survenu, merci de réessayer dans quelques minutes "
 
-<br>Toutefois si vous n'êtes pas concerné par ce qui précéde, nous vous invitons à écrire votre problèmatique directement sur le forum communautaire dont le lien est 
+Toutefois si vous n'êtes pas concerné par ce qui précéde, nous vous invitons à écrire votre problèmatique directement sur le forum communautaire dont le lien est 
 
 [**Consulter le forum communautaire**](http://www.LIEN-DE-FORUM-COMMU/FORUMCOMMU.). Un membre de notre équipe se chargera de vous répondre. 
 
@@ -267,7 +267,7 @@ Assurez-vous que le fichier n'est pas impliqué dans l'un de ces problèmes rép
 
 Lors de l'ajout d'un contenu, vous pouvez le planifier en cochant l'option **Planification** et en remplissant une date.
 
-<br>Bon à savoir : Tant qu'il n'est pas effectif vous pouvez la modifier à tout instant avec cette marche à suivre :
+Bon à savoir : Tant qu'il n'est pas effectif vous pouvez la modifier à tout instant avec cette marche à suivre :
 
 1.  Après vous être connecté, passez la souris sur la barre d'informations à gauche et cliquez sur [**Mon repaire**](http://www.LIEN-DE-MONREPAIRE/HOME.).
 2. Cliquez sur l'onglet **Gérer ma page** et recherchez le contenu à masquer dans la zone **Contenus** présente plus bas.
@@ -311,7 +311,7 @@ Pour enregistrer un nouveau moyen de paiement, suivez cette marche-à-suivre :
 ### Comment acheter un contenu sur CleverHero ?
 
 L'achat se fait directement sur la page du contenu souhaité en cliquant sur l'icône **Obtenir** en dessous du contenu.
-<br>Pour acheter, vous pouvez accéder au contenu de votre choix via : 
+Pour acheter, vous pouvez accéder au contenu de votre choix via : 
 
 * Une recherche grâce à la **barre de recherches**.
   
@@ -480,7 +480,7 @@ Vous pouvez rechercher un contenu dans la **barre de recherche** présente en ha
 ### Comment fonctionnent les favoris ?
 
 Il vous est possible de conserver un contenu en le mettant dans vos favoris. 
-<br>Pour ce faire, cliquez sur la **petite étoile** dans le coin gauche sur la page du contenu.
+Pour ce faire, cliquez sur la **petite étoile** dans le coin gauche sur la page du contenu.
 
 ### Soutenir un Hero
 
