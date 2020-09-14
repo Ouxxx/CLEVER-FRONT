@@ -629,10 +629,10 @@ Contactez-nous à l'adresse **protection-de-mes-donnees@cleverhero.fr** et deman
 
 * **Suppression d'une donnée propre à mon compte** 
 
-Pour toute demande relative à une donnée propre à votre compte, cntactez-nous à l'adresse **protection-de-mes-donnees@cleverhero.fr**.
-Sachez qu'avec la sécurité double-validation, il sera compliqué pour nous d'assurer la protection de votre compte si vous souhaitez supprimer votre e-mail et/ou votre numéro de téléphone.
+Pour toute demande relative à une donnée propre à votre compte, contactez-nous à l'adresse **code16@cleverhero.fr**.
+  A noter : Si vous souhaitez supprimer votre e-mail et/ou votre numéro de téléphone, il sera compliqué pour nous d'assurer la protection de votre compte sans la sécurité multi-validations.
 
-Toute demande de suppression entamera une vérification d'identité.
+Toute demande de suppression entraîne une vérification d'identité.
 Dans un contexte légal, nous conservons les données qui ne sont pas à caractère personnel c'est-à-dire qu'elles ne permettent pas de vous identifier. Elles participent à nous protéger contre les fraudes. A savoir, une trace des appareils et des moyens de paiement utilisés, un hachage de l'historique de paiements et des adresses e-mail affiliées au compte Hero.
 
 ## Comment empêcher quelqu'un d'accéder à mon compte ?
@@ -707,7 +707,7 @@ Nos équipes se chargent de vous répondre dans les plus brefs délais.
 
 **Si vous pouvez vous connecter**, concernant :
 
-* Votre mot de passe. Grâce à la sécurité double-validation vous pouvez recevoir un code par SMS qui vous permettra de modifier votre mot de passe. Allez dans vos **Paramètres** et cliquez sur **Changer le mot de passe**. Consultez ce ticket pour apprendre à former un mot de passe fort [**Conseils pour protéger au mieux mon compte**](http://www.LIEN-DE-PROTECTIONCOMPTE/CENTREDAIDE.).
+* Votre mot de passe. Grâce à la sécurité multi-validations vous pouvez recevoir un code par SMS qui vous permettra de modifier votre mot de passe. Allez dans vos **Paramètres** et cliquez sur **Changer le mot de passe**. Consultez ce ticket pour apprendre à former un mot de passe fort [**Conseils pour protéger au mieux mon compte**](http://www.LIEN-DE-PROTECTIONCOMPTE/CENTREDAIDE.).
 * Votre adresse mail. Il est probable que votre adresse mail ait également été modifiée. Allez dans vos **Paramètres** pour la remettre à jour.
 
 Après ces étapes, toujours sur la même page de vos **Paramètres**, cliquez en bas sur **Deconnexion de tous les appareils connectés**. Vous serez immédiatement déconnecté. Reconnectez-vous et vérifiez que vos informations ont bien été mises à jour.
@@ -804,7 +804,7 @@ Nous mettons tout en oeuvre pour conserver un environnement de confiance et de s
 
 ### Sécuriser mon compte avec la double validation
 
-Pour lutter contre les actions malveillantes dont vous pouvez être victime, nous favorisons la sécurité de votre compte avec la double validation. Elle est simple et vous assure une meilleure sécurité.
+Pour lutter contre les actions malveillantes dont vous pouvez être victime, nous favorisons la sécurité de votre compte en activant la multi-validations. Elle est simple et vous assure une meilleure sécurité.
 
 **Ce que vous devez savoir**
 
@@ -814,5 +814,5 @@ C'est une technique de plus en plus utilisée que nous recommandons fortement. E
 
 1. Passez la souris sur la barre d'informations et cliquez sur [**Paramètres**](http://www.LIEN-DE-PARAMETRES/HOME.).
 2. Cliquez sur l'onglet **Sécurité**
-3. Dans **Double validation**, ajustez vos choix
+3. Dans **Multi-validations**, ajustez vos choix
 4. La validation se fait immédiatement.
