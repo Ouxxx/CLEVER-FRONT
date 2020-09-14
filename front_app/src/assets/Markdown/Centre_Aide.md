@@ -630,7 +630,7 @@ Contactez-nous à l'adresse **protection-de-mes-donnees@cleverhero.fr** et deman
 * **Suppression d'une donnée propre à mon compte** 
 
 Pour toute demande relative à une donnée propre à votre compte, contactez-nous à l'adresse **code16@cleverhero.fr**.
-  A noter : Si vous souhaitez supprimer votre e-mail et/ou votre numéro de téléphone, il sera compliqué pour nous d'assurer la protection de votre compte sans la sécurité multi-validations.
+  A noter : Si vous souhaitez supprimer votre e-mail et/ou votre numéro de téléphone, il sera compliqué pour nous d'assurer la protection de votre compte sans la sécurité par multi-validations.
 
 Toute demande de suppression entraîne une vérification d'identité.
 Dans un contexte légal, nous conservons les données qui ne sont pas à caractère personnel c'est-à-dire qu'elles ne permettent pas de vous identifier. Elles participent à nous protéger contre les fraudes. A savoir, une trace des appareils et des moyens de paiement utilisés, un hachage de l'historique de paiements et des adresses e-mail affiliées au compte Hero.
@@ -707,7 +707,7 @@ Nos équipes se chargent de vous répondre dans les plus brefs délais.
 
 **Si vous pouvez vous connecter**, concernant :
 
-* Votre mot de passe. Grâce à la sécurité multi-validations vous pouvez recevoir un code par SMS qui vous permettra de modifier votre mot de passe. Allez dans vos **Paramètres** et cliquez sur **Changer le mot de passe**. Consultez ce ticket pour apprendre à former un mot de passe fort [**Conseils pour protéger au mieux mon compte**](http://www.LIEN-DE-PROTECTIONCOMPTE/CENTREDAIDE.).
+* Votre mot de passe. Grâce à la sécurité par multi-validations vous pouvez recevoir un code par SMS qui vous permettra de modifier votre mot de passe. Allez dans vos **Paramètres** et cliquez sur **Changer le mot de passe**. Consultez ce ticket pour apprendre à former un mot de passe fort [**Conseils pour protéger au mieux mon compte**](http://www.LIEN-DE-PROTECTIONCOMPTE/CENTREDAIDE.).
 * Votre adresse mail. Il est probable que votre adresse mail ait également été modifiée. Allez dans vos **Paramètres** pour la remettre à jour.
 
 Après ces étapes, toujours sur la même page de vos **Paramètres**, cliquez en bas sur **Deconnexion de tous les appareils connectés**. Vous serez immédiatement déconnecté. Reconnectez-vous et vérifiez que vos informations ont bien été mises à jour.
@@ -802,7 +802,7 @@ Merci de votre intervention, nos équipes feront le nécessaire rapidement. Pour
 Les contenus qui ont fait l'objet d'un signalement sont étudiés par nos équipes. Si l'objet est considéré comme justifié, nous ouvrons un dossier et entâmons une enquête plus approfondie. Il se peut que cela prenne du temps mais rien ne sera oublié.
 Nous mettons tout en oeuvre pour conserver un environnement de confiance et de sécurité. 
 
-### Sécuriser mon compte avec la double validation
+### Sécuriser mon compte avec la multi-validations
 
 Pour lutter contre les actions malveillantes dont vous pouvez être victime, nous favorisons la sécurité de votre compte en activant la multi-validations. Elle est simple et vous assure une meilleure sécurité.
 
