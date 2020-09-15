@@ -56,4 +56,4 @@ Les barres verticales 3 points :
 
 
 
-Ce message doit être supprimé quand plus besoin.
+Ce message doit être supprimé quand plus besoin
