@@ -50,10 +50,16 @@ Ouverture du menu :
 
 # Mes Soutiens
 
+Barres de recherche et de tri :
+  - opacité 50 %.
 Les barres verticales 3 points : 
   - Recevoir les actualités de ce Hero (bouton switch)
   - Ne plus soutenir ce Hero
 
+# Médiathèque
+
+Barres de recherche et de tri :
+  - opacité 50 %.
 
 
-Ce message doit être supprimé quand plus besoin
+Ce message ne s'autodétruira pas dans 3 sec. Merci de le supprimer quand il n'y a plus besoin.

@@ -92,7 +92,7 @@ Et non ce n'est pas necessaire de TOUJOURS se déco. Mais oui il le faut toujour
 14- Comment fonctionnent les favoris ? AC
 
 Ici peut etre preciser que c'est le lien vers le contenu que tu as en favoris. Du coup ca suppose que tu peux garder en favoris meme des contenus que tu n as pas encore acheté.
-  - Page revue.
+  - Page revue. J'ai ajouté un mot sur le retrait d'un contenu des favoris. C'était un oubli.
 
 15- Regarder des contenus sur différents appareils AR
 

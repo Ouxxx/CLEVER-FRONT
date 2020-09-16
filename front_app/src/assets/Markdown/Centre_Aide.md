@@ -96,7 +96,7 @@ Bonne route sur CleverHero, notre ressource à tous est Votre Savoir.
 
 Le format ED-Book offre une expérience de pleine immersion visuelle et auditive. Plongez au gré de votre lecture dans une stimulation de vos sens et laissez-vous être submergé par vos émotions.
 
-Pour les Heros qui aspirent à réaliser ce format, voici un pas-à-pas 
+Pour les Heroes qui aspirent à réaliser ce format, voici un pas-à-pas 
 
   1. Ajoutez un Ecrit. Si vous ne savez pas le faire, suivez ce pas-à-pas [**Ajout d'un Ecrit : le pas à pas**](http://www.LIEN-PASAPAS-ECRIT/CENTRE-AIDE.)
   2. Puis dans vos paramètres, cochez l'option **Ed-Book**.
@@ -153,16 +153,16 @@ Quatre supports - **Vidéo** / **Ecrit** / **Contenu Images** - ont été dével
 
 ### Un Portail, c'est quoi ?
 
-L'onglet **Portail** apporte la possibilité d'interagir par le son et l'image **en direct** avec les Heros qui le désirent en passant par une inscription.
+L'onglet **Portail** apporte la possibilité d'interagir par le son et l'image **en direct** avec les Heroes qui le désirent en passant par une inscription.
 
-* Pour les Heros créateurs de portails :
+* Pour les Heroes créateurs de portails :
 
-C'est un vrai plus de livrer un atelier interactif dédié au sujet de votre choix. Cela permet de lier avec les Héros qui vous soutiennent. Si vous souhaitez tenter l'aventure des **Portails** suivez ce pas-à-pas :
+C'est un vrai plus de livrer un atelier interactif dédié au sujet de votre choix. Cela permet de lier avec les Heroes qui vous soutiennent. Si vous souhaitez tenter l'aventure des **Portails** suivez ce pas-à-pas :
   1. Après vous être connecté, passez la souris sur la barre d'informations à gauche et cliquez sur **Portail**.
   2. Dans cet espace, cliquez sur **Créer un portail**.
   3. Remplissez le formulaire de création. Pour plus de détails sur celui-ci, cliquez sur ce lien [**Créer un portail**](http://www.LIEN-DE-CREATIONPORTAIL/CENTRE-AIDE.)
 
-* Pour les Heros qui ont soif de connaissances :
+* Pour les Heroes qui ont soif de connaissances :
 
 Les portails sont accessibles par une inscription au préalable. En cliquant directement sur **Je m'inscris** sur la page du portail.
 Pour une meilleure organisation possible, n'oubliez pas de prendre en compte la planification.
@@ -195,7 +195,7 @@ A titre d'exemple : Si votre support principal est une vidéo mais que vous avez
 
 * Planifier un contenu
 
-La planification est possible pour tout contenu et est préférée pour les Heros qui prévoient de soumettre leur travail à une date précise. 
+La planification est possible pour tout contenu et est préférée pour les Heroes qui prévoient de soumettre leur travail à une date précise. 
 
 ### Mon contenu a été supprimé
 
@@ -423,7 +423,7 @@ Pour tout problème rencontré avec PayPal vérifiez bien que vos informations b
 
 Si la transaction est un succès, les catégories de contenus **Vidéo**, **Ecrit** et **Images** seront accessibles immédiatement.
 
-A noter : Les **portails** sont considérés comme un contenu à part entière. Ils dépendent de la planification prévue par le Héro créateur. Veillez à regarder la date de réalisation avant toute inscription.
+A noter : Les **portails** sont considérés comme un contenu à part entière. Ils dépendent de la planification prévue par le Hero créateur. Veillez à regarder la date de réalisation avant toute inscription.
 
 ### J'ai reçu un mail de commande que je n'ai pas passée
 
@@ -485,15 +485,15 @@ Vous pouvez rechercher un contenu dans la **barre de recherche** présente en ha
 ### Comment fonctionnent les favoris ? AC
 
 Il vous est possible de conserver un contenu, obtenu ou non, en le mettant dans vos **Favoris**. Ainsi vous pourrez ainsi avoir un accès rapide à ces contenus. 
-Pour ce faire, cliquez sur la **petite étoile** dans le coin gauche sur la page du contenu.
+Pour ce faire, cliquez sur la **petite étoile** dans le coin gauche sur la page du contenu. Si vous ne souhaitez plus avoir un contenu en **Favoris**, re-cliquez sur la **petite étoile**.
 
 ### Soutenir un Hero
 
-C'est un bon moyen de faciliter la visibilité de nouveaux contenus d'un Héro ainsi que ses actualités. 
+C'est un bon moyen de faciliter la visibilité de nouveaux contenus d'un Hero ainsi que ses actualités. 
 Mais avant tout, **soutenir un Hero** c'est aussi **soutenir son travail**.
 
 Si vous souhaitez soutenir un Hero, suivez ces étapes :
-1. Après connexion, rendez-vous sur le profil du Héro concerné ou sur l'un de ses contenus
+1. Après connexion, rendez-vous sur le profil du Hero concerné ou sur l'un de ses contenus
 2. Cliquez sur l'icône Soutenir
 3. Et voilà.
 
@@ -744,7 +744,7 @@ Si vous pensez qu'une personne malintentionnée a pu accéder à votre compte, c
 Vous avez un Historique des connexions dans vos Paramètres - onglet Sécurité. N'hésitez pas à le consulter, il vous donne des informations sur les appareils qui se sont connectés à  savoir : 
   * Date de connexion
   * Adresse IP
-  * Situation géographique
+  * Situation géographique Héros
 
 **Signalement d'activité suspecte**
 
