@@ -43,7 +43,7 @@ A droite de votre commentaire vous trouverez une icône **Crayon**, cliquez dess
 
 Oui vous pouvez entrer en contact avec un Hero. Deux manières sont possibles : 
 
-* Si il est activé par le vendeur, l'espace **Discussions** présent sur la page d'un contenu. Ici le message sera visible par la communauté CleverHero mais le vendeur aura la possibilité d'intéragir avec l'ensemble.
+* Si il est activé par le vendeur, l'espace **Discussions** présent sur la page d'un contenu. Ici le message sera visible par la communauté CleverHero ainsi le vendeur aura la possibilité d'intéragir avec l'ensemble.
 * Si tu as passé un achat, tu as la possibilité de contacter le vendeur via l'option **Envoyer un message** maintenant visible sur la page du contenu.
 
 ## Mon contenu
@@ -125,7 +125,7 @@ Bonne route sur CleverHero, notre ressource à tous est Votre Savoir.
 Vous avez la possibilité de créer à partir de 5 catégories bien distinctes. Voici comment elles se définissent :
 
 *  **Cours** :  Contenu unique sur un sujet unique. 
-*  **Formation** : Vous souhaitez créer un contenu composé de plusieurs cours axés autour d'un sujet unique ? Alors cette catégorie sera préférée. 
+*  **Formation** : Vous souhaitez créer un contenu multi-catégories axé autour d'un sujet unique ? Alors cette catégorie sera préférée.
 *  **Tutoriel** : Guide favorisant la transmission directe d'un savoir au travers d'un enchaînement d'étapes.
 *  **Vulgarisation** : Si vous préférez faire découvrir et rendre accessible un sujet unique à un public non-spécialiste alors cette catégorie sera privilégiée.  
 *  **Exercices** : Proposez une source d'entrainement. Nous vous conseillons de le faire sur sujet unique.  
@@ -197,14 +197,6 @@ A titre d'exemple : Si votre support principal est une vidéo mais que vous avez
 
 La planification est possible pour tout contenu et est préférée pour les Heros qui prévoient de soumettre leur travail à une date précise. 
 
-### Pourquoi ai-je besoin d'avoir des soutiens ?
-
-Les soutiens ont une part significative dans la transmission et l'appréciation de votre travail. Ils contribuent à apporter 
-La communauté réserve une place chaleureuse aux Heros qui soutiennent se forme grâce aux soutiens et aux apports qu'ils impliquent. Partage, débats,  sont des éléments qui font la chaleur et l'animation de CleverHero. 
-
-N'oubliez pas qu'ils peuvent être à l'origine de financement de vos travaux. 
-Les soutiens contribuent à faire grandir vos contenus.
-
 ### Mon contenu a été supprimé
 
 Nous veillons à ce que CleverHero reste un lieu collaboratif bienveillant et mettons tout en oeuvre pour conserver la qualité de ses contenus.
@@ -214,9 +206,9 @@ Les conditions générales de vente et d'utilisation sont accessibles en cliquan
 
 [**Conditions générales de vente et d'utilisation**](http://www.LIEN-CONDITIONS-DUTILISATION/CONDITIONS-DUTILISATION.)
 
-Toutefois si vous n'avez pas reçu de message de notre part dans les 48H suivants la suppression et que ce n'est pas de votre fait, nous vous invitons à écrire votre problèmatique directement sur le forum communautaire dont le lien est 
+Toutefois si, après vérification de vos spams et boîte de réception, vous n'avez pas reçu de message de notre part dans les 48H suivants la suppression et que ce n'est pas de votre fait, nous vous invitons à écrire votre problèmatique à cette adresse **code51@cleverhero.fr**.
 
-[**Consulter le forum communautaire**](http://www.LIEN-DE-FORUM-COMMU/FORUMCOMMU.). Un membre de notre équipe se chargera de vous répondre.  
+### Consulter le forum communautaire TD
 
 ### Comment utiliser le dashboard ? TD
 
@@ -313,13 +305,24 @@ Pour enregistrer un nouveau moyen de paiement, suivez cette marche-à-suivre :
 L'achat se fait directement sur la page du contenu souhaité en cliquant sur l'icône **Obtenir** en dessous du contenu.
 Pour acheter, vous pouvez accéder au contenu de votre choix via : 
 
-* Une recherche grâce à la **barre de recherches**.
-  
-* Le **profil** du Héro créateur puis en allant dans ses contenus.
-  
-* Si vous avez mis le contenu dans vos **Favoris**, vous pouvez à tout moment le retrouver à cet endroit en passant votre souris sur la **barre d'informations** à gauche de votre écran.
-  
-* Si vous avez déjà le Héro créateur dans vos Soutiens, vous pouvez retrouver son profil en cliquant sur son l'image de présentation. 
+1. Via la **barre de recherches**.
+
+* **Par le profil :**
+
+Cliquez sur le **profil** du Hero créateur puis allez dans ses contenus.
+
+* **Par le contenu :**
+
+Cliquez directement sur le contenu.
+
+2. Via vos **Favoris** :
+
+Si vous avez mis le contenu dans vos **Favoris**, vous pouvez à tout moment le retrouver à cet endroit en passant votre souris sur la **barre d'informations** à gauche de votre écran.
+
+3. Via vos **Soutiens** :  
+
+Si vous avez déjà le Hero créateur dans vos **Soutiens**, vous pouvez retrouver son profil en cliquant sur son image de présentation. 
+
 
 Sur la page de paiement, vous pourrez choisir le moyen de paiement. Votre contenu est automatiquement ajouté à votre **Historique de contenus**.
 
@@ -348,20 +351,22 @@ Vérifiez vos informations bancaires enregistrées dans les **Paramètres** dans
 
 Si vous utilisez PayPal, veillez à vérifier vos informations enregistrées. Toutefois si le problème persiste, contactez PayPal directement.
 
-### Comment associer un contenu acheté en mode invité à mon compte Hero ?
+### Comment associer un contenu acheté en mode invité à mon compte Hero ? AC
 
-Au moment de l'achat, il vous sera proposé de vous créer un compte. C'est lors de cette étape que vous associerez votre contenu acheté à un nouveau compte Hero.
+Il vous est impossible d'effectuer un achat si vous êtes en mode invité. En cliquant sur **Obtenir** vous serez redirigé vers la page de création de compte. Suivant cette étape, vous pourrez acheter votre contenu.
+
+Bienvenue sur CleverHero !
 
 ### Le paiement est-il sécurisé ? TD
 
-// A compléter selon le type de sécurité utilisé.
+*A compléter selon le type de sécurité utilisé.*
 Sur CleverHero, la sécurité est notre priorité. Tous les moyens de paiement utilisés sur CleverHero sont fiables.
 
-### Modes de paiement
+### Modes de paiement TW
 
 Sur CleverHero, nous acceptons ces modes de paiement :
 
-**Carte bancaires**
+**Carte bancaires** 
 
 * Carte bleue
 * VISA 
@@ -373,17 +378,19 @@ Sur CleverHero, nous acceptons ces modes de paiement :
 Si vous bénéficiez déjà d'un compte PayPal vous serez redirigés vers une page sécurisée PayPal. Vous pourrez ainsi procéder au paiement. 
 
 Si vous ne bénéficiez pas d'un compte PayPal vous avez 2 choix possibles :
-  * **Payer en passant par un compte PayPal**
+  * **Payer avec votre compte PayPal**
+  
     1. Sélectionner le mode de paiement PayPal
     2. Vous allez être redirigé sur une page sécurisée PayPal, choisissez de vous inscrire et entrez les informations demandées.
     3. Vous pouvez maintenant procéder au paiement.
     4. L'achat sécurisé a été fait, vous êtes redirigé sur CleverHero
-  * **Payer sans passer par un compte PayPal**
+  * **Payer avec PayPal sans creer de compte**
+
     1. Sélectionner le mode de paiement PayPal
     2. Vous allez être redirigé sur une page sécurisée PayPal, cliquez sur "Payer sans ouvrir de compte"
     3. Entrez les informations demandées et validez.
     4. Le paiement étant réalisé vous êtes redirigés sur CleverHero.
-   A prendre en compte : Nous informons nos Héros que dans cet unique cas, vous n'aurez pas droit à la protection des achats inhérente à la possession d'un compte PayPal.
+   A prendre en compte : Nous informons nos Heroes que dans cet unique cas, vous n'aurez pas droit à la protection des achats inhérente à la possession d'un compte PayPal.
 
 ### Mettre à jour un mode de paiement
 
@@ -422,11 +429,9 @@ A noter : Les **portails** sont considérés comme un contenu à part entière. 
 
 Cette problèmatique peut avoir plusieurs causes :
 
-* Assurez-vous que ce ne soit pas un e-mail frauduleux. Pour cela, contrôlez votre **Historique de commandes** en allant dans votre **Paramètres** puis **Facturation et paiements**. Si la commande n'apparaît pas, l'e-mail n'a pas été envoyé par CleverHero. Nous vous conseillons de bloquer et signaler ce dernier ainsi que de lire ce ticket [**Comment réagir face à un message frauduleux ?**](http://www.LIEN-DE-MESSAGEFRAUDULEUX/CENTREDAIDE.).
+* Assurez-vous que ce ne soit pas un e-mail frauduleux. Pour cela, contrôlez votre **Historique de commandes** en allant dans vos **Paramètres** puis **Facturation et paiements**. Si la commande n'apparaît pas, l'e-mail n'a pas été envoyé par CleverHero. Nous vous conseillons de bloquer et signaler ce dernier ainsi que de lire ce ticket [**Comment réagir face à un message frauduleux ?**](http://www.LIEN-DE-MESSAGEFRAUDULEUX/CENTREDAIDE.).
 
-* Parfois il peut arriver que quelqu'un ait fait une faute de frappe en entrant son adresse mail lors de son inscription.
-
-* Si vous ne vous êtes pas déconnecté sur un ordinateur commun, une personne a peut-être passée une commande sur votre compte. Pour éviter ce genre de problème, nous vous conseillons de **TOUJOURS** vous déconnecter de votre compte.
+* Si vous ne vous êtes pas déconnecté sur un ordinateur commun, une personne a peut-être passé une commande sur votre compte. Pour éviter ce genre de problème, nous vous conseillons **TOUJOURS** de vous déconnecter de votre compte d'un appareil accessible au public.
 
 ### Comment réagir face à un message frauduleux ?
 
@@ -477,9 +482,9 @@ Vous pouvez rechercher un contenu dans la **barre de recherche** présente en ha
 * la **catégorie** ou le **domaine** recherché(e)
 * un ou plusieurs **mots clés**
 
-### Comment fonctionnent les favoris ?
+### Comment fonctionnent les favoris ? AC
 
-Il vous est possible de conserver un contenu en le mettant dans vos favoris. 
+Il vous est possible de conserver un contenu, obtenu ou non, en le mettant dans vos **Favoris**. Ainsi vous pourrez ainsi avoir un accès rapide à ces contenus. 
 Pour ce faire, cliquez sur la **petite étoile** dans le coin gauche sur la page du contenu.
 
 ### Soutenir un Hero
@@ -500,7 +505,7 @@ Aujourd'hui, nous n'avons pas intégré l'option "cast" à CleverHero. Mais nos 
 
 # Gérer mon compte
 
-## Qu'est ce le RGPD : Réglement Général sur la Protection des Données ?
+## Qu'est ce le RGPD : Réglement Général sur la Protection des Données ? AR
 
 **Qu'est-ce que c'est ?**
 
@@ -615,7 +620,8 @@ Si votre compte est accessible :
 
 1. Connectez-vous sur votre compte Hero
 2. Passez la souris sur la barre d'informations et cliquez sur [**Paramètres**](http://www.LIEN-DE-PARAMETRES/HOME.).
-3. Vous êtes sur l'onglet **Compte**. Cliquez sur **Supprimer mon compte** en bas de page. 
+3. Vous êtes sur l'onglet **Compte**. Cliquez sur **Supprimer mon compte** en bas de page.
+4. Vous allez recevoir une demande de confirmation par mail. Cliquez sur le lien pour que la suppression soit effective. 
 
 Si votre compte n'est pas accessible :
 
@@ -655,6 +661,7 @@ Si votre compte est accessible :
 1. Connectez-vous sur votre compte Hero
 2. Passez la souris sur la barre d'informations et cliquez sur [**Paramètres**](http://www.LIEN-DE-PARAMETRES/HOME.).
 3. Vous êtes sur l'onglet **Compte**. Cliquez sur **Supprimer mon compte** en bas de page. 
+4. Vous allez recevoir une demande de confirmation par mail. Cliquez sur le lien pour que la suppression soit effective.
 
 Si votre compte n'est pas accessible :
 
@@ -671,12 +678,12 @@ Bonne route sur CleverHero, notre ressource à tous est Votre Savoir.
 ## Se connecter en tant que visiteur
 
 Se connecter en tant que visiteur donne un accès restreint sur CleverHero. Vous ne pourrez pas profiter des priviléges qu'a un compte Hero. 
-Votre accès ne se limitera qu'à une simple visualisation du contenu de CleverHero.
+Votre accès ne se limitera qu'à une simple visualisation du contenu gratuit de CleverHero.
 
 ## Puis-je avoir un autre matricule ?
 
 Non, vous ne pouvez pas le modifier. 
-Le matricule distribué à votre arrivée sur CleverHero est affilié à vos données personnelles. Il n'est pas choisi au hasard, il est constitué à partir de la date de création de votre compte. Aucun autre individu ne le possède, c'est ce qui le rend unique.     
+Le matricule distribué à votre arrivée sur CleverHero est affilié à vos données personnelles. Il n'est pas choisi au hasard, il est constitué à partir de votre numéro de file et de la date de création de votre compte. Aucun autre individu ne le possède, c'est ce qui le rend unique.     
 
 ## Changer ma photo de profil
 
@@ -759,9 +766,9 @@ Au regard de la loi, tout défaut de respect des droits d'auteur est sanctionné
 
 ### Avertissement reçu concernant les droits d'auteur
 
-Nous prenons très au sérieux le respect des droits d'auteur de nos Héros et la confiance qu'ils nous accordent.
+Nous prenons très au sérieux le respect des droits d'auteur de nos Heroes et la confiance qu'ils nous accordent.
 
-Sur CleverHero, tout manquement au respect du droit d'auteur sera sanctionné par un avertissement la première fois. Si un Hero venait à répéter cette situation, il serait immédiatement banni et de façon permanente et son dossier sera transmis aux autorités compétentes qui prendront la relève.
+Sur CleverHero, tout manquement au respect du droit d'auteur sera sanctionné par un avertissement la première fois. Si un Hero venait à répéter cette situation, il serait immédiatement banni et de façon permanente et son dossier serait transmis aux autorités compétentes qui prendront la relève.
 
 ### Supprimer un contenu qui a reçu une plainte 
 
