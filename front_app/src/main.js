@@ -25,7 +25,7 @@ const router = new VueRouter({
     component: require('./components/Home_v1').default,
   },{
     path: '/repaire',
-    component: require('./components/repaire/Repaire_v1').default,
+    component: require('./components/repaire/Repaire_v2').default,
     children: [
       {
         path: 'profil',

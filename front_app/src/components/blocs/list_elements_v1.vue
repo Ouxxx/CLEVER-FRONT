@@ -2,8 +2,9 @@
     <div class="list-root">
         <h1>{{ this.category }}</h1>
         <div class="list-grp">
-            <div class="list-elem"
-                    v-for="elem in elems" :key="elem.id" >{{ elem.id }}</div>
+            <div class="list-elem" v-for="elem in elems" :key="elem.id" >
+                {{ elem.id }}
+            </div>
         </div>
 
     </div>

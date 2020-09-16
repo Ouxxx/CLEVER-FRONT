@@ -1,25 +1,27 @@
 <template>
     <div class="repaire-root">
 
-        <div class="repaire-body">
+        <banner />
+
+        <div class="dropdown-introduce">
+            <div class="introduce-yourself content-block-property">
+            </div>
         </div>
-             
-            <div class="dropdown-introduce">
-                <div class="introduce-yourself content-block-property">
-                </div>
+        
+        <div class="dropdown-thread">
+            <div class="thread-repaire content-block-property content-block-property">
             </div>
-            
-            <div class="dropdown-thread">
-                <div class="thread-repaire content-block-property content-block-property">
-                </div>
-            </div>
+        </div>
             
     </div>
 </template>
 
 <script>
 
+import banner from '../../common/banner/Banner_v1'
+
 export default {
+    components: {banner},
     data () {
         return {
             hover: false,

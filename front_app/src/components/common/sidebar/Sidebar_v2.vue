@@ -45,7 +45,7 @@
 
 .sidebar-root {
     position: fixed;
-    z-index: 1;
+    z-index: 2021;
     height: 100vh;
     width: 200px;
     transition: transform 500ms ease-out, 
