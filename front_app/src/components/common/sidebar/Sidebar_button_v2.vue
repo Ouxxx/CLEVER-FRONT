@@ -36,8 +36,9 @@ export default {
     },
     methods: {
         move () {
-            console.log(this)
-            if(this.moveTo != ''){
+            if(this.moveTo != '' && this.moveTo != this.$route.fullPath){
+                console.log('this.moveTo = ' + this.moveTo)
+                console.log(this)
                 this.$router.push(this.moveTo)
             }
         },

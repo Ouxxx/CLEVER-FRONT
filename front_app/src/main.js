@@ -39,6 +39,24 @@ const router = new VueRouter({
       }
     ]
   },{
+    path: '/parametres',
+    component: require('./components/parametres/Parametre_v1').default,
+    children: [
+      {
+        path: 'account',
+        component: require('./components/parametres/account/Account_v1').default,
+      },{
+        path: 'privacy',
+        component: require('./components/parametres/privacy/Privacy_v1').default,
+      },{
+        path: 'security',
+        component: require('./components/parametres/security/Security_v1').default,
+      },{
+        path: 'payments',
+        component: require('./components/parametres/payments/Payments_v1').default,
+      }
+    ]
+  },{
     path: '/create/user',
     component: require('./components/create_user/Create_user_v1').default,
     children: [
