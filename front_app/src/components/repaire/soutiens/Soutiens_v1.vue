@@ -96,7 +96,7 @@ export default {
 
 @media screen and (min-width: 1200px){
     .soutiens-root {
-        margin: 0 auto;
+        margin: 100px auto;
         width: 1000px;
     }    
 }

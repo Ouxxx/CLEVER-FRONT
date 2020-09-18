@@ -15,7 +15,7 @@
                 <sidebar-button name="Favoris" moveTo="/favoris" :selected="$route.matched[0].path === '/favoris'">
                     <img class="button-img" src="../../../assets/img/forms_bouton.png" alt="Favoris">
                 </sidebar-button>
-                <sidebar-button name="Paramètres" moveTo="" >
+                <sidebar-button name="Paramètres" moveTo="/parametres/account" :selected="$route.matched[0].path === '/parametres'">
                     <img class="button-img" src="../../../assets/img/forms_bouton.png" alt="Paramètres">
                 </sidebar-button>
             </div>
