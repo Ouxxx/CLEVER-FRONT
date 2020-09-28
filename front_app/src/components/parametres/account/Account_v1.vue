@@ -32,12 +32,11 @@
                 <td><p>Membre depuis :</p></td>
                 <td><p>11/09/2020</p></td>
             </tr>
-            <tr>
-                <td></td><td></td>
-                <td><p class="clickable" @click="changePhone()">Supprimer mon compte</p></td>
-            </tr>
+            <br><br><br>
+            <tr><td><p class="clickable">Supprimer mon compte</p></td></tr>
         </table>
-
+        
+        
 
     </div>
 </template>
@@ -47,13 +46,16 @@
 export default {
     methods : {
         changePassword () {
-            console.log("Vous tentez de changeer votre mot de passe.")
+            console.log("Vous tentez de changer votre mot de passe.")
         },
         changeEmail () {
-            console.log("Vous tentez de changeer votre Email.")
+            console.log("Vous tentez de changer votre Email.")
         },
         changePhone () {
-            console.log("Vous tentez de changeer votre numéro de télephone.")
+            console.log("Vous tentez de changer votre numéro de télephone.")
+        },
+        deleteAccount () {
+            console.log("Vous tentez de supprimer votre compte")
         }
     }
 }
@@ -79,11 +81,11 @@ export default {
     margin: auto
 }
 
-.account-root p {
-    color: white;
-    margin: 10px 50px ;
+table p {
+    margin: 10px 50px;
 }
 .clickable {
+    cursor: pointer;
     text-decoration: underline;
 }
 

@@ -3,7 +3,7 @@
         <ch-sidebar></ch-sidebar>
         <ch-header> 
             <ch-header-button @button-selected="move('/parametres/account')" 
-                    buttonName="Compte" :selected="fullPath === '/parametres/account'" />
+                    buttonName="Compte" :selected="$route.fullPath === '/parametres/account'" />
             <ch-header-button @button-selected="move('/parametres/privacy')" 
                     buttonName="Confidentialité" :selected="$route.fullPath === '/parametres/privacy'" />
             <ch-header-button @button-selected="move('/parametres/security')" 
@@ -42,6 +42,8 @@ export default {
 
 .param-root {
     background: url("../../assets/fonds/background_home_v1.png") no-repeat fixed;
+
+
     min-height: 100vh;
     position: relative;
 }

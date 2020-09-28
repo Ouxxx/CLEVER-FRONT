@@ -36,7 +36,7 @@ Afin de créer une expérience d'achat la plus complète possible, nous avons mi
  
 dans votre **Repaire**. Puis cliquez sur la **Barre de points** à droite du contenu obtenu. Sélectionnez **Evaluer** et commencez votre évaluation.
 
-Pour palier à l'absence de notation, le système d'évaluations prévoit d'attribuer une note positive de 5 étoiles par défaut. Vous pouvez modifier cette note à tout moment en retournant sur les commentaires sous le contenu obtenu.
+Pour palier à l'absence de notation, le système d'évaluation prévoit d'attribuer une note positive de 5 étoiles par défaut. Vous pouvez modifier cette note à tout moment en retournant sur les commentaires sous le contenu obtenu.
 A droite de votre commentaire vous trouverez une icône **Crayon**, cliquez dessus et modifier votre notation.
 
 ### Puis-je entrer en contact avec un Hero ?

@@ -40,6 +40,10 @@ h1 {
     font-weight: normal;
 }
 
+p {
+  color: white;
+}
+
 #app {
   min-height: 100vh;
 
