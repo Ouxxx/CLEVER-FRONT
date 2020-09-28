@@ -41,9 +41,7 @@ export default {
 <style scoped>
 
 .param-root {
-    background: url("../../assets/fonds/background_home_v1.png") no-repeat fixed;
-
-
+    background-color: rgb(0,10,26);
     min-height: 100vh;
     position: relative;
 }

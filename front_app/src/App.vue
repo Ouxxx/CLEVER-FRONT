@@ -28,7 +28,7 @@ body {
     margin: 0;
     min-height: 100vh;
 }
-
+/* Anienne version
 h1 {
     background-color: rgb(22,24,35);
     font-size: 1.35em;
@@ -39,6 +39,25 @@ h1 {
     margin-bottom: 20px;
     font-weight: normal;
 }
+*/
+h1 {
+    font-size: 1.35em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(168,135,75);
+    text-transform: uppercase;
+    border-bottom-style: solid;
+    border-width: 1px;
+    padding: 0px 0px 7px 15px;
+    margin: 30px 0px 20px 55px;
+    width: 60%;
+}
+
+
+
+h1::first-letter {
+  font-size: 1.5em;
+}
+
 
 p {
   color: white;
