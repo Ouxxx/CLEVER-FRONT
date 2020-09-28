@@ -51,9 +51,6 @@ h1 {
     margin: 30px 0px 20px 55px;
     width: 60%;
 }
-
-
-
 h1::first-letter {
   font-size: 1.5em;
 }
