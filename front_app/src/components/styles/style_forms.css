@@ -1,7 +1,7 @@
 
 .root-newmbr {
-    background: url("./../../assets/fonds/background_forms_v2.png") no-repeat center fixed;
-
+    background: url("./../../assets/fonds/FondV1essai.png") no-repeat center fixed;
+    background-size: cover;
     min-height: 100vh;
 }
 
