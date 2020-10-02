@@ -65,7 +65,7 @@
 .form-label-radio{
     display: inline-block;
     /* color: #00e4ff; */
-    color: darkcyan;
+    color: rgb(48, 255, 21);
     height: 40px;
     margin-top: 20px;
     font-size: 20px;
@@ -76,7 +76,7 @@
 .form-label {
     display: block;
     /* color: #00e4ff; */
-    color: darkcyan;
+    color: rgb(10, 196, 222);
     height: 20px;
     transition: transform 150ms ease-out, font-size 150ms ease-out
 }
@@ -94,7 +94,7 @@
     font-size: 20px;
     border: 1px;
     /* box-shadow: 0 1px 0 0 #00e4ff; */
-    box-shadow: 0 1px 0 0 darkcyan;
+    box-shadow: 0 1px 0 0 rgb(10, 196, 222);
     padding: 10px 0 5px 0;
 }
 .form-input:focus {
@@ -120,7 +120,7 @@
     margin-left: 10px;
     padding: 5px;
 
-    background-color: rgba(53, 75, 94, 0.9);
+    background-color: rgba(94, 53, 87, 0.9);
     border-style: solid;
     border-width:2px;
     border-color: white;
@@ -145,8 +145,8 @@
 
 .form-label-date {
     display: inline-block;
-    color: darkcyan;
-    box-shadow: 0 1px 0 0 darkcyan;
+    color: rgb(10, 196, 222);
+    box-shadow: 0 1px 0 0 rgb(10, 196, 222);
     margin-right:20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
     font-size: 20px;
@@ -161,13 +161,13 @@
 
 .form-date-select{
     display: inline-block;
-    color: darkcyan;
+    color: rgb(10, 196, 222);
     font-family: 'Times New Roman',Cambria, Cochin, Georgia, Times, serif; 
     font-size: 20px;
     margin-left: 10px;
     background-color: transparent;
     border: hidden;
-    box-shadow: 0 1px 0 0 darkcyan;
+    box-shadow: 0 1px 0 0 rgb(10, 196, 222);
 }
 
 .form-button-ok {
