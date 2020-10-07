@@ -58,10 +58,6 @@
             <p>Suivant</p>
         </button>
 
-        
-
-
-
     </div>
 </template>
 
@@ -78,29 +74,30 @@ export default {
 
     data () {
         return {
-            // data associe au champs 'adresse mail'
+            // data associee au champs 'adresse mail'
             savedEmail: '',
             isValidEmail: false,
 
-            // data associe au champs 'mot de passe'
+            // data associee au champs 'mot de passe'
             savedPassword: '',
             isValidPwd:false,
 
-            // data associe au champs 'confirmation de mot de passe'
+            // data associee au champs 'confirmation de mot de passe'
             savedSamePwd: '',
 
-            // data associe au champs 'telephone'
+            // data associee au champs 'telephone'
             savedPhone: '',
             isValidPhone: false,
 
             //TO DO: Envoi BDD du genre
-            picked:'nothing',
+            // data associee au champs 'genre'
+            savedGender: '',
 
-            // data associe au champs 'date de naissance'
+            // data associee au champs 'date de naissance'
             savedBirthday: '',
             isValidBirthday: false,
 
-            // data associe au champs 'code postal'
+            // data associee au champs 'code postal'
             savedZip: '',
             isValidZip: false,
         }
@@ -127,7 +124,6 @@ export default {
             this.savedPhone = phone.value
             this.isValidPhone = phone.isValid
         },
-    
         saveZip (zip) {
             this.savedZip = zip.value
             this.isValidZip = zip.isValid
@@ -136,8 +132,9 @@ export default {
             this.savedBirthday = date.value
             this.isValidBirthday = date.isValid
         },
-        
-
+        saveGender (genre) {
+            this.savedGender = genre.value
+        },
 
         postForm () {
 
@@ -150,7 +147,7 @@ export default {
                     phone: this.savedPhone,
                     zip: this.savedZip,
                     birthday: this.savedBirthday,
-                    gender: this.picked
+                    genderPicked: this.savedGender
                 }
             })
 
@@ -167,7 +164,7 @@ export default {
             })
             .catch(error => {
                  // TODO : afficher une erreur pour le client
-                console.log(error);            
+                console.log(error+'pipicaca');            
             })
         }
     },
@@ -177,8 +174,7 @@ export default {
         isButtonDisable () {
             return !(this.isValidEmail && this.isValidPwd && this.isValidPhone 
                 && this.isValidBirthday && this.isValidZip 
-                && this.savedPassword === this.savedSamePwd 
-                && (this.picked === "Femme" || this.picked === "Homme"))
+                && this.savedPassword === this.savedSamePwd)
         } 
         
 

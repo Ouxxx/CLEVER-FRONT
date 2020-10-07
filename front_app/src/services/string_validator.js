@@ -41,7 +41,7 @@ export default {
         return regexzip.test(zip)
     },
 
-    /* Renvoie true si la chaine correspond a un code postal, false sinon */
+    /* Renvoie true si la chaine correspond a un code correct (phone/email), false sinon */
     testCode (code) {
         var regexcode =/^\d{10}$/;
         return regexcode.test(code)
