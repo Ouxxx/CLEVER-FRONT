@@ -41,7 +41,7 @@
             event="genderPicked">
         </input-gender>
 
-        <div class="radio">
+        <!--  <div class="radio">
             <input type="radio" id="two" value="Femme" name="gender" checked>
                 <label for="two">Femme</label>
         </div>
@@ -52,7 +52,7 @@
         <div class="radio3">
             <input type="radio" id="one" value="Homme" name="gender">
                 <label for="three">Autre</label>
-        </div>
+        </div> -->
 
         <button class="form-button-ok" @click="postForm()"  v-bind:disabled="isButtonDisable" >
             <p>Suivant</p>
@@ -95,32 +95,6 @@ export default {
 
             //TO DO: Envoi BDD du genre
             picked:'nothing',
-
-
-            //savedGender:''
-            //value: ''
-            /*<input class="form-input" :id="this.inputId" :type="inputType"
-                v-model="value" ref="input" :class="{'form-invalid-input': error}"
-                @focus="focusInputTransition()" @blur="blurInputTransition()" >
-            <div class="form-label-radio">
-                <input type="radio"
-                name="gender"
-                value="homme">
-                <label for="choice1">Homme</label>
-            </div>
-            <div class="form-label-radio">
-                <input type="radio"
-                    name="gender"
-                    value="femme">
-                <label for="choice2">Femme</label>
-            </div>
-            <div class="form-label-radio">
-                <input type="radio"
-                    name="gender"
-                    value="autre">
-                <label for="choice3">Autre</label>
-            </div>
-        </input>*/
 
             // data associe au champs 'date de naissance'
             savedBirthday: '',
