@@ -37,14 +37,28 @@
             event="zip" @zip="saveZip" >
         </input-form>
 
+        <input-gender info-label="Genre :" 
+            event="genderPicked">
+        </input-gender>
+
+        <div class="radio">
+            <input type="radio" id="two" value="Femme" name="gender" checked>
+                <label for="two">Femme</label>
+        </div>
+        <div class="radio2">
+            <input type="radio" id="one" value="Homme" name="gender">
+                <label for="one">Homme</label>
+        </div>
+        <div class="radio3">
+            <input type="radio" id="one" value="Homme" name="gender">
+                <label for="three">Autre</label>
+        </div>
+
         <button class="form-button-ok" @click="postForm()"  v-bind:disabled="isButtonDisable" >
             <p>Suivant</p>
         </button>
 
-        <input type="radio" id="two" value="Femme" name="gender" v-model="picked">
-            <label for="two">Femme</label>
-        <input type="radio" id="one" value="Homme" name="gender" v-model="picked">
-            <label for="one">Homme</label>
+        
 
 
 
@@ -55,11 +69,12 @@
 
 import inputForm from './../inputs/input_form_v1'
 import inputDate from './../inputs/input_date_v1'
+import inputGender from './../inputs/input_gender_v1'
 
 const axios = require('axios').default
 
 export default {
-    components: { inputForm, inputDate },
+    components: { inputForm, inputDate, inputGender },
 
     data () {
         return {

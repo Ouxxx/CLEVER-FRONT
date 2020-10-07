@@ -10,7 +10,7 @@
         </div>
         <div class="form-title-div">
             <p class="form-title-text form-title-text-tl">
-                <span class="form-title-text form-title-text-hd">D</span>EVENEZ UN HÉRO MAINTENANT</p>
+                <span class="form-title-text form-title-text-hd">D</span>EVENEZ UN HERO MAINTENANT</p>
             <hr class="form-title-line-hr">
         </div>
         <router-view ></router-view>

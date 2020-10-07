@@ -18,6 +18,7 @@
     text-align: center;
     padding-top: 50px;
 }
+
 .form-logo-img {
     height: 100px;
 }
@@ -25,6 +26,7 @@
 .form-title-div {
     text-align: center;
 }
+
 .form-title-text {
     color: aliceblue;
     font-size: 2em;
@@ -62,20 +64,13 @@
     height: 70px;
 }
 
-.form-label-radio{
-    display: inline-block;
-    /* color: #00e4ff; */
-    color: rgb(48, 255, 21);
-    height: 40px;
-    margin-top: 20px;
-    font-size: 20px;
-    margin-right: 40px;
-
+.radio, .radio2, .radio3 {
+    color: rgb(10, 196, 222);
+    margin-bottom: 10px;
 }
 
 .form-label {
     display: block;
-    /* color: #00e4ff; */
     color: rgb(10, 196, 222);
     height: 20px;
     transition: transform 150ms ease-out, font-size 150ms ease-out
@@ -106,7 +101,6 @@
     display: inline-block;
     z-index: 1;
     height: 20px;
-    /* width: 20px; */
     transform: translate(-20px,0)
 
 }
@@ -143,7 +137,7 @@
     color: #be1e37;
 }
 
-.form-label-date {
+.form-label-date, .form-label-gender {
     display: inline-block;
     color: rgb(10, 196, 222);
     box-shadow: 0 1px 0 0 rgb(10, 196, 222);
@@ -155,11 +149,11 @@
     height: 20px;
 }
 
-.form-date {
+.form-date, .form-gender {
     display: inline-block
 }
 
-.form-date-select{
+.form-date-select, .form-gender-select {
     display: inline-block;
     color: rgb(10, 196, 222);
     font-family: 'Times New Roman',Cambria, Cochin, Georgia, Times, serif; 
