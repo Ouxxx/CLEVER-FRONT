@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <div v-else>
-                    <div class="header-connexion">
+                    <div class="header-connexion" @click="goHome()">
                         <p>Connexion</p>
                     </div>
                     
