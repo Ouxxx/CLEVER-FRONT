@@ -1,7 +1,7 @@
 <template>
     <div class="security-root">
         <div class="section">
-            <p>Multi-validation:</p>
+            <p>Multi-validations :</p>
             <table>
                 <tr>
                     <td class="security-question"><p>SMS</p></td>
@@ -68,11 +68,11 @@ export default {
                 {
                     'name' : 'SukiHome',
                     'lastConnexion' : '14/09/2020',
-                    'localisation' : 'Montrouge'
+                    'localisation' : 'Mars'
                 },{
                     'name' : 'SukiPhone',
                     'lastConnexion' : '26/09/2020',
-                    'localisation' : 'Montrouge'
+                    'localisation' : 'Mars'
                 }
             ],
             connexions : [
@@ -80,12 +80,12 @@ export default {
                     'id' : '14092020',
                     'name' : 'SukiHome',
                     'date' : '14/09/2020',
-                    'localisation' : 'Montrouge'
+                    'localisation' : 'Mars'
                 },{
                     'id' : '26092020',
                     'name' : 'SukiPhone',
                     'date' : '26/09/2020',
-                    'localisation' : 'Montrouge'
+                    'localisation' : 'Mars'
                 }
             ]
         }

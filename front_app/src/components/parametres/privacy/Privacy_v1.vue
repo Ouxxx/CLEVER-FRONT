@@ -4,7 +4,7 @@
             <p>Si vous choisissez de ne plus recevoir de mail/SMS de notre part, vous ne serez plus éligible à la sécurité par multi-validation.</p>
             <table>
                 <tr>
-                    <td class="privacy-question"><p>Recevoir des mail de CleverHero</p></td>
+                    <td class="privacy-question"><p>Recevoir les e-mails de CleverHero</p></td>
                     <td>
                         <div class="centered"><switch-button /></div>
                     </td>

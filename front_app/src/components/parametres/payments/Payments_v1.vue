@@ -45,7 +45,7 @@ export default {
                     'paymentName' : '****-2000',
                 },{
                     'type' : 'Paypal',
-                    'paymentName' : 'adressemailassociée@blabla.fr',
+                    'paymentName' : 'adressemailassociee@blabla.fr',
                 }
             ],
             purchases : [
@@ -54,13 +54,13 @@ export default {
                     'methodePaiement' : 'Visa',
                     'contenu' : 'SukiHome',
                     'date' : '14/09/2020',
-                    'montant' : '13.20'
+                    'montant' : '13.20'+'€'
                 },{
                     'id' : '14092020',
                     'methodePaiement' : 'Visa',
                     'contenu' : 'SukiHome',
                     'date' : '14/09/2020',
-                    'montant' : 'Montrouge'
+                    'montant' : '16,96'+'€'
                 }
             ]
         }

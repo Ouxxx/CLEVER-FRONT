@@ -11,7 +11,7 @@
             </tr>
             <tr>
                 <td><p>Prénom :</p></td>
-                <td><p>Sukiru Kokoro</p></td>
+                <td><p>Sukiru</p></td>
             </tr>
             <tr>
                 <td><p>Mot de passe :</p></td>
