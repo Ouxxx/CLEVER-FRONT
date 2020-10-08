@@ -34,8 +34,8 @@ const router = new VueRouter({
         path: 'soutiens',
         component: require('./components/repaire/soutiens/Soutiens_v1').default,
       },{
-        path: 'historique/achats',
-        component: require('./components/repaire/historique_achats/Historique_des_achats_v1').default,
+        path: 'media',
+        component: require('./components/repaire/media/media_v1').default,
       }
     ]
   },{

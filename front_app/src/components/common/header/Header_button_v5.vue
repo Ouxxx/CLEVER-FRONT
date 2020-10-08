@@ -38,7 +38,7 @@ export default {
     padding: 0 15px;
 }
 .ch-header-button-selected {
-    background: linear-gradient(rgb(255,255,255,0.10), rgb(255,255,255,0));
+    background: linear-gradient(rgba(194, 190, 190, 0.1), rgb(255,255,255,0));
 }
 
 .ch-header-p{

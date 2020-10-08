@@ -12,8 +12,7 @@
             <p>{{ description }}</p>
         </div>
         <div class="gestions">
-            <img class="button-img" src="../../../assets/img/forms_bouton.png" alt="Notifications">
-            <img class="button-img" src="../../../assets/img/forms_bouton.png" alt="Supprimer">
+            <img class="button-img" src="../../../assets/rendus/MonRepaire/a_ObjetsCommuns/barre3pointsblancs.png" alt="Menu">
         </div>
     </div>
 </template>
@@ -103,8 +102,8 @@ export default {
 }
 
 .button-img {
-    width: 40px;
-
+    width: 8px;
+    height: 20px;
 }
 
 </style>

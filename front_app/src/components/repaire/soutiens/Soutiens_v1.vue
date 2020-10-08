@@ -4,9 +4,9 @@
             <div class="soutiens-functions">
                 <div class="soutiens-sort">
                     <select class="ch-select" v-model="sorting">
-                        <option value="date">date</option>
-                        <option value="matricul">matricule</option>
-                        <option value="news">nouveauté</option>
+                        <option value="date">Date</option>
+                        <option value="matricul">Matricule</option>
+                        <option value="news">Nouveautés</option>
                     </select>
                 </div>
             </div>

@@ -9,6 +9,7 @@
             </div>
             <div class="header-right" >
                 <div v-if="$store.getters.getToken">
+                    <div class="exit-button" @click="goWelcome()"></div>
                     <div class="header-avatar" >
                         <div class="header-avatar-img" >
                             <img src="../../../assets/img/avatar-circle-user.png" alt="avatar" >
@@ -19,7 +20,7 @@
                     </div>
                 </div>
                 <div v-else>
-                    <div class="header-connexion" @click="goHome()">
+                    <div class="header-connexion" @click="goWelcome()">
                         <p>Connexion</p>
                     </div>
                     
@@ -42,6 +43,9 @@ export default {
     },
     methods: {
         goHome () {
+            this.$router.push('/home')
+        },
+        goWelcome () {
             this.$router.push('/')
         }
     }
@@ -82,6 +86,20 @@ export default {
     border-style: solid;
     border-color: rgb(0, 0, 0);
     border-radius: 6px;
+}
+
+.exit-button {
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 30px;
+    float: left;
+    height: 20px;
+    width: 20px;
+    background: red;
+    -ms-transform: rotate(45deg); /* Internet Explorer */
+    -moz-transform: rotate(45deg); /* Firefox */
+    -webkit-transform: rotate(45deg); /* Safari et Chrome */
+    -o-transform: rotate(45deg); /* Opera */
 }
 
 .header-right {

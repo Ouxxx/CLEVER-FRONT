@@ -10,6 +10,8 @@
                     buttonName="Dashboard" :selected="$route.fullPath === '/'" />
             <ch-header-button @button-selected="move('/repaire/soutiens')" 
                     buttonName="Mes soutiens" :selected="$route.fullPath === '/repaire/soutiens'" />
+            <ch-header-button @button-selected="move('/repaire/media')" 
+                    buttonName="Médiathèque" :selected="$route.fullPath === '/repaire/media_v1'" />
         </ch-header>
 
         <div class="repaire-content">
