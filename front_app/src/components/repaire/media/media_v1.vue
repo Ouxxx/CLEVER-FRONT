@@ -1,16 +1,39 @@
 <template>
-    <div class="container">
-        <img class="image" :src='image' alt="">
-        <div class="overlay">
-            <div class="text" >
-                <p>{{ this.description }}</p>
+    <div class='media-root'>
+        <div v-if="soutiens.length > 0">
+            <div class="media-functions">
+                <div class="search-bar">
+                </div>
+
+                <div class="media-sort">
+                    <select class="media-select" v-model="sorting">
+                        <option value="date">Date</option>
+                        <option value="matricul">Matricule</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="container">
+                <img class="image" :src='image' alt="">
+                <div class="overlay">
+                    <div class="text" >
+                        <p>{{ this.description }}</p>
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
 </template>
 
 <script>
 export default {
+    data () {
+        return {
+            sorting : 'date'
+        }
+    },
+    
     props: {
         image: {
             type: String,
@@ -23,10 +46,39 @@ export default {
             default: 'coucou momo !'
         }
     }
+    
 }
 </script>
 
 <style scoped>
+
+@media screen and (max-width: 1200px){
+    .media-root {
+        margin: 100px auto 0;
+        width: 80%;
+    }    
+}
+
+@media screen and (min-width: 1200px){
+    .media-root {
+        margin: 100px auto;
+        width: 1000px;
+    }    
+}
+
+.media-functions {
+    margin: 20px 40px;
+    text-align: right;
+}
+
+.media-select {
+    background-color: transparent;
+    color : rgba(218,165, 32, 1);
+    border-style: solid;
+    border-color: rgba(218,165, 32, 1);
+    font-size: 1.1em;
+    padding: 5px;
+}
 
 .container {
   position: relative;

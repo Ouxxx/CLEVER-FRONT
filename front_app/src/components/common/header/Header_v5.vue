@@ -9,7 +9,7 @@
             </div>
             <div class="header-right" >
                 <div v-if="$store.getters.getToken">
-                    <div class="exit-button" @click="goWelcome()"></div>
+                    <button class="exit-button" @click="goWelcome()">Bye Bitches</button>
                     <div class="header-avatar" >
                         <div class="header-avatar-img" >
                             <img src="../../../assets/img/avatar-circle-user.png" alt="avatar" >
@@ -89,18 +89,20 @@ export default {
 }
 
 .exit-button {
-    cursor: pointer;
-    margin-top: 10px;
-    margin-right: 30px;
     float: left;
-    height: 20px;
-    width: 20px;
-    background: red;
-    -ms-transform: rotate(45deg); /* Internet Explorer */
-    -moz-transform: rotate(45deg); /* Firefox */
-    -webkit-transform: rotate(45deg); /* Safari et Chrome */
-    -o-transform: rotate(45deg); /* Opera */
+    margin-top: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    border-color: #f44336;
+    color: white;
+    background-color: rgb(4, 32, 78);
 }
+
+.exit-button:hover {
+    background: #f44336;
+    color: whitesmoke;
+}
+
 
 .header-right {
     padding: 0 10px;
