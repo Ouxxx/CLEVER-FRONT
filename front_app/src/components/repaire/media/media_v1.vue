@@ -27,9 +27,7 @@ export default {
 </script>
 
 <style scoped>
-.allcontainers {
-   
-}
+
 .container {
   position: relative;
   width: 50%;
