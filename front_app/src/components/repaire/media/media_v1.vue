@@ -1,10 +1,8 @@
 <template>
     <div class='media-root'>
-        <div v-if="soutiens.length > 0">
+        
             <div class="media-functions">
-                <div class="search-bar">
-                </div>
-
+                <input type="text" name="search" placeholder="Rechercher un contenu plus rapidement">
                 <div class="media-sort">
                     <select class="media-select" v-model="sorting">
                         <option value="date">Date</option>
@@ -21,7 +19,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+       
 
     </div>
 </template>
@@ -67,11 +65,24 @@ export default {
 }
 
 .media-functions {
+    display: flex;
     margin: 20px 40px;
-    text-align: right;
+    
+}
+
+input[type=text] {
+    text-align: center;
+    width: 280px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
 }
 
 .media-select {
+    float:right;
     background-color: transparent;
     color : rgba(218,165, 32, 1);
     border-style: solid;
@@ -85,7 +96,7 @@ export default {
   width: 50%;
 }
 
-.image, .image2 {
+.image {
   width: 200px;
   height: 300px;
 }
