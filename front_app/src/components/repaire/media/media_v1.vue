@@ -1,9 +1,9 @@
 <template>
-    <div class="allcontainers">
-        <div class="container">
-            <img src="../../../assets/img/livre_img_default.png" alt="" class="image">
-            <div class="overlay">
-                <div class="text">TO DO : Description du contenu à raccorder</div>
+    <div class="container">
+        <img class="image" :src='image' alt="">
+        <div class="overlay">
+            <div class="text" >
+                <p>{{ this.description }}</p>
             </div>
         </div>
     </div>
@@ -11,7 +11,18 @@
 
 <script>
 export default {
-    
+    props: {
+        image: {
+            type: String,
+            required: false,
+            default: require('@/assets/img/livre_img_default.png')
+        },
+        description:{
+            type: String,
+            required: true,
+            default: 'coucou momo !'
+        }
+    }
 }
 </script>
 
