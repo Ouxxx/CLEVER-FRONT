@@ -38,8 +38,8 @@ export default {
     data () {
         return {
             sorting : 'date',
-            /* soutiens est un tableaux qui contiendra l'ensemble des utilisateurs soutenus
-               un souutien { matricul, avatar, description, some_news, since}
+            /* soutiens est un tableau qui contiendra l'ensemble des utilisateurs soutenus
+               un soutien { matricul, avatar, description, some_news, since}
                (some news devra contenir une date pour trier par nouveauté */
             soutiens : [
                 {
