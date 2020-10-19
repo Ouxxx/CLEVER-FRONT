@@ -154,19 +154,19 @@ input[type=text]:focus {
 
 .search-bar {
     flex: 1 1 auto;
-    text-align: center;
+    text-align: right;
 }
 
 .media-sort {
-    margin: 0 150px 20px 0;
-    
+    margin: 0 180px 20px 0px;
+    padding-top: 20px;
 }
 
 .btn {
   background-color: rgba(218,165, 32, 1);
   color: white;
   padding: 12px;
-  font-size: 16px;
+  font-size: 15px;
   border: none;
   outline: none;
 }
