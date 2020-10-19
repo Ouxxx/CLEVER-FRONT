@@ -134,19 +134,6 @@ export default {
     }    
 }
 
-.media-functions {
-    display: inline;
-}
-
-.media-sort {
-    float:center;
-}
-
-.search-bar {
-    display: inline;
-    
-}
-
 input[type=text] {
     text-align: center;
     height: 40px;
