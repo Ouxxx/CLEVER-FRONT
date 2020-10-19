@@ -15,8 +15,8 @@
                             <div class="fa fa-caret-down"></div>
                         </button>
                         <div class="dropdown-content">
-                            <a href="#">Date</a>
-                            <a href="#">Matricule</a>
+                            <div class="#">Date</div>
+                            <div class="#">Matricule</div>
                         </div>
                     </div>
                 </div>  
@@ -135,6 +135,7 @@ export default {
 }
 
 input[type=text] {
+    cursor: pointer;
     text-align: center;
     height: 40px;
     width: 280px;
@@ -143,6 +144,7 @@ input[type=text] {
 }
 
 input[type=text]:focus {
+    cursor: pointer;
     width: 60%;
 }
 
@@ -158,17 +160,19 @@ input[type=text]:focus {
 }
 
 .media-sort {
+    cursor: pointer;
     margin: 0 180px 20px 0px;
     padding-top: 20px;
 }
 
 .btn {
-  background-color: rgba(218,165, 32, 1);
-  color: white;
-  padding: 12px;
-  font-size: 15px;
-  border: none;
-  outline: none;
+    cursor: pointer;
+    background-color: rgba(218,165, 32, 1);
+    color: white;
+    padding: 12px;
+    font-size: 15px;
+    border: none;
+    outline: none;
 }
 
 .dropdown {
@@ -184,16 +188,16 @@ input[type=text]:focus {
   z-index: 1;
 }
 
-.dropdown-content a {
+.dropdown-content div {
   color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
-.dropdown-content a:hover {
-    background-color: white;
-    color: black;
+.dropdown-content div:hover {
+    background-color: rgba(105, 68, 12, 0.6);
+    color: white;
 }
 
 .dropdown:hover .dropdown-content {
@@ -203,15 +207,5 @@ input[type=text]:focus {
 .btn:hover {
   background-color: rgba(218,165, 32, 0.6);
 }
-
-/*.media-select {
-    float:right;
-    background-color: transparent;
-    color : rgba(218,165, 32, 1);
-    border-style: solid;
-    border-color: rgba(218,165, 32, 1);
-    font-size: 1.1em;
-    padding: 5px;
-}*/
 
 </style>
