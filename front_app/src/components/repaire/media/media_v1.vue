@@ -2,7 +2,7 @@
     <div class='media-root'>
         <div class= "media-functions">
 
-            <div class="search-bar" align="center">
+            <div class="search-bar">
                 <input type="text" name="search" placeholder="Rechercher un contenu plus rapidement...">
             </div>
                 
@@ -146,10 +146,26 @@ input[type=text]:focus {
     width: 60%;
 }
 
+.media-functions {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.media-sort {
+    margin: 0 150px 20px 0;
+    
+}
+
 .btn {
   background-color: rgba(218,165, 32, 1);
   color: white;
-  padding: 16px;
+  padding: 12px;
   font-size: 16px;
   border: none;
   outline: none;
