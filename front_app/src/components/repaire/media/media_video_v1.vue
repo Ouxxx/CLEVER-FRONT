@@ -10,8 +10,8 @@
             <div class="media-sort">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                 <button class="btn" @click="gotovideo()">Vidéo</button>
-                <button class="btn" @click="gotoecrit()">Ecrit</button>
-                <button class="btn" @click="gotoimage()">Image</button>
+                <button class="btn">Ecrit</button>
+                <button class="btn">Image</button>
                 <div class="dropdown">
                     <button class="btn" style="border-left:1px solid navy">
                         <div class="fa fa-caret-down"></div>
@@ -54,14 +54,14 @@ import chVideo from '../../common/video/Video_v1'
 export default {
     components: { chVideo },
     methods: {
+        gotovideo() {
+            this.$router.push('video_media')
+        },
         gotoecrit() {
-            this.$router.push('/repaire/media/ecrit')
+            this.$router.push('ecrit_media')
         },
         gotoimage() {
-            this.$router.push('/repaire/media/image')
-        },
-        gotovideo() {
-            this.$router.push('/repaire/media')
+            this.$router.push('image_media')
         }
     },
     data () {
@@ -134,14 +134,14 @@ export default {
 
 @media screen and (max-width: 1200px){
     .media-root {
-        margin: auto;
+        margin: 100px auto;
         width: 80%;
     }    
 }
 
 @media screen and (min-width: 1000px){
     .media-root {
-        margin: auto;
+        margin: 100px auto;
         width: 1000px auto;
     }    
 }

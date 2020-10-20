@@ -36,6 +36,18 @@ const router = new VueRouter({
       },{
         path: 'media',
         component: require('./components/repaire/media/media_v1').default,
+        children: [
+          {
+            path: 'video',
+            component: require('./components/repaire/media/media_video_v1').default,
+          },{
+            path: 'ecrit',
+            component: require('./components/repaire/media/media_ecrit_v1').default,
+          },{
+            path: 'image',
+            component: require('./components/repaire/media/media_image_v1').default,
+          }
+        ]
       }
     ]
   },{
