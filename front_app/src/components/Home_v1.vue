@@ -5,14 +5,15 @@
 
         <div class="home-main">
             <div style="margin-left : 100px">
+
+                <ch-list />
+
                 <ch-video v-for="video in videos" :key="video.docId" 
-                        :docid="video.docId" :title="video.title" :author="video.author" :views="video.views" 
-                        :since="video.since" :description="video.description" />
+                        :docid="video.docId" :title="video.title" :author="video.author" />
             </div>
             <div style="margin-left : 100px">
                 <ch-ecrit v-for="ecrit in ecrits" :key="ecrit.docId" 
-                        :docid="ecrit.docId" :title="ecrit.title" :author="ecrit.author" :views="ecrit.views" 
-                        :since="ecrit.since" :description="ecrit.description" />
+                        :docid="ecrit.docId" :title="ecrit.title" :author="ecrit.author" />
             </div>
             
             <element-list category="En cours de visionnage"></element-list>
@@ -32,8 +33,10 @@ import chEcrit from './common/ecrit/Ecrit_v1'
 import elementList from './blocs/list_elements_v1'
 import headerCh from './common/header/Header_v5'
 
+import chList from './common/content_list/Content_list_v1'
+
 export default {
-    components: { headerCh, sidebarCh, elementList, chVideo, chEcrit },
+    components: { headerCh, sidebarCh, elementList, chVideo, chEcrit , chList},
     data () {
         return {
             videos : [

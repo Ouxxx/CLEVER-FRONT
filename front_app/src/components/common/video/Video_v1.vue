@@ -1,5 +1,5 @@
 <template>
-    <div class="video-root">
+    <div class="video-root" :style="styleSize">
         <div class="video-background">
             <img :src="image" alt="">
         </div>
@@ -33,7 +33,20 @@ export default {
         author: {
             type: String,
             required: true
+        },
+        width: {
+            type: Number,
+            required: true
         }
+    },
+    computed : {
+        styleSize : function () {
+            return {
+                width : this.width + 'px',
+                height : this.width * 9 / 16 + 'px',
+            }
+        }       
+
     }
 }
 </script>
@@ -47,8 +60,8 @@ export default {
 }
 
 .video-background img{
-    width: 300px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
 }
 
 .video-desc {
