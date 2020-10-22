@@ -43,6 +43,8 @@ h1 {
 h1 {
     font-size: 1.35em;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: medium;
+    font-weight: lighter;
     color: rgb(168,135,75);
     text-transform: uppercase;
     border-bottom-style: solid;

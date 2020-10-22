@@ -13,8 +13,7 @@
                 <span class="form-title-text form-title-text-hd">D</span>EVENEZ UN HERO MAINTENANT</p>
             <hr class="form-title-line-hr">
         </div>
-        <router-view ></router-view>
-    
+        <router-view ></router-view> 
     </div>
 
     <div class="div-animation">
@@ -28,11 +27,6 @@
 
 export default {
 
-    data () {
-        return {
-            
-        }  
-    },
     methods : {
         goHome () {
             this.$router.push('/')

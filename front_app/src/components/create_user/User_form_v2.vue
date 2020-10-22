@@ -164,7 +164,7 @@ export default {
             })
             .catch(error => {
                  // TODO : afficher une erreur pour le client
-                console.log(error+'pipicaca');            
+                console.log(error+'probleme survenu');            
             })
         }
     },

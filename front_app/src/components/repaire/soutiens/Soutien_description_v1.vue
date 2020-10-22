@@ -11,8 +11,14 @@
         <div class="description">
             <p>{{ description }}</p>
         </div>
-        <div class="gestions">
-            <img class="button-img" src="../../../assets/rendus/MonRepaire/a_ObjetsCommuns/barre3pointsblancs.png" alt="Menu">
+        <div class="dropdown">
+            <button class="btn">
+                <img class="button-img" src="../../../assets/rendus/MonRepaire/a_ObjetsCommuns/barre3pointsblancs.png" alt="Menu">
+            </button>
+            <div class="dropdown-content">
+                <div class="#">Muter</div>
+                <div class="#">Ne plus soutenir</div>
+            </div>
         </div>
     </div>
 </template>
@@ -25,7 +31,7 @@ export default {
             required: true
         },
         avatar: {
-            // TODO:  je ne sais pas comment representer une image ni comment elles sont stocke pour le moment
+            // TODO:  je ne sais pas comment representer une image ni comment elles sont stockees pour le moment
             type: String
         },
         description: {
@@ -49,6 +55,20 @@ export default {
 </script>
 
 <style scoped>
+
+@media screen and (max-width: 1200px){
+    .desc-soutien-root {
+        margin: 100px;
+        width: 80%;
+    }    
+}
+
+@media screen and (min-width: 1000px){
+    .desc-soutien-root {
+        margin: 50px;
+        width: 1000px auto;
+    }    
+}
 
 .desc-soutien-root {
     display: table;
@@ -97,13 +117,63 @@ export default {
 }
 
 .gestions {
-    display: table-cell;
+    display: inline-block;
+    background-color: none;
     padding: 20px;
 }
 
 .button-img {
     width: 8px;
     height: 20px;
+}
+
+.media-sort {
+    cursor: pointer;
+    margin: 0 180px 20px 0px;
+    padding-top: 20px;
+}
+
+.btn {
+    cursor: pointer;
+    background-color:transparent;
+    color: white;
+    padding: 12px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+}
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:transparent;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content div {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content div:hover {
+    background-color: rgba(105, 68, 12, 0.6);
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.btn:hover {
+  background-color: rgba(218,165, 32, 0.6);
 }
 
 </style>

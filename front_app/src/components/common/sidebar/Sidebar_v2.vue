@@ -9,7 +9,7 @@
                 <sidebar-button name="Mon repaire" moveTo="/repaire/profil" :selected="$route.matched[0].path === '/repaire'">
                     <img class="button-img" src="../../../assets/img/forms_bouton.png" alt="Mon repaire">
                 </sidebar-button>
-                <sidebar-button name="Ajout" moveTo="" >
+                <sidebar-button name="Ajout" moveTo="/ajout" >
                     <img class="button-img" src="../../../assets/img/forms_bouton.png" alt="Ajout">
                 </sidebar-button>
                 <sidebar-button name="Favoris" moveTo="/favoris" :selected="$route.matched[0].path === '/favoris'">

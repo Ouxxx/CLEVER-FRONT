@@ -69,6 +69,9 @@ const router = new VueRouter({
       }
     ]
   },{
+    path: '/ajout',
+    component: require('./components/Ajout/ajout_v1').default,
+  },{
     path: '/create/user',
     component: require('./components/create_user/Create_user_v1').default,
     children: [

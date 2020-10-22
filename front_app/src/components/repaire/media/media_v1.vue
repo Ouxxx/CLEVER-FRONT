@@ -2,19 +2,19 @@
     <div class='media-root'> 
         
         <div class= "media-functions">
-
+            
             <div class="search-bar">
                 <input type="text" name="search" placeholder="Rechercher un contenu plus rapidement...">
             </div>
                 
             <div class="media-sort">
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                
                 <button class="btn" @click="gotovideo()">Vidéo</button>
                 <button class="btn" @click="gotoecrit()">Ecrit</button>
                 <button class="btn" @click="gotoimage()">Image</button>
                 <div class="dropdown">
                     <button class="btn" style="border-left:1px solid navy">
-                        <div class="fa fa-caret-down"></div>
+                        <img class="triangle-dropdown" src="../../../assets/rendus/MonRepaire/a_ObjetsCommuns/triangle_dropdownmenu_v2.png" alt="triangle">
                     </button>
                     <div class="dropdown-content">
                         <div class="#">Date</div>
@@ -22,16 +22,12 @@
                     </div>
                 </div>
             </div>  
-
+            
         </div>
 
+        <router-view ></router-view>
+
         <div class="container">
-            
-            <div style="margin-left : 100px">
-                <ch-video v-for="video in videos" :key="video.docId" 
-                    :docid="video.docId" :title="video.title" :author="video.author" :views="video.views" 
-                    :since="video.since" :description="video.description" />
-            </div>
 
             <!-- <img class="image" :src='image' alt="">
                 <div class="overlay">
@@ -44,15 +40,14 @@
             </select>
             </div>-->
         </div>
+
     </div>
+    
 
 </template>
 
 <script>
-import chVideo from '../../common/video/Video_v1'
-
 export default {
-    components: { chVideo },
     methods: {
         gotoecrit() {
             this.$router.push('/repaire/media/ecrit')
@@ -61,70 +56,7 @@ export default {
             this.$router.push('/repaire/media/image')
         },
         gotovideo() {
-            this.$router.push('/repaire/media')
-        }
-    },
-    data () {
-        return {
-            videos : [
-                {
-                    docId : "111",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.111",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "222",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.222",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "111",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.111",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "222",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.222",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "111",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.111",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "222",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.222",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "111",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.111",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "222",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.222",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                }
-            ]
+            this.$router.push('/repaire/media/video')
         }
     }
 }
@@ -144,6 +76,11 @@ export default {
         margin: auto;
         width: 1000px auto;
     }    
+}
+
+.triangle-dropdown {
+    height: 40%;
+    width: 40%;
 }
 
 input[type=text] {

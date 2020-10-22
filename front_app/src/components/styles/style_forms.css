@@ -21,6 +21,7 @@
 
 .form-logo-img {
     height: 100px;
+    cursor: pointer;
 }
 
 .form-title-div {
@@ -64,11 +65,6 @@
     height: 70px;
 }
 
-.radio, .radio2, .radio3 {
-    color: rgb(10, 196, 222);
-    margin-bottom: 10px;
-}
-
 .form-label {
     display: block;
     color: rgb(10, 196, 222);
@@ -77,12 +73,14 @@
 }
 .inside-input {
     padding-top: 0; 
+    cursor: pointer;
     font-size: 20px;
     height: 20px;
     transform: translateY(35px);
 }
 .form-input {
     display: inline-block;
+    cursor: pointer;
     width: 70%;
     background: transparent;
     color: aliceblue;
@@ -113,7 +111,6 @@
     width: 275px;
     margin-left: 10px;
     padding: 5px;
-
     background-color: rgba(94, 53, 87, 0.9);
     border-style: solid;
     border-width:2px;
@@ -150,11 +147,12 @@
 }
 
 .form-date, .form-gender {
-    display: inline-block
+    display: inline-block;
 }
 
 .form-date-select, .form-gender-select {
     display: inline-block;
+    cursor: pointer;
     color: rgb(10, 196, 222);
     font-family: 'Times New Roman',Cambria, Cochin, Georgia, Times, serif; 
     font-size: 20px;
@@ -166,6 +164,7 @@
 
 .form-button-ok {
     margin-top: 40px;
+    cursor: pointer;
 }
 
 .form-vertical-border {
@@ -178,7 +177,6 @@
     margin-left: 75%;
     border: none; /*on supprime le style par défaut*/
 }
-
 
 .div-animation {
     position: fixed;
