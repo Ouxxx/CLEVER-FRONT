@@ -33,7 +33,23 @@
                 <td><p>11/09/2020</p></td>
             </tr>
             <br><br><br>
-            <tr><td><p class="clickable">Supprimer mon compte</p></td></tr>
+            <!--<tr><td><p class="clickable">Supprimer mon compte</p></td></tr>-->
+            <button onclick="document.getElementById('id01').style.display='block'">Supprimer mon compte</button>
+
+            <div id="id01" class="modal">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container">
+                <h1>Suppression de compte</h1>
+                <p2>Vous allez supprimer définitivement votre compte, êtes-vous de vouloir le faire ?</p2>
+
+                <div class="clearfix">
+                    <button type="button" class="cancelbtn">Non</button>
+                    <button type="button" class="deletebtn">Oui, je supprime</button>
+                </div>
+                </div>
+            </form>
+            </div>
         </table>
         
         
@@ -89,5 +105,103 @@ table p {
     text-decoration: underline;
 }
 
+
+
+/* les boutons */
+button {
+  background-color: transparent;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  text-decoration: underline;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* les boutons annulation et supp */
+.cancelbtn, .deletebtn {
+  float: left;
+  width: 50%;
+}
+
+/* bouton annulation */
+.cancelbtn {
+  background-color: #ccc;
+  color: black;
+}
+
+/* bouton supp*/
+.deletebtn {
+  background-color: #f44336;
+}
+
+/* container */
+.container {
+  padding: 16px;
+  text-align: center;
+}
+
+/* modal */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto 15% auto; 
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* The Modal Close Button (x) MAIS PROBLEME N'APPARAIT PAS*/
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #1aaa2e;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* adaptation petits ecrans */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .deletebtn {
+    width: 100%;
+  }
+}
 
 </style>

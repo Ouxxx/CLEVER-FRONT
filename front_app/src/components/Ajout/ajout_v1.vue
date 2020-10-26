@@ -40,6 +40,7 @@
                 </label>
             </div>
             <div class="type">
+                <p>A quel genre appartient-il ?</p>
                 <div class="custom-select" style="width:200px;">
                     <select>
                         <option value="0">Architecture</option>
@@ -61,11 +62,36 @@
                     </select>
                 </div>  
             </div>
+            <div class="format">
+                <p>Quel est son support principal ?</p>
+                <label class="container">Video
+                    <input type="radio" name="radio">
+                    <span class="class"></span>
+                </label>
+                <label class="container">Ecrit
+                    <input type="radio" name="radio" >
+                    <span class="class"></span>
+                </label>
+                <label class="container">Image
+                    <input type="radio" name="radio">
+                    <span class="class"></span>
+                </label>
+            </div>
         </div>
 
         <div class="menu-middle">
-        
+            <div class="col-container">
+                <div class="col">
+                    <tr>Importer une image de présentation (optionnel)</tr>
+                    <tr>Titre :</tr>
+                    <tr>Description :</tr>
+                </div>
 
+                <div class="col">
+                    <tr>Importer une image de présentation (optionnel)</tr>
+                    <tr>Importer une image de présentation (optionnel)</tr>
+                </div>
+            </div>
         </div>
 
         <div class="menu-bottom">
@@ -85,10 +111,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
 
-
-
+<style scoped>
 @media screen and (max-width: 1200px){
     .ajout-root {
         margin: 100px auto;
@@ -103,6 +127,8 @@ export default {
     }    
 }
 
+/*top*/
+
 .repaire-root {
     background-color: rgb(0,10,26);
     min-height: 100vh;
@@ -112,12 +138,12 @@ export default {
 .repaire-content {
     padding-top: 100px;
 }
-
+.group, .type, .format {
+    margin-left: 50px;
+}
 .container {
   display: inline;
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
   cursor: pointer;
   color: white;
   font-size: 25px;
@@ -127,5 +153,32 @@ export default {
   user-select: none;
 }
 
+/*colonnes milieu*/
+
+.col-container {
+    display: table; /* Make the container element behave like a table */
+    width: 90%; /* Set full-width to expand the whole page */
+    margin-left: 50px;
+    background-color: rgb(17, 26, 41);
+    
+}
+
+.col {
+    color: white;
+    display: table-cell;
+    border-width:0.1px; 
+    border-style: solid;
+    border-color:rgba(168, 135, 75, 0.6);
+}
+
+@media only screen and (max-width: 600px) {
+  .col {
+    display: block;
+    width: 100%;
+  }
+}
+
+/*bot*/
 
 </style>
+

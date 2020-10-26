@@ -59,6 +59,13 @@ export default {
     margin: 4px;
 }
 
+.video-background img:hover {
+    position: relative;
+    z-index: 1;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
 .video-background img{
     width: 100%;
     height: 100%;
