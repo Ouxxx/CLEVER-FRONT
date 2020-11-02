@@ -38,10 +38,10 @@
 
             <div id="id01" class="modal">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <form class="modal-content" action="/action_page.php">
+            <form class="modal-content">
                 <div class="container">
                 <h1>Suppression de compte</h1>
-                <p2>Vous allez supprimer définitivement votre compte, êtes-vous de vouloir le faire ?</p2>
+                <p>Vous allez supprimer définitivement votre compte, êtes-vous sûr de vouloir le faire ?</p>
 
                 <div class="clearfix">
                     <button type="button" class="cancelbtn">Non</button>

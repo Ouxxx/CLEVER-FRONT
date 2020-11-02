@@ -70,7 +70,19 @@ const router = new VueRouter({
     ]
   },{
     path: '/ajout',
-    component: require('./components/Ajout/ajout_v1').default,
+    component: require('./components/ajout/ajout_v2').default,
+    children: [
+      {
+        path: 'video',
+        component: require('./components/ajout/ajout_video').default,
+      },{
+        path: 'ecrit',
+        component: require('./components/ajout/ajout_ecrit').default,
+      },{
+        path: 'image',
+        component: require('./components/ajout/ajout_img').default,
+      }
+    ]
   },{
     path: '/create/user',
     component: require('./components/create_user/Create_user_v1').default,

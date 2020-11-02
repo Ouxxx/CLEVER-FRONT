@@ -41,19 +41,6 @@
             event="genderPicked">
         </input-gender>
 
-        <!--  <div class="radio">
-            <input type="radio" id="two" value="Femme" name="gender" checked>
-                <label for="two">Femme</label>
-        </div>
-        <div class="radio2">
-            <input type="radio" id="one" value="Homme" name="gender">
-                <label for="one">Homme</label>
-        </div>
-        <div class="radio3">
-            <input type="radio" id="one" value="Homme" name="gender">
-                <label for="three">Autre</label>
-        </div> -->
-
         <button class="form-button-ok" @click="postForm()"  v-bind:disabled="isButtonDisable" >
             <p>Suivant</p>
         </button>
