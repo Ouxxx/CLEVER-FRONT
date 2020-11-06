@@ -33,12 +33,18 @@
                 <td><p>11/09/2020</p></td>
             </tr>
             <br><br><br>
-            <!--<tr><td><p class="clickable">Supprimer mon compte</p></td></tr>-->
+
+            <div class="container-modal"></div>
+
+            <modal v-bind:showModal="showModal" v-bind:toggleModal="toggleModal"></modal>
+            <button v-on:click="toggleModal()" class="btn btn-open">Supprimer mon compte</button>
+
+            <!--<tr><td><p class="clickable">Supprimer mon compte</p></td></tr>
             <div class="modal-delete">
-              <button class="modal-btn" @click="showModal()">Supprimer mon compte</button>
+              <button class="modal-btn" @click="openModal()">Supprimer mon compte</button>
               <modal v-show="isModalVisible" @close="closeModal()"></modal>
             </div>
-            <div class="modal-container" id="modal">
+            <div class="modal" id="modal-template">
               <transition name="modal-fade">
                 <form class="modal-fade-content">
                   <div class="container">
@@ -46,29 +52,29 @@
                     <p>Vous allez supprimer définitivement votre compte, êtes-vous sûr de vouloir le faire ?</p>
                     <div class="selected-btn">
                       <button class="cancelbtn" @click="close" type="button">Non</button>
-                      <button class="deletebtn" @click="close" type="button">Oui, je supprime</button>
+                      <button class="deletebtn" @click="deleteMessage()" type="button">Oui, je supprime</button>
                     </div>
                   </div>
                 </form>
               </transition>
             </div>
-    
-                  
+            -->
            
         </table>
     </div>
 </template>
 
 <script>
-
+import modal from './modal'
 export default {
-  data () {
+  name: 'contain',
+  data() {
     return {
-    isModalVisible: false,
+      showModal: false
     }
   },
-
-  computed: {
+  components: {
+    'modal': modal
   },
 
   methods : {
@@ -81,14 +87,8 @@ export default {
     changePhone () {
         console.log("Vous tentez de changer votre numéro de télephone.")
     },
-    deleteAccount () {
-        console.log("Vous tentez de supprimer votre compte")
-    },
-    showModal() {
-      this.isModalVisible = true;
-    },
-    closeModal() {
-      this.isModalVisible = false;
+    toggleModal() {
+      this.showModal = !this.showModal
     }
   }
 }
