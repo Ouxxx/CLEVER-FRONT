@@ -120,7 +120,12 @@
                     </textarea>
                 </div>
                 <div class="column">
+                    <div class="column-format">
                     <tr>Importer une image de présentation (optionnel)</tr>
+                    <tr>Titre de la vidéo</tr>
+                    <tr>Description de la vidéo</tr>
+                    <tr>Importer une vidéo</tr>
+                    </div>
                 </div>
             </div>
             <div class="price">Prix

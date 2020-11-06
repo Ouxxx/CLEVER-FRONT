@@ -34,48 +34,66 @@
             </tr>
             <br><br><br>
             <!--<tr><td><p class="clickable">Supprimer mon compte</p></td></tr>-->
-            <button onclick="document.getElementById('id01').style.display='block'">Supprimer mon compte</button>
-
-            <div id="id01" class="modal">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <form class="modal-content">
-                <div class="container">
-                <h1>Suppression de compte</h1>
-                <p>Vous allez supprimer définitivement votre compte, êtes-vous sûr de vouloir le faire ?</p>
-
-                <div class="clearfix">
-                    <button type="button" class="cancelbtn">Non</button>
-                    <button type="button" class="deletebtn">Oui, je supprime</button>
-                </div>
-                </div>
-            </form>
+            <div class="modal-delete">
+              <button class="modal-btn" @click="showModal()">Supprimer mon compte</button>
+              <modal v-show="isModalVisible" @close="closeModal()"></modal>
             </div>
+            <div class="modal-container" id="modal">
+              <transition name="modal-fade">
+                <form class="modal-fade-content">
+                  <div class="container">
+                    <h1>Suppression de compte</h1>
+                    <p>Vous allez supprimer définitivement votre compte, êtes-vous sûr de vouloir le faire ?</p>
+                    <div class="selected-btn">
+                      <button class="cancelbtn" @click="close" type="button">Non</button>
+                      <button class="deletebtn" @click="close" type="button">Oui, je supprime</button>
+                    </div>
+                  </div>
+                </form>
+              </transition>
+            </div>
+    
+                  
+           
         </table>
-        
-        
-
     </div>
 </template>
 
 <script>
 
 export default {
-    methods : {
-        changePassword () {
-            console.log("Vous tentez de changer votre mot de passe.")
-        },
-        changeEmail () {
-            console.log("Vous tentez de changer votre Email.")
-        },
-        changePhone () {
-            console.log("Vous tentez de changer votre numéro de télephone.")
-        },
-        deleteAccount () {
-            console.log("Vous tentez de supprimer votre compte")
-        }
+  data () {
+    return {
+    isModalVisible: false,
     }
+  },
+
+  computed: {
+  },
+
+  methods : {
+    changePassword () {
+        console.log("Vous tentez de changer votre mot de passe.")
+    },
+    changeEmail () {
+        console.log("Vous tentez de changer votre Email.")
+    },
+    changePhone () {
+        console.log("Vous tentez de changer votre numéro de télephone.")
+    },
+    deleteAccount () {
+        console.log("Vous tentez de supprimer votre compte")
+    },
+    showModal() {
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
+    }
+  }
 }
 </script>
+
 
 <style scoped>
 
