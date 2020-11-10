@@ -1,27 +1,24 @@
 <template>
-    <div class="bloc-modal" v-if="showModal">
-
-        <div class="overlay" v-on:click="toggleModal()"></div>
-        <div class="modal container" v-on:click="toggleModal">
-            <button class="btn-modal" >X</button>
-            <h2>Le contenu</h2>
+    <div class="modal-root">
+        <div class="overlay" v-on:click="$emit('close-modal')"></div>
+        <div class="modal container">
+            <button class="btn-modal" v-on:click="$emit('close-modal', modalId)">X</button>
+            <slot></slot>
         </div>
     </div>
 </template>
 
 <script>
 export default {
-    name: "Modal",
-    props : {
-        showModal: String,
-        toggleModal: String,
+    props: {
+        
     }
 }
 
 </script>
 
 <style scoped>
-.bloc-modal {
+.modal-root {
     color: white;
     display: flex;
     position: fixed;
@@ -31,6 +28,7 @@ export default {
     left: 0;
     justify-content: center;
     align-items: center;
+    
 }
 
 .overlay{
@@ -47,7 +45,7 @@ export default {
     background: white;
     color: #333;
     padding: 200px;
-    top: 40%;
+    top: 20%;
 }
 
 .btn-modal {

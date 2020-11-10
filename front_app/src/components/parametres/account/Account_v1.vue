@@ -16,50 +16,71 @@
             <tr>
                 <td><p>Mot de passe :</p></td>
                 <td><p>**********</p></td>
-                <td><p class="clickable" @click="changePassword()">Modifier mon mot de passe</p></td>
+                <td>
+                  <td>
+                  <modal v-if="modalSelected == 'change-pwd'" v-on:close-modal="closeModal">
+                    <h1>Modification de votre mot de passe</h1>
+                  
+                    <label class="mid-part" for="old-pwd">Entrez votre ancien mot de passe</label>
+                      <input type="text" id="old-pwd" name="old-pwd" required>
+                    <label class="mid-part" for="new-pwd">Entrez un nouveau mot de passe</label>
+                      <input type="text" id="new-pwd" name="new-pwd" required>
+                    <label class="mid-part" for="new-bis-pwd">Confirmez le nouveau mot de passe</label>
+                      <input type="text" id="new-bis-pwd" name="new-bis-pwd" required>
+                    <button class="validation" v-on:click="postCodePwd()">Je valide</button>
+                  </modal>
+                <div class="btn btn-open" v-on:click="openModal('change-pwd')"><p class="clickable">Modifier votre mot de passe</p></div>
+                </td>
+                
             </tr>
             <tr>
                 <td><p>E-mail :</p></td>
                 <td><p>laplusbelle@suki.fr</p></td>
-                <td><p class="clickable" @click="changeEmail()">Modifier mon adresse e-mail</p></td>
+                <td>
+                  <td>
+                  <modal v-if="modalSelected == 'change-mail'" v-on:close-modal="closeModal">
+                    <h1>Modification de votre adresse e-mail</h1>
+                    <label class="mid-part" for="new-mail">Entrez votre nouvel e-mail</label>
+                    <input type="text" id="new-mail" name="new-mail" required>
+                    <button class="validation" v-on:click="postCodeEmail()">Je valide</button>
+                  </modal>
+                <div class="btn btn-open" v-on:click="openModal('change-mail')"><p class="clickable">Modifier votre adresse e-mail</p></div>
+                </td>
+          
             </tr>
             <tr>
                 <td><p>Téléphone :</p></td>
                 <td><p>0600000000</p></td>
-                <td><p class="clickable" @click="changePhone()">Modifier mon numéro de télephone</p></td>
+                <td>
+                  <td>
+                  <modal v-if="modalSelected == 'change-tel'" v-on:close-modal="closeModal">
+                    <h1>Modification de votre numéro de téléphone</h1>
+                    <label class="mid-part" for="new-phone">Entrez votre nouveau numéro de téléphone</label>
+                      <input type="text" id="new-phone" name="new-phone" required>
+                    <button class="validation" v-on:click="postCodePhone()">Je valide</button>
+                  </modal>
+                <div class="btn btn-open" v-on:click="openModal('change-tel')"><p class="clickable">Modifier votre numéro de téléphone</p></div>
+                </td>
+                
             </tr>
+               
+            
             <tr>
                 <td><p>Membre depuis :</p></td>
                 <td><p>11/09/2020</p></td>
             </tr>
             <br><br><br>
-
-            <div class="container-modal"></div>
-
-            <modal v-bind:showModal="showModal" v-bind:toggleModal="toggleModal"></modal>
-            <button v-on:click="toggleModal()" class="btn btn-open">Supprimer mon compte</button>
-
-            <!--<tr><td><p class="clickable">Supprimer mon compte</p></td></tr>
-            <div class="modal-delete">
-              <button class="modal-btn" @click="openModal()">Supprimer mon compte</button>
-              <modal v-show="isModalVisible" @close="closeModal()"></modal>
-            </div>
-            <div class="modal" id="modal-template">
-              <transition name="modal-fade">
-                <form class="modal-fade-content">
-                  <div class="container">
-                    <h1>Suppression de compte</h1>
-                    <p>Vous allez supprimer définitivement votre compte, êtes-vous sûr de vouloir le faire ?</p>
-                    <div class="selected-btn">
-                      <button class="cancelbtn" @click="close" type="button">Non</button>
-                      <button class="deletebtn" @click="deleteMessage()" type="button">Oui, je supprime</button>
-                    </div>
-                  </div>
-                </form>
-              </transition>
-            </div>
-            -->
-           
+            <tr>
+              <modal v-if="modalSelected == 'delete-modal'" v-on:close-modal="closeModal">
+                <h1>Suppression de compte</h1>
+                <div class="mid-part">Êtes-vous sûr de vouloir supprimer votre compte ?</div>
+                <div class="foot-part">
+                  <button class="yes">Oui, je souhaite supprimer mon compte</button>
+                  <button class="no">Non, j'ai changé d'avis</button>
+                </div>
+              </modal>
+              <div class="btn btn-open" v-on:click="openModal('delete-modal')"><p class="clickable">Supprimer mon compte</p></div>
+            </tr>
         </table>
     </div>
 </template>
@@ -67,30 +88,22 @@
 <script>
 import modal from './modal'
 export default {
-  name: 'contain',
   data() {
     return {
-      showModal: false
+      modalSelected: ''
     }
   },
   components: {
     'modal': modal
   },
-
   methods : {
-    changePassword () {
-        console.log("Vous tentez de changer votre mot de passe.")
+    closeModal : function () {
+      this.modalSelected = ''
     },
-    changeEmail () {
-        console.log("Vous tentez de changer votre Email.")
-    },
-    changePhone () {
-        console.log("Vous tentez de changer votre numéro de télephone.")
-    },
-    toggleModal() {
-      this.showModal = !this.showModal
+    openModal : function (modalId) {
+      this.modalSelected = modalId
     }
-  }
+  } 
 }
 </script>
 
@@ -123,103 +136,11 @@ table p {
     text-decoration: underline;
 }
 
-
-
-/* les boutons */
-button {
-  background-color: transparent;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-  text-decoration: underline;
+.mid-part, .validation {
+  display: block;
 }
 
-button:hover {
-  opacity:1;
+.validation {
+  margin-top: 20px;
 }
-
-/* les boutons annulation et supp */
-.cancelbtn, .deletebtn {
-  float: left;
-  width: 50%;
-}
-
-/* bouton annulation */
-.cancelbtn {
-  background-color: #ccc;
-  color: black;
-}
-
-/* bouton supp*/
-.deletebtn {
-  background-color: #f44336;
-}
-
-/* container */
-.container {
-  padding: 16px;
-  text-align: center;
-}
-
-/* modal */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: #474e5d;
-  padding-top: 50px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto 15% auto; 
-  border: 1px solid #888;
-  width: 80%; 
-}
-
-/* Style the horizontal ruler */
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-/* The Modal Close Button (x) MAIS PROBLEME N'APPARAIT PAS*/
-.close {
-  position: absolute;
-  right: 35px;
-  top: 15px;
-  font-size: 40px;
-  font-weight: bold;
-  color: #1aaa2e;
-}
-
-.close:hover,
-.close:focus {
-  color: #f44336;
-  cursor: pointer;
-}
-
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* adaptation petits ecrans */
-@media screen and (max-width: 300px) {
-  .cancelbtn, .deletebtn {
-    width: 100%;
-  }
-}
-
 </style>
