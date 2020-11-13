@@ -2,14 +2,78 @@
     <div class="repaire-root">
 
         <banner />
-
+    
         <div class="dropdown-introduce">
-            <div class="introduce-yourself content-block-property">
+            <div class="introduce-repaire content-block-property">
+                <div class="flexbox">
+                    <textarea class="input-text" value="text-input" rows=15 cols=200px>
+                    </textarea>
+                    <div class="logo-bar">
+                        <img class="instagram logo" src="@/assets/img/instagram.png" alt="instagram">
+                        <img class="linkedin logo" src="@/assets/img/linkedin.png" alt="linkedin">
+                        <img class="twitter logo" src="@/assets/img/twitter.png" alt="twitter">
+                    </div>
+                </div>
             </div>
         </div>
         
         <div class="dropdown-thread">
-            <div class="thread-repaire content-block-property content-block-property">
+            <div class="thread-repaire content-block-property">
+                <div class="one-thread">
+                    <div class="container">
+                        <img class="img-thread" src="@/assets/img/example-home.png" alt="img-thread">
+                    </div>
+                    <p class="input-thread" v-bind:class="{'post-close': isPostClose}" cols="30" rows="10" style="color:red">sfsqjkdfsdjq
+                        fdsdfksqdqs
+                        <br>
+                        qfsfqsdsf
+                        <br>
+                        fdsdfksqdqsfdsfsqd
+                        <br>
+                        fdsdfksqdqsfdsfsqdf
+                        <br>
+                        dfsqsdf
+                        <br>
+                        sfdqsdffsd
+                        <br>
+                        fdsfqsddfqsq
+                        <br>
+                        fdsdfksqdqsfdsfsqd
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                        br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        ssdfjsdfjkkldf
+                        br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        dffkjfsqdjkqsfd
+                        f
+
+                        fsdqqsdf
+                    </p>
+                    <button class="open-up"  v-on:click="openUp">{{buttonText}}
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="contents-hero">
+            <div class="contents-repaire content-block-property">
             </div>
         </div>
             
@@ -28,14 +92,35 @@ export default {
             bannerUrl : '@/assets/img/banner_example.jpg',
             bannerBackground : {
                 background : 'url(' + require('@/assets/img/banner_example.jpg') + ')' 
-            }
+            },
+            buttonText : "<",
+            isPostClose : true,
         }
     },
+    methods:{
+        openUp : function () {
+            this.isPostClose = !this.isPostClose
+        }
+    }
 }
 
 </script>
 
 <style scoped>
+
+@media screen and (max-width: 1200px){
+    .account-root {
+        margin: 100px auto 0;
+        width: 80%;
+    }    
+}
+
+@media screen and (min-width: 1200px){
+    .account-root {
+        margin: 100px auto;
+        width: 1000px;
+    }    
+}
 
 .repaire-root {
     position: relative;
@@ -46,14 +131,10 @@ export default {
 }
 
 /* Body */
-.repaire-body {
-    display: block;
-    margin-left: 60px;
-}
 
-.content-block-property{
+.content-block-property {
     display: inline-block;
-    width: 98%;
+    width: 100%;
     min-height: 150px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -62,84 +143,71 @@ export default {
     background-color: aliceblue;
 }
 
-.options {
-    vertical-align: top;
+.introduce-repaire {
     display: inline-block;
 }
 
-/* image entree repaire */
-.entree-repaire-img{
-    position: relative;
-    
-    top: 100px;
-    left: 100px;
+.logo-bar {
+    margin-right:20px;
+    margin-left:10px;
 }
 
-.repaire-first{
-    margin-top: 20px;
-    height: 600px;
-    background-color:rgb(22,24,35);
-}
-
-.repaire-first-message{
-    
-    color:rgb(209, 129, 71);
-    margin: auto;
-}
-
-.bold-message{
-    font-size: 2.1em;
-    color:rgb(209, 129, 71);
-}
-/*TO DO: User devra pouvoir personnaliser sa banniere par un chgt de couleur ou une image apportée*/
-
-/* Avatar (image + matricule) en haut à droite */
-.repaire-avatar{
-    display: inline-block;
-    vertical-align: middle;
-    width: 150px;
-    margin-bottom: 15px;   
-}
-
-.repaire-avatar-img{
+.logo {
     display: block;
-    padding-top:5px;
-    bottom: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    width:100%;
-}
-
-.repaire-avatar-register{
-    display: block;
-    padding-top:10px;
-    text-align: center;
-    font-size: 22px;
-    color : rgb(255, 255, 255);
-    margin: 0;
-}
-
-/* Icone de soutien */
-.repaire-support-img {
-    float: right;
-    vertical-align: bottom;
+    margin-top:5px;
+    overflow:hidden;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
     width:30px;
+    height:30px;
+    cursor: pointer;
 }
 
-/* TO DO: User devra pouvoir personnaliser par écrit */
-.introduce-yourself{    
-}
-/* TO DO: actualisation de la page avec des dernières actualités. Actualités = capacité d'interagir 
-  avec les gens qui regardent/suivent en mettant des posts. */
-.thread-repaire{ 
-
-}
-/* TO DO: Actualisation du contenu du Hero */
-.hero-contents{
-    height: 500px;
+.input-text {
+    float: left;
+    margin-left: 50px;
+    width: 95%;
+    height:90%;
+    resize: none;
 }
 
+.flexbox {
+    display:flex;
+}
 
+.one-thread {
+    display: flex;
+    margin-left: 50px;
+    border: dotted;
+    width: 400px; 
+}
 
+.container {
+    background: rgb(231, 231, 231);
+    width: auto;
+}
 
+.input-thread {
+    resize: none;
+    width: 300px;
+}
+
+.open-up {
+    transform: rotate(-90deg);
+    cursor: pointer;
+}
+
+.post-close{
+    overflow: hidden;
+}
+
+.dropdown-thread {
+    height: 200px;
+}
+
+.img-thread {
+    height: 100px;
+    width: 100px;
+}
 </style>
