@@ -8,10 +8,10 @@
                 <p>{{ this.title }}</p>
             </div>
             <div class="video-desc-author">
-                <p>{{ this.author}}</p>
+                <p>{{ this.author }}</p>
             </div>
         </div>
-    </div>    
+    </div>
 </template>
 
 <script>
@@ -45,7 +45,7 @@ export default {
                 width : this.width + 'px',
                 height : this.width * 9 / 16 + 'px',
             }
-        }       
+        }
 
     }
 }
@@ -56,15 +56,17 @@ export default {
 .video-root {
     position: relative;
     display: inline-block;
-    margin: 4px;
+    padding: 4px;
 }
 
+/*
 .video-background img:hover {
     position: relative;
     z-index: 1;
     transform: scale(1.2);
     cursor: pointer;
 }
+*/
 
 .video-background img{
     width: 100%;

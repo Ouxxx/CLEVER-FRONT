@@ -1,8 +1,8 @@
 <template>
-    <div class="ecrit-root">
+    <div class="ecrit-root" :style="rootSize">
         <div class="ecrit-img">
             <div class="ecrit-background">
-                <img :src="image" alt="">
+                <img :src="image" alt="" :style="imgSize" >
             </div>
             <div class="ecrit-desc">
                 <p>{{ this.description }}</p>
@@ -14,7 +14,6 @@
             </div>
             <div class="ecrit-infos-divers">
                 <p>{{ this.author}}</p>
-                <p>{{ viewsAndDate }}</p>
             </div>
         </div>
             
@@ -45,18 +44,21 @@ export default {
             type: String,
             required: true
         },
-        views: {
-            type: String,
-            required: true
-        },
-        since: {
-            type: String,
+        width: {
+            type: Number,
             required: true
         }
     },
-    computed : {
-        viewsAndDate: function () {
-            return this.views + (this.views > 1 ? ' views' : ' view') + ' - ' + this.since
+    computed: {
+        rootSize : function () {
+            return {
+                width : this.width + 'px'
+            }
+        },
+        imgSize : function () {
+            return {
+                height : this.width * 3 / 2 + 'px',
+            }
         }
     }
 }
@@ -67,12 +69,11 @@ export default {
 .ecrit-root {
     position: relative;
     display: inline-block;
-    margin: 3px;
+    padding: 4px;
 }
 
 .ecrit-img {
     position: relative;
-    padding: 5px;
 }
 
 .ecrit-desc {
@@ -90,18 +91,20 @@ export default {
 }
 .ecrit-desc p{
     color: white;
-    margin: 10px;
 }
-
+/*
 .ecrit-background img{
     width: 200px;
     height: 300px;
 }
-
+*/
+.ecrit-background img{
+    width: 100%;
+    height: 100%;
+}
 .ecrit-infos {
     padding-left: 5px;
 }
-
 
 .ecrit-infos p {
     margin: 0;
@@ -109,7 +112,6 @@ export default {
 
 .ecrit-infos-titre {
     color: white;
-    margin: 5px 0;
 
 }
 

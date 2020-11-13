@@ -1,7 +1,7 @@
 <template>
     <div class="repaire-root">
         <ch-sidebar></ch-sidebar>
-        <ch-header> 
+        <ch-header>
             <ch-header-button @button-selected="move('/repaire/profil')" 
                     buttonName="Mon profil" :selected="$route.fullPath === '/repaire/profil'" />
             <ch-header-button @button-selected="move('/repaire/profil')" 
