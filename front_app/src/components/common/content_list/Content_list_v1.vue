@@ -136,7 +136,6 @@ export default {
     display: flex;
     -webkit-user-select: none;
     -moz-user-select: none;
-    -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
