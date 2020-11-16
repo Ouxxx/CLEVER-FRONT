@@ -15,13 +15,13 @@
             
         <div class="banner-shop">
             <div class="shop-img">
-                <img src="@/assets/img/icon_write.png">
+                <img src="@/assets/img/shopTest.png">
             </div>
         </div>
 
         <div class="banner-fans">
             <div class="fans-img">
-                <img src="@/assets/img/icon_support.png">
+                <img src="@/assets/img/fanTest.png">
             </div>
         </div>
 
@@ -96,8 +96,8 @@ export default {
 }
 
 .shop-img img{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     padding: 5px;
 }
 
@@ -109,8 +109,8 @@ export default {
 }
 
 .fans-img img{
-    width: 50px;
-    height: 50px;
+    width: 28px;
+    height: 30px;
     padding: 5px;
 }
 
