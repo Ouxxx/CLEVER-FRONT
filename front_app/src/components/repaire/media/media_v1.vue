@@ -96,8 +96,9 @@ input[type=text]:focus {
 }
 
 .media-sort {
+    display: inline;
     cursor: pointer;
-    margin: 0 180px 20px 0px;
+    margin: 0 180px 20px 10px;
     padding-top: 20px;
 }
 
