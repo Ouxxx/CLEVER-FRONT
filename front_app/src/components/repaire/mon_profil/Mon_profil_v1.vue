@@ -3,8 +3,7 @@
 
         <banner />
     
-        <div class="dropdown-introduce">
-            <div class="introduce-repaire content-block-property">
+        <div class="introduce-repaire content-block-property">
                 <div class="flexbox">
                     <textarea class="input-text" value="text-input" rows=15 cols=200px>
                     </textarea>
@@ -14,16 +13,18 @@
                         <img class="twitter logo" src="@/assets/img/twitter.png" alt="twitter">
                     </div>
                 </div>
-            </div>
         </div>
         
-        <div class="dropdown-thread">
+        <div class="dropdown-thread ">
+
             <div class="thread-repaire content-block-property">
+
                 <div class="one-thread">
                     <div class="container">
                         <img class="img-thread" src="@/assets/img/example-home.png" alt="img-thread">
                     </div>
-                    <p class="input-thread" v-bind:class="{'post-close': isPostClose}" cols="30" rows="10" style="color:red">sfsqjkdfsdjq
+                    <div class="input-thread" v-bind:class="{'post-close': isPostClose}" style="color:red">
+                        sfsqjkdfsdjq
                         fdsdfksqdqs
                         <br>
                         qfsfqsdsf
@@ -47,8 +48,6 @@
                         <br>
                         <br>
                         <br>
-
-                        br>
                         <br>
                         <br>
                         <br>
@@ -65,7 +64,7 @@
                         f
 
                         fsdqqsdf
-                    </p>
+                    </div>
                     <button class="open-up"  v-on:click="openUp">{{buttonText}}
                     </button>
                 </div>
@@ -76,16 +75,17 @@
             <div class="contents-repaire content-block-property">
             </div>
         </div>
-            
+   
     </div>
 </template>
 
 <script>
 
 import banner from '../../common/banner/Banner_v1'
+//import postOne from './postOne'
 
 export default {
-    components: {banner},
+    components: {banner },
     data () {
         return {
             hover: false,
@@ -93,7 +93,7 @@ export default {
             bannerBackground : {
                 background : 'url(' + require('@/assets/img/banner_example.jpg') + ')' 
             },
-            buttonText : "<",
+            buttonText : "+",
             isPostClose : true,
         }
     },
@@ -133,9 +133,7 @@ export default {
 /* Body */
 
 .content-block-property {
-    display: inline-block;
     width: 100%;
-    min-height: 150px;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-top: 20px;
@@ -194,20 +192,28 @@ export default {
 }
 
 .open-up {
-    transform: rotate(-90deg);
     cursor: pointer;
+    width: 20%;
 }
 
 .post-close{
     overflow: hidden;
+    height:20px;
 }
 
 .dropdown-thread {
+    position: relative;
     height: 200px;
+}
+
+.contents-hero {
+    position: relative;
+    
 }
 
 .img-thread {
     height: 100px;
     width: 100px;
 }
+
 </style>

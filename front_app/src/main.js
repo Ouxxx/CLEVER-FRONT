@@ -29,7 +29,7 @@ const router = new VueRouter({
     children: [
       {
         path: 'profil',
-        component: require('./components/repaire/mon_profil/Mon_profil_v1').default,
+        component: require('./components/repaire/mon_profil/mon_profil_v2').default,
       },{
         path: 'soutiens',
         component: require('./components/repaire/soutiens/Soutiens_v1').default,
@@ -57,18 +57,6 @@ const router = new VueRouter({
       {
         path: 'account',
         component: require('./components/parametres/account/Account_v1').default,
-        children: [
-          {
-          path: 'pwd',
-          component: require('./components/parametres/account/pagePwd_v1').default,
-          },{
-          path: 'email',
-          component: require('./components/parametres/account/pageEmail_v1').default,
-          },{
-          path: 'phone',
-          component: require('./components/parametres/account/pagePhone_v1').default,
-          }
-        ]
       },{
         path: 'privacy',
         component: require('./components/parametres/privacy/Privacy_v1').default,

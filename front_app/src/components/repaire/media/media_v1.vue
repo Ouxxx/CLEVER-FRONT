@@ -27,19 +27,6 @@
 
         <router-view ></router-view>
 
-        <div class="container">
-
-            <!-- <img class="image" :src='image' alt="">
-                <div class="overlay">
-                <div class="text" >
-                    <p>{{ this.description }}</p>
-                </div>
-            <select class="media-select" v-model="sorting">
-                        <option value="date">Date</option>
-                        <option value="matricule">Matricule</option>
-            </select>
-            </div>-->
-        </div>
 
     </div>
     
@@ -98,9 +85,9 @@ input[type=text]:focus {
 }
 
 .media-functions {
-    position: relative;
     display: flex;
-    align-items: center;
+    position: relative;
+    align-items: baseline;
 }
 
 .search-bar {
@@ -125,23 +112,25 @@ input[type=text]:focus {
 }
 
 .dropdown {
-  position: absolute;
-  display: inline-block;
+    display: inline-block;
+    position: absolute;
+  
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color:rgba(218,165, 32, 1);
-  min-width: 160px;
-  z-index: 1;
+    display: none;
+    position: absolute;
+    background-color:rgba(218,165, 32, 1);
+    min-width: 160px;
+    z-index: 1;
 }
 
 .dropdown-content div {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+    display: block;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+  
 }
 
 .dropdown-content div:hover {
