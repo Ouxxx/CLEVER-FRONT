@@ -31,6 +31,9 @@ const router = new VueRouter({
         path: 'profil',
         component: require('./components/repaire/mon_profil/mon_profil_v2').default,
       },{
+        path: 'gerermonprofil',
+        component: require('./components/repaire/gerer_mon_profil/profile_management_v1').default,
+      },{
         path: 'soutiens',
         component: require('./components/repaire/soutiens/Soutiens_v1').default,
       },{

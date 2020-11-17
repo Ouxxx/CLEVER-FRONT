@@ -132,7 +132,7 @@ export default {
 
 /*post*/
 
-/*contents rgba(218,165, 32, 1)*/
+/*contents*/
 
 .search-bar {
     display: inline;
