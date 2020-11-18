@@ -11,7 +11,7 @@
                             name="text"
                             v-model="form.text"/>
 
-                            {{ form }}
+                        <p class="test">{{ form }}</p>
 
                         <div class="logo-bar">
                             <img class="instagram logo" src="@/assets/img/instagram.png" alt="instagram">
@@ -44,6 +44,10 @@ export default {
 </script>
 
 <style scoped>
+
+.test {
+    color: white;
+}
 
 /* Body */
 
