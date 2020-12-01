@@ -1,10 +1,6 @@
 <template>
-    <textarea 
-        class="textarea" 
-        :name="name" 
-        @input="$emit('input', $event.target.value); resize($event)" 
-        :id="name" 
-        :value="value">
+    <textarea :id="name" class="textarea" :name="name" :value="value"
+        @input="onInputEvent($event)" >
     </textarea>
 </template>
 
@@ -20,9 +16,11 @@ export default {
         }
     },
     methods: {
-        resize (a) {
-            a.target.style.height = 'auto'
-            a.target.style.height = '${a.target.scrollHeight}px'
+        onInputEvent (e) {
+            this.$emit('input', e.target.value);
+            e.target.style.height = 'auto';
+            e.target.style.height = `${e.target.scrollHeight}px`;
+
         }
     }
 }
@@ -31,14 +29,16 @@ export default {
 <style scoped>
 
 .textarea {
-    display: inline;
-    width: 90%;
+    display: block;
+    width: 100%;
     resize: none;
     font-size: inherit;
     outline: none;
     padding: 20px;
     min-height: 40px;
     box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 5px;
 }
 
 

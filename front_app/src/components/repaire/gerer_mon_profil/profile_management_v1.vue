@@ -7,19 +7,21 @@
         <div class="profile-main">
             <div class="introduce-profile content-block-property">
                 <div class="flexbox">
-                        <autosizeTextarea
-                            name="text"
-                            v-model="form.text"/>
+                    <autosizeTextarea name="y" v-model="form.body" placeholder="coucou from parent" />
 
-                        <p class="test">{{ form }}</p>
-
-                        <div class="logo-bar">
-                            <img class="instagram logo" src="@/assets/img/instagram.png" alt="instagram">
-                            <img class="linkedin logo" src="@/assets/img/linkedin.png" alt="linkedin">
-                            <img class="twitter logo" src="@/assets/img/twitter.png" alt="twitter">
-                        </div>
+                    <div class="logo-bar">
+                        <img class="instagram logo" src="@/assets/img/instagram.png" alt="instagram">
+                        <img class="linkedin logo" src="@/assets/img/linkedin.png" alt="linkedin">
+                        <img class="twitter logo" src="@/assets/img/twitter.png" alt="twitter">
                     </div>
+                </div>
             </div>
+
+            <div style="color: white">Lien Facebook : <input /> </div>
+            <div style="color: white">Lien Insta : <input /> </div>
+            <div style="color: white">Lien blabla : <input /> </div>
+            <div v-if="linkFacebook" style="color: white">Lien Facebook : <input /> </div>
+
         </div>
 
     </div> 
@@ -34,8 +36,9 @@ export default {
     data () {
         return {
             form: {
-                body: 'aze'
-            }
+                body: ''
+            },
+            linkFacebook : ''
         }
     }
 }
@@ -63,6 +66,7 @@ export default {
 /*introduce*/
 
 .flexbox {
+    display: flex;
     max-width: 900px;
     margin: 0 auto;
 }

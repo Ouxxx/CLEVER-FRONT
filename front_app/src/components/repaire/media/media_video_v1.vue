@@ -1,35 +1,24 @@
 <template>
     <div class='media-root'> 
 
-        <div class="container">
+        <div class="container" style="background-color : yellow">
             
             <div style="margin-left : 100px">
-                <ch-video v-for="video in videos" :key="video.docId" 
-                    :docid="video.docId" :title="video.title" :author="video.author" :views="video.views" 
-                    :since="video.since" :description="video.description" />
+                <ch-mosaique :contents="videos" contentType="video" />
             </div>
 
-            <!-- <img class="image" :src='image' alt="">
-                <div class="overlay">
-                <div class="text" >
-                    <p>{{ this.description }}</p>
-                </div>
-            <select class="media-select" v-model="sorting">
-                        <option value="date">Date</option>
-                        <option value="matricule">Matricule</option>
-            </select>
-            </div>-->
         </div>
     </div>
 
 </template>
 
 <script>
-import chVideo from '../../common/video/Video_v1'
+import chMosaique from '../../common/mosaique/Mosaique_v1'
 
 export default {
-    components: { chVideo },
+    components: { chMosaique },
     data () {
+ 
         return {
             videos : [
                 {
@@ -47,44 +36,44 @@ export default {
                     since : "il y a 2 mois",
                     description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
                 },{
-                    docId : "111",
+                    docId : "333",
                     title : "Titre de ma vidéo",
-                    author : "100.AAA.111",
+                    author : "100.AAA.333",
                     views : "4142",
                     since : "il y a 2 mois",
                     description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
                 },{
-                    docId : "222",
+                    docId : "444",
                     title : "Titre de ma vidéo",
-                    author : "100.AAA.222",
+                    author : "100.AAA.444",
                     views : "4142",
                     since : "il y a 2 mois",
                     description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
                 },{
-                    docId : "111",
+                    docId : "555",
                     title : "Titre de ma vidéo",
-                    author : "100.AAA.111",
+                    author : "100.AAA.555",
                     views : "4142",
                     since : "il y a 2 mois",
                     description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
                 },{
-                    docId : "222",
+                    docId : "666",
                     title : "Titre de ma vidéo",
-                    author : "100.AAA.222",
+                    author : "100.AAA.666",
                     views : "4142",
                     since : "il y a 2 mois",
                     description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
                 },{
-                    docId : "111",
+                    docId : "777",
                     title : "Titre de ma vidéo",
-                    author : "100.AAA.111",
+                    author : "100.AAA.777",
                     views : "4142",
                     since : "il y a 2 mois",
                     description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
                 },{
-                    docId : "222",
+                    docId : "888",
                     title : "Titre de ma vidéo",
-                    author : "100.AAA.222",
+                    author : "100.AAA.888",
                     views : "4142",
                     since : "il y a 2 mois",
                     description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
@@ -97,18 +86,6 @@ export default {
 
 <style scoped>
 
-@media screen and (max-width: 1200px){
-    .media-root {
-        margin: 100px auto;
-        width: 80%;
-    }    
-}
 
-@media screen and (min-width: 1000px){
-    .media-root {
-        margin: 100px auto;
-        width: 1000px auto;
-    }    
-}
 
 </style>
