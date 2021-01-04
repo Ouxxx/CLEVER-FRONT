@@ -49,6 +49,7 @@ export default {
 
 <style scoped>
 .sorter-root {
+    display: inline-block;
     position: relative;
     cursor: pointer;
     height: 40px;
@@ -83,7 +84,7 @@ export default {
 .sorter-button-value{
     display: inline-block;
     padding: 0 10px;
-    min-width: 90px;
+    width: 90px;
 
 
 }

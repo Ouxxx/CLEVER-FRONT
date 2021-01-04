@@ -1,7 +1,7 @@
 <template>
     <div class="soutiens-root">
         <div v-if="soutiens.length > 0">
-            <div class="soutiens-functions">
+            <!-- <div class="soutiens-functions">
                 <div class="soutiens-sort">
                     <select class="ch-select" v-model="sorting">
                         <option value="date">Date</option>
@@ -9,6 +9,9 @@
                         <option value="news">Nouveautés</option>
                     </select>
                 </div>
+            </div> -->
+             <div class="soutiens-functions">
+                <ch-sorter  @sorter="changeSortType" :selected="this.sortType" />
             </div>
 
             <div class="soutiens-content">
@@ -25,19 +28,26 @@
 
 <script>
 import descSoutien from './Soutien_description_v1'
+import chSorter from '../../common/sorter/Sorter_v1'
 
 /*
     TODO:
-    + hook created -> devra remplir le tableau soutiens
+    + hook mounted -> devra remplir le tableau soutiens
     + les fonctions de tri
 */
 
 
 export default {
-    components: { descSoutien },
+    components: { descSoutien, chSorter },
+    methods : {
+        changeSortType : function (by) {
+            this.sortType = by
+        }
+        
+    },
     data () {
         return {
-            sorting : 'date',
+            sortType : 'date',
             /* soutiens est un tableau qui contiendra l'ensemble des utilisateurs soutenus
                un soutien { matricul, avatar, description, some_news, since}
                (some news devra contenir une date pour trier par nouveauté */

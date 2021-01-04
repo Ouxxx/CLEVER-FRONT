@@ -36,6 +36,9 @@ export default {
     display: inline-block;
     cursor: pointer;
     padding: 0 15px;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .ch-header-button-selected {
     background: linear-gradient(rgba(194, 190, 190, 0.1), rgb(255,255,255,0));
