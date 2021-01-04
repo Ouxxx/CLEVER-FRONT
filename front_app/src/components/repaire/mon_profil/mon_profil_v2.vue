@@ -13,9 +13,16 @@
                             Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots latins les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les usages de ce mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient en fait des sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" (Des Suprêmes Biens et des Suprêmes Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la théorie de l'éthique. Les premières lignes du Lorem Ipsum, "Lorem ipsum dolor sit amet...", proviennent de la section 1.10.32.
                         </p>
                         <div class="logo-bar">
-                            <img class="instagram logo" src="@/assets/img/instagram.png" alt="instagram">
-                            <img class="linkedin logo" src="@/assets/img/linkedin.png" alt="linkedin">
-                            <img class="twitter logo" src="@/assets/img/twitter.png" alt="twitter">
+                            <div v-if="this.input|=''">
+                                <img class="instagram logo" src="@/assets/img/instagram.png" alt="instagram">
+                            </div>
+                            <div v-if="this.input|=''">
+                                <img class="linkedin logo" src="@/assets/img/linkedin.png" alt="linkedin">
+                            </div>
+                            <div v-if="this.input|=''">
+                                <img class="twitter logo" src="@/assets/img/twitter.png" alt="twitter">
+                            </div>
+                            
                         </div>
                     </div>
             </div>
@@ -39,7 +46,7 @@
                         <button class="btn" @click="gotoecrit()">Ecrit</button>
                         <button class="btn" @click="gotoimage()">Image</button>
                         <div class="dropdown">
-                            <button class="btn" style="border-left:1px solid navy">
+                            <button class="btn">
                             <img class="triangle-dropdown" src="../../../assets/rendus/MonRepaire/a_ObjetsCommuns/triangle_dropdownmenu_v2.png" alt="triangle">
                             </button>
                             <div class="dropdown-content">
@@ -175,7 +182,7 @@ input[type=text]:focus {
     font-size: 15px;
     border: none;
     outline: none;
-    
+    border-left:1px solid navy
 }
 
 .dropdown {
