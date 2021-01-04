@@ -6,8 +6,8 @@
                     buttonName="Mon profil" :selected="$route.fullPath === '/repaire/profil'" />
             <ch-header-button @button-selected="move('/repaire/gerermonprofil')" 
                     buttonName="Gérer mon profil" :selected="$route.fullPath === '/repaire/gerermonprofil'" />
-            <ch-header-button @button-selected="move('/')" 
-                    buttonName="Dashboard" :selected="$route.fullPath === '/'" />
+            <ch-header-button @button-selected="move('/repaire/dashboard')" 
+                    buttonName="Dashboard" :selected="$route.fullPath === '/repaire/dashboard'" />
             <ch-header-button @button-selected="move('/repaire/soutiens')" 
                     buttonName="Mes soutiens" :selected="$route.fullPath === '/repaire/soutiens'" />
             <ch-header-button @button-selected="move('/repaire/media/video')" 

@@ -27,29 +27,29 @@
             <p>Liste des appareils enregistrés:</p>
             <table class="listing">
                 <thead>
-                    <td><p>Nom de l'appareil</p></td>
-                    <td><p>Dernière connexion</p></td>
-                    <td><p>Position géographique</p></td>
+                    <td :style="styleColumnWidth"><p>Nom de l'appareil</p></td>
+                    <td :style="styleColumnWidth"><p>Dernière connexion</p></td>
+                    <td :style="styleColumnWidth"><p>Position géographique</p></td>
                 </thead>
                 <tr v-for="device in devices" :key="device.name">
-                    <td><p>{{ device.name }}</p></td>
-                    <td><p>{{ device.lastConnexion }}</p></td>
-                    <td><p>{{ device.localisation }}</p></td>
+                    <td :style="styleColumnWidth"><p>{{ device.name }}</p></td>
+                    <td :style="styleColumnWidth"><p>{{ device.lastConnexion }}</p></td>
+                    <td :style="styleColumnWidth"><p>{{ device.localisation }}</p></td>
                 </tr>
             </table>
         </div>
         <div class="section">
-            <p>Liste des appareils enregistrés:</p>
+            <p>Historique des connexions:</p>
             <table class="listing">
                 <thead>
-                    <td><p>Date</p></td>
-                    <td><p>Nom de l'appareil</p></td>
-                    <td><p>Position géographique</p></td>
+                    <td :style="styleColumnWidth"><p>Date de connexion</p></td>
+                    <td :style="styleColumnWidth"><p>Nom de l'appareil</p></td>
+                    <td :style="styleColumnWidth"><p>Position géographique</p></td>
                 </thead>
                 <tr v-for="connexion in connexions" :key="connexion.id">
-                    <td><p>{{ connexion.date }}</p></td>
-                    <td><p>{{ connexion.name }}</p></td>
-                    <td><p>{{ connexion.localisation }}</p></td>
+                    <td :style="styleColumnWidth"><p>{{ connexion.date }}</p></td>
+                    <td :style="styleColumnWidth"><p>{{ connexion.name }}</p></td>
+                    <td :style="styleColumnWidth"><p>{{ connexion.localisation }}</p></td>
                 </tr>
             </table>
         </div>
@@ -60,6 +60,7 @@
 <script>
 import switchButton from '../../common/button/Btn_switch_v1'
 
+var blocContent
 export default {
     components: {switchButton},
     data () {
@@ -87,8 +88,20 @@ export default {
                     'date' : '26/09/2020',
                     'localisation' : 'Mars'
                 }
-            ]
+            ],
+            columnWidth: 0 // valeur qui changera immediatement lors du hook mounted
         }
+    },
+    computed : {
+        styleColumnWidth : function () {
+            return {
+                'width' : this.columnWidth + 'px',
+            }
+        }
+    },
+    mounted () {
+        blocContent = document.getElementsByClassName('security-root')[0]
+        this.columnWidth = blocContent.offsetWidth / 3
     }
 }
 </script>

@@ -70,6 +70,7 @@ export default {
     position: relative;
     display: inline-block;
     padding: 4px;
+    cursor: pointer;
 }
 
 .ecrit-img {

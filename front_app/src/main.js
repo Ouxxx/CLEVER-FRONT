@@ -24,6 +24,9 @@ const router = new VueRouter({
     path: '/visitor',
     component: require('./components/Home_v1').default,
   },{
+    path: '/favoris',
+    component: require('./components/favoris/Favoris_v1').default,
+  },{
     path: '/repaire',
     component: require('./components/repaire/Repaire_v2').default,
     children: [
@@ -33,6 +36,9 @@ const router = new VueRouter({
       },{
         path: 'gerermonprofil',
         component: require('./components/repaire/gerer_mon_profil/profile_management_v1').default,
+      },{
+        path: 'dashboard',
+        component: require('./components/repaire/dashboard/Dashboard_v1').default,
       },{
         path: 'soutiens',
         component: require('./components/repaire/soutiens/Soutiens_v1').default,

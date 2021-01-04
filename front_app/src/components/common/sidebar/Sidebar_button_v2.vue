@@ -54,6 +54,9 @@ export default {
 .sidebar-button-root {
     padding-right: auto;
     cursor: pointer;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .button-name {
