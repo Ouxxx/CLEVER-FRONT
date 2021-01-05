@@ -18,6 +18,7 @@
             
         </modal>
         <div class="link-list">
+            <!-- Ici rajouter le v-for pour afficher la liste -->
         </div>
         <div class="link-button-area">
             <div class="link-button" @click="openModal">
@@ -36,7 +37,9 @@ export default {
         return {
             isModalOpen : false,
             prefixInput : '',
-            linkList : []
+            // linkList : contient des objets commme celui ci { type , link }
+            // chaque element devra etre present dans une div a l'aide d'un v-for
+            linkList : [ ]
         }
     },
     computed : {
@@ -67,6 +70,11 @@ export default {
                 default:
                     this.prefixInput = 'Autre lien ';
             }
+        },
+        addToList: function (type, lien){
+            console.log(type + lien)
+            // fonction qui ajoute a linkList les objets { type, link }
+            // pour savoir comment manipuler des list :  https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array
         }
         
 
