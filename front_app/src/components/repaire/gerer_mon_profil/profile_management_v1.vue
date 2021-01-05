@@ -7,33 +7,51 @@
         <div class="profile-main">
             <div class="introduce-profile content-block-property">
                 
-                <div class="flexbox">Ajouter un Description :
-                    <autosizeTextarea name="y" v-model="form.body" placeholder="coucou from parent" />
+                <div class="flexbox">Ajouter une Description :
+                    <autosizeTextarea name="y" v-model="form.body" placeholder="Ajouter une description, ici." />
                 </div>
                 
+                     
+                
                 <div class="logo-choice">
-                    <div>Lien Facebook : <input /> </div>
-                    <div>Lien Instagram : <input /> </div>
-                    <div>Autre lien : <input /> </div>
+                    <div>
+                        <div class="type-of-choice">Lien Facebook : </div> 
+                        <input /> 
+                    </div>
+                    <div>
+                        <div class="type-of-choice">Lien Instagram : </div> 
+                        <input /> 
+                    </div>
+                    <div>
+                        <div class="type-of-choice">Lien Twitch : </div> 
+                        <input /> 
+                    </div>
+                    <div>
+                        <div class="type-of-choice">Lien Twitter : </div> 
+                        <input /> 
+                    </div>
+                    <div>
+                        <div class="type-of-choice">Autre lien : </div> 
+                        <input /> 
+                    </div>
                     <div v-if="linkFacebook">Lien Facebook : <input /> </div>
                 </div>
             </div>
             <div class="post-profile content-block-property">
                 <div class="new-post">Ajouter un Post :
-                    <autosizeTextarea name="y" v-model="form.body" placeholder="coucou from parent" />
+                    <autosizeTextarea class="autosize-textarea" name="y" v-model="form.body" placeholder="coucou from parent" />
                 </div>
                 
                 <div class="post-one">
                     <postOne :postText="textExample">
                     </postOne>
-                    <div class="img-cross-post">
-                         <!-- mettre @click suppression de post-->
-                        <img class="cross" src="../../../assets/img/cross_menu.png" alt="cross_menu"> 
-                    </div>
                 </div>
             </div>
             <div class="contents-profile content-block-property">
-
+                <div class="img-cross-post">
+                     <!-- mettre @click suppression de post-->
+                    <img class="cross" src="../../../assets/img/cross_menu.png" alt="cross_menu"> 
+                </div>
             </div>
 
             
@@ -98,7 +116,13 @@ export default {
     color:white;
 }
 
+.type-of-choice {
+    display: inline;  
+}
+
 /* post */
+
+
 
 .text-area-post {
     width: 400px;
@@ -107,7 +131,7 @@ export default {
 }
 
 .new-post {
-    display: flex;
+    display: block;
     color: white;
     padding-right: 10px;
     text-align: top;
