@@ -6,6 +6,8 @@
         </div>
         <div class="profile-main">
             <div class="introduce-profile content-block-property">
+
+                <linkSharing />
                 
                 <div class="flexbox">Ajouter une Description :
                     <autosizeTextarea name="y" v-model="form.body" placeholder="Ajouter une description, ici." />
@@ -34,7 +36,7 @@
                         <div class="type-of-choice">Autre lien : </div> 
                         <input /> 
                     </div>
-                    <div v-if="linkFacebook">Lien Facebook : <input /> </div>
+                    <!-- <div v-if="linkFacebook">Lien Facebook : <input /> </div> -->
                 </div>
             </div>
             <div class="post-profile content-block-property">
@@ -46,6 +48,8 @@
                     <postOne :postText="textExample">
                     </postOne>
                 </div>
+
+                
             </div>
             <div class="contents-profile content-block-property">
                 <div class="img-cross-post">
@@ -65,9 +69,10 @@
 import banner from '../../common/banner/Banner_v1'
 import autosizeTextarea from '../../common/autosize_textarea/autosize_textarea_v1'
 import postOne from '../../common/profile_gestion/postOne'
+import linkSharing from '../../common/linkSharing/LinkSharing_v1'
 
 export default {
-    components : {banner, autosizeTextarea, postOne},
+    components : {banner, autosizeTextarea, postOne, linkSharing},
     data () {
         return {
             form: {
@@ -117,7 +122,8 @@ export default {
 }
 
 .type-of-choice {
-    display: inline;  
+    display: inline-block;
+    width: 150px; 
 }
 
 /* post */

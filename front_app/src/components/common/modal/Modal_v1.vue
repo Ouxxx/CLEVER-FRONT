@@ -2,20 +2,11 @@
     <div class="modal-root">
         <div class="overlay" v-on:click="$emit('close-modal')"></div>
         <div class="modal container">
-            <button class="btn-modal" v-on:click="$emit('close-modal', modalId)">X</button>
+            <button class="btn-modal" v-on:click="$emit('close-modal')">X</button>
             <slot></slot>
         </div>
     </div>
 </template>
-
-<script>
-export default {
-    props: {
-        
-    }
-}
-
-</script>
 
 <style scoped>
 .modal-root {
@@ -29,6 +20,10 @@ export default {
     justify-content: center;
     align-items: center;
     
+}
+
+.modal-root p{
+    color: black;
 }
 
 .overlay{

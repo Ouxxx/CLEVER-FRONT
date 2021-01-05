@@ -56,7 +56,6 @@ export default {
 
 <style scoped>
 .post-root {
-    position: relative;
     background: rgb(241,241,241);
     margin: 5px;
     border-radius: 5px;
@@ -92,7 +91,6 @@ export default {
 }
 
 .block-right-container {
-    position: relative;
     width: 50%;
     padding:10px;
 }

@@ -86,7 +86,7 @@
 </template>
 
 <script>
-import modal from './modal'
+import modal from '../../common/modal/Modal_v1'
 export default {
   data() {
     return {
