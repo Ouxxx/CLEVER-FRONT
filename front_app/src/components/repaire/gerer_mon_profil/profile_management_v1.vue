@@ -13,31 +13,8 @@
                     <autosizeTextarea name="y" v-model="form.body" placeholder="Ajouter une description, ici." />
                 </div>
                 
-                     
-                
-                <div class="logo-choice">
-                    <div>
-                        <div class="type-of-choice">Lien Facebook : </div> 
-                        <input /> 
-                    </div>
-                    <div>
-                        <div class="type-of-choice">Lien Instagram : </div> 
-                        <input /> 
-                    </div>
-                    <div>
-                        <div class="type-of-choice">Lien Twitch : </div> 
-                        <input /> 
-                    </div>
-                    <div>
-                        <div class="type-of-choice">Lien Twitter : </div> 
-                        <input /> 
-                    </div>
-                    <div>
-                        <div class="type-of-choice">Autre lien : </div> 
-                        <input /> 
-                    </div>
                     <!-- <div v-if="linkFacebook">Lien Facebook : <input /> </div> -->
-                </div>
+                
             </div>
             <div class="post-profile content-block-property">
                 <div class="new-post">Ajouter un Post :

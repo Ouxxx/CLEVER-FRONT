@@ -36,6 +36,10 @@ export default {
         },
         userAvatar : {
             type: String
+        },
+        isEditable : {
+            type: Boolean,
+            default: false
         }
     }
     

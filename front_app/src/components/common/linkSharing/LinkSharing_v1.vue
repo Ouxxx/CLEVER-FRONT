@@ -3,23 +3,29 @@
         <modal v-if="isModalOpen" @close-modal="closeModal">
             <h1>Ajouter un lien</h1>
             <table class="link-types">
-                <td @click="chooseInput('Facebook')"><img src="@/assets/img/icon_discord.png" alt="logo-discord"></td>
-                <td @click="chooseInput('Instagram')"><img src="@/assets/img/icon_instagram.png" alt="logo-discord"></td>
-                <td @click="chooseInput('Twitter')"><img src="@/assets/img/icon_twitter.png" alt="logo-discord"></td>
-                <td @click="chooseInput('Spotify')"><img src="@/assets/img/icon_spotify.png" alt="logo-discord"></td>
-                <td @click="chooseInput('Twitch')"><img src="@/assets/img/icon_discord.png" alt="logo-discord"></td>
-                <td @click="chooseInput('Discord')"><img src="@/assets/img/icon_discord.png" alt="logo-discord"></td>
+                <td @click="chooseInput('facebook')"><img src="../../../assets/img/icon_discord.png" alt="logo-discord"></td>
+                <td @click="chooseInput('instagram')"><img src="../../../assets/img/icon_instagram.png" alt="logo-discord"></td>
+                <td @click="chooseInput('twitter')"><img src="../../../assets/img/icon_twitter.png" alt="logo-discord"></td>
+                <td @click="chooseInput('spotify')"><img src="../../../assets/img/icon_spotify.png" alt="logo-discord"></td>
+                <td @click="chooseInput('twitch')"><img src="../../../assets/img/icon_discord.png" alt="logo-discord"></td>
+                <td @click="chooseInput('discord')"><img src="../../../assets/img/icon_discord.png" alt="logo-discord"></td>
             </table>
             
             <div class="link-input" v-show="prefixInput != ''">
-                <label for="prefix-input"><p>{{prefixInput}}</p></label><input type="text">
-                <div><p>Je valide</p></div>
+                <label for="prefix-input"><p>{{prefixInput}}</p></label>
+                <input type="text" v-model="linkTail">
+                <div class="validate-click" @click="addToList()"><p>Je valide</p></div>
             </div>
             
         </modal>
+        
         <div class="link-list">
             <!-- Ici rajouter le v-for pour afficher la liste -->
-        </div>
+            <div class="link-list-elem">
+                <div v-for="elem in linkList" :key="elem.link"> <img :src="elem.image">{{' : ' + elem.link}} </div>
+            </div>
+        </div> 
+
         <div class="link-button-area">
             <div class="link-button" @click="openModal">
                 <p>Ajouter un lien</p>
@@ -37,9 +43,13 @@ export default {
         return {
             isModalOpen : false,
             prefixInput : '',
+            linkTail : '',
+            currentType : '',
             // linkList : contient des objets commme celui ci { type , link }
             // chaque element devra etre present dans une div a l'aide d'un v-for
-            linkList : [ ]
+            linkList : [
+             ],
+            currentImage : ''
         }
     },
     computed : {
@@ -55,29 +65,32 @@ export default {
         },
         chooseInput : function (linkType) {
             switch (linkType) {
-                case 'Facebook':
+                case 'facebook':
                     this.prefixInput = 'https://www.facebook.com/';
                     break;
-                case 'Instagram':
+                case 'instagram':
                     this.prefixInput = 'https://www.instagram.com/';
                     break;
-                case 'Twitch':
+                case 'twitch':
                     this.prefixInput = 'https://www.twitch.tv/';
                     break;
-                case 'Twitter':
+                case 'twitter':
                     this.prefixInput = 'https://twitter.com/';
                     break;
                 default:
                     this.prefixInput = 'Autre lien ';
             }
+            this.currentType=linkType
         },
-        addToList: function (type, lien){
-            console.log(type + lien)
-            // fonction qui ajoute a linkList les objets { type, link }
-            // pour savoir comment manipuler des list :  https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array
+        addToList: function (){
+            this.linkList.push(
+                {
+                link: this.prefixInput + this.linkTail,
+                image: require('@/assets/img/icon_' + this.currentType + '.png')
+                }
+            )
+            console.log(this.prefixInput+this.linkTail+this.currentType)
         }
-        
-
 
     }
 }
@@ -110,5 +123,9 @@ export default {
 
 .type-link-text {
     display: inline-block;
+}
+
+.validate-click {
+    cursor: pointer;
 }
 </style>
