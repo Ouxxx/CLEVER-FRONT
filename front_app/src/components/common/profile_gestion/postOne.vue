@@ -57,6 +57,7 @@ export default {
 <style scoped>
 .post-root {
     background: rgb(241,241,241);
+    border: 0.5mm solid rgba(27,37,48,.8);
     margin: 5px;
     border-radius: 5px;
     max-width:2000px;

@@ -9,7 +9,7 @@
             </div>
             <div class="header-right" >
                 <div v-if="$store.getters.getToken">
-                    <button class="exit-button" @click="goWelcome()">Bye Bitches</button>
+                    <button class="exit-button" @click="goWelcome()">A bientôt</button>
                     <div class="header-avatar" >
                         <div class="header-avatar-img" >
                             <img src="../../../assets/img/avatar-circle-user.png" alt="avatar" >

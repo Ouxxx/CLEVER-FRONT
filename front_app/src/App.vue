@@ -50,7 +50,7 @@ h1 {
     border-bottom-style: solid;
     border-width: 1px;
     padding: 0px 0px 7px 15px;
-    margin: 30px 0px 20px 55px;
+    margin: 30px 0px 20px 40px;
     width: 60%;
 }
 h1::first-letter {

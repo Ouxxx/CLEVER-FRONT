@@ -34,6 +34,7 @@ export default {
     resize: none;
     font-size: inherit;
     outline: none;
+    margin: 5px;
     padding: 20px;
     min-height: 40px;
     box-sizing: border-box;

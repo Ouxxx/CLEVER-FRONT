@@ -55,6 +55,7 @@
                             </div>
                         </div>
                     </div>
+                    <ch-mosaique :contents="videos" contentType="video" />
                     <p class="test"></p>
                 </div>
             </div>
@@ -67,10 +68,70 @@
 <script>
 import banner from '../../common/banner/Banner_v1'
 import postOne from '../../common/profile_gestion/postOne'
+import chMosaique from '../../common/mosaique/Mosaique_v1'
 export default {
-    components : {banner, postOne},
+    components : {banner, postOne, chMosaique},
     data () {
         return  {
+            videos : [
+                {
+                    docId : "111",
+                    title : "Titre de ma vidéo",
+                    author : "100.AAA.111",
+                    views : "4142",
+                    since : "il y a 2 mois",
+                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
+                },{
+                    docId : "222",
+                    title : "Titre de ma vidéo",
+                    author : "100.AAA.222",
+                    views : "4142",
+                    since : "il y a 2 mois",
+                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
+                },{
+                    docId : "333",
+                    title : "Titre de ma vidéo",
+                    author : "100.AAA.333",
+                    views : "4142",
+                    since : "il y a 2 mois",
+                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
+                },{
+                    docId : "444",
+                    title : "Titre de ma vidéo",
+                    author : "100.AAA.444",
+                    views : "4142",
+                    since : "il y a 2 mois",
+                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
+                },{
+                    docId : "555",
+                    title : "Titre de ma vidéo",
+                    author : "100.AAA.555",
+                    views : "4142",
+                    since : "il y a 2 mois",
+                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
+                },{
+                    docId : "666",
+                    title : "Titre de ma vidéo",
+                    author : "100.AAA.666",
+                    views : "4142",
+                    since : "il y a 2 mois",
+                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
+                },{
+                    docId : "777",
+                    title : "Titre de ma vidéo",
+                    author : "100.AAA.777",
+                    views : "4142",
+                    since : "il y a 2 mois",
+                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
+                },{
+                    docId : "888",
+                    title : "Titre de ma vidéo",
+                    author : "100.AAA.888",
+                    views : "4142",
+                    since : "il y a 2 mois",
+                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
+                }
+            ],
             textExample : "Coucou les loulous Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots latins les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les usages de ce mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient en fait des sections 1.10.32 et 1.10.33 du (Des Suprêmes Biens et des Suprêmes Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la théorie de l'éthique. Les premières lignes du Lorem Ipsum, , proviennent de la section 1.10.32.",     
             textExample2: "Coucou les loulous !"
         }
@@ -94,7 +155,7 @@ export default {
 
 .profile-root {
     position: relative;
-    background-color: rgb(7,15,24);
+    background-color: rgb(24, 7, 20);
     min-height: 100vh;
 }
 
@@ -107,6 +168,7 @@ export default {
     width: 100%;
     padding: 10px 0 10px 50px;
     margin-top: 20px;
+    border: 0.5mm solid rgba(27,37,48,.8);
     background-color: rgba(27,37,48,.8);
 }
 

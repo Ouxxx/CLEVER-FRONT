@@ -1,7 +1,7 @@
 <template>
     <div class="link-root">
         <modal v-if="isModalOpen" @close-modal="closeModal">
-            <h1>Ajouter un lien</h1>
+            <h1>Ajouter un lien de partage : Choisissez parmi ces options </h1>
             <table class="link-types">
                 <td @click="chooseInput('facebook')"><img src="../../../assets/img/icon_discord.png" alt="logo-discord"></td>
                 <td @click="chooseInput('instagram')"><img src="../../../assets/img/icon_instagram.png" alt="logo-discord"></td>
@@ -28,7 +28,8 @@
 
         <div class="link-button-area">
             <div class="link-button" @click="openModal">
-                <p>Ajouter un lien</p>
+                <img class="plus" src="../../../assets/img/plus.png" alt="plus">
+                <p>Ajouter un lien de partage</p>
             </div>
         </div>
     </div>
@@ -128,4 +129,18 @@ export default {
 .validate-click {
     cursor: pointer;
 }
+
+.link-button p {
+    display: inline-block;
+    font-size: large;
+    color:rgb(255, 255, 255);
+}
+
+.plus {
+    display:inline-block;
+    width: 15px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
 </style>

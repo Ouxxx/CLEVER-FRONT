@@ -1,31 +1,46 @@
 <template>
-    <div class="banner-root">
-
+    <div class="banner-root" @mouseover="setBannerHover(true)" @mouseout="setBannerHover(false)">
+    
         <div class="banner-background">
             <img src="@/assets/testing/banner2.jpg">
         </div>
-        <div class="banner-avatar">
+        <div class="dark-background" v-if="iseditabled">
+            <div class="banner-img" v-show="bannerHover && !avatarHover">
+                <div class="banner-img-edition">
+                    <img src="@/assets/img/plus.png" alt="img2">
+                </div>
+                
+            </div>
+            
+        </div>
+        <div class="banner-avatar" @mouseover="setAvatarHover(true)" @mouseout="setAvatarHover(false)">
             <div class="avatar-img">
-                <img src="@/assets/testing/avatarX.png">
+                <div class="dark-background-avatar" v-if="iseditabled" v-show="avatarHover">
+                     <img class="avatar-img-edition" src="@/assets/img/plus.png" alt="img2">
+                </div>
+                <img class="fixed-img" src="@/assets/testing/avatarX.png" alt="img1">
             </div>
             <div class="avatar-matricule">
                 <p class="avatar-p">{{ $store.getters.getId }}</p>
             </div>
         </div>
             
-        <div class="banner-shop">
+        <!-- TO DO : Shop not implemented
+            
+            <div class="banner-shop">
             <div class="shop-img">
                 <img src="@/assets/img/shopTest.png">
             </div>
-        </div>
+        </div> -->
 
         <div class="banner-fans">
             <div class="fans-img">
                 <img src="@/assets/img/fanTest.png">
             </div>
         </div>
-
+        
     </div>
+    
 </template>
 
 <script>
@@ -37,9 +52,23 @@ export default {
         userAvatar : {
             type: String
         },
-        isEditable : {
+        iseditabled : {
             type: Boolean,
-            default: false
+            default : false
+        }
+    },
+    data () {
+        return {
+            bannerHover : false,
+            avatarHover : false,
+        }
+    },
+    methods : {
+        setBannerHover : function (b){
+            this.bannerHover=b
+        },
+        setAvatarHover : function (b){
+            this.avatarHover=b
         }
     }
     
@@ -47,10 +76,13 @@ export default {
 </script>
 
 <style scoped>
+
 .banner-root {
     position: relative;
-    height: 300px
+    height: 350px;
 }
+
+/* Banner */
 
 .banner-background{
     position: absolute;
@@ -58,30 +90,68 @@ export default {
 
 .banner-background img{
     width: 100%;
-    height: 300px;
+    height: 350px;
 }
+
+.dark-background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.banner-img {
+    display:flex;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.4)
+}
+
+.banner-img-edition{
+    margin:auto;
+}
+
+.show-button-edition {
+    background-color: rgb(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+/* Avatar */
+
 
 .banner-avatar {
     position: absolute;
-    top: 80px;
+    top: 100px;
     left: 10%;
     /*background: linear-gradient(rgb(22,24,35,0), rgb(22,24,35, 0.8), rgb(22,24,35,0));*/
 }
 
-.avatar-img{
+.fixed-img {
     display: table-cell;
     border-radius: 50%;
-    padding: 5px;
-}
-
-.avatar-img img{
     width: 100px;
     height: 100px;
     padding: 5px;
-    border-radius: 50%;
     border-style: solid;
     border-color: rgb(22,24,35);
     border-width: 5px;
+}
+
+.avatar-img-edition {
+    display: table-cell;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px; 
+    padding: 15px;
+}
+
+.dark-background-avatar {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0, 0.8);
+    cursor: pointer;
 }
 
 .avatar-p{
@@ -92,18 +162,28 @@ export default {
     color: rgba(218,165, 32, 1);
 }
 
+.avatar-img-edition {
+    cursor:pointer;
+}
+
+
+
+/* ----------
+
+
+
 .banner-shop {
     position: absolute;
     top: 20px;
     right: 10%;
-    /*background: linear-gradient(rgb(22,24,35,0), rgb(22,24,35, 0.8), rgb(22,24,35,0));*/
-}
+    /*background: linear-gradient(rgb(22,24,35,0), rgb(22,24,35, 0.8), rgb(22,24,35,0));
+} 
 
-.shop-img img{
+ .shop-img img{
     width: 40px;
     height: 40px;
     padding: 5px;
-}
+} */
 
 .banner-fans {
     position: absolute;
@@ -117,6 +197,5 @@ export default {
     height: 30px;
     padding: 5px;
 }
-
 
 </style>
