@@ -19,7 +19,6 @@
     left: 0;
     justify-content: center;
     align-items: center;
-    
 }
 
 .modal-root p{

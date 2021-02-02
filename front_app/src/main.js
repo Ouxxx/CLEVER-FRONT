@@ -31,11 +31,12 @@ const router = new VueRouter({
     component: require('./components/repaire/Repaire_v2').default,
     children: [
       {
-        path: 'profil',
+       path: 'profil',
         component: require('./components/repaire/mon_profil/mon_profil_v2').default,
-      },{
+       },
+      {
         path: 'gerermonprofil',
-        component: require('./components/repaire/gerer_mon_profil/profile_management_v1').default,
+        component: require('./components/repaire/gerer_mon_profil/profile_management_v2').default,
       },{
         path: 'dashboard',
         component: require('./components/repaire/dashboard/Dashboard_v1').default,

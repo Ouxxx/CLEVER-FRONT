@@ -45,7 +45,7 @@ h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: medium;
     font-weight: lighter;
-    color: rgb(168,135,75);
+    color:rgba(255, 255, 255, 0.178);
     text-transform: uppercase;
     border-bottom-style: solid;
     border-width: 1px;

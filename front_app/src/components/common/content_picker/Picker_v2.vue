@@ -52,11 +52,9 @@ export default {
 <style scoped>
 
 .picker-root{
-    position: relative;
     display: flex;
     justify-content: flex-end;
     padding: 20px 20px 10px 0px;
-    cursor: pointer;
 }
 .picker-root p{
     margin: 0;
@@ -71,7 +69,6 @@ export default {
     padding: 0 20px;
     outline: none;
     transition: width 0.4s ease-in-out;
-
 }
 .picker-search input:focus{
     width: 600px;
@@ -81,6 +78,7 @@ export default {
 .picker-filters {
     border-right-style: solid;
     border-right-width: 1px;
+    cursor: pointer;
 }
 
 .picker-btn {

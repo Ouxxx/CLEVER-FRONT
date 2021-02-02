@@ -129,12 +129,12 @@ export default {
 }
 
 .button-post-hover {
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(233, 171, 0, 0.9);
 }
 
 
 .button-post-p-hover {
-    color: rgb(168, 135, 75);
+    color: rgba(255, 255, 255, 1);
 }
 
 </style>
