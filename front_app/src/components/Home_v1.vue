@@ -11,12 +11,11 @@
                 <ch-list :contents="ecrits" contentType="ecrit" />
 
             </div>
-            <!--
-            <div style="margin-left : 100px">
-                <ch-ecrit v-for="ecrit in ecrits" :key="ecrit.docId" 
-                        :docid="ecrit.docId" :title="ecrit.title" :author="ecrit.author" :description="ecrit.description" />
+
+            <div style="margin: 150px; background: red">
+                <shares />
+                <shares />
             </div>
-            -->
             
             <element-list category="En cours de visionnage"></element-list>
             <element-list category="Catégorie 1"></element-list>
@@ -32,11 +31,12 @@
 import sidebarCh from './common/sidebar/Sidebar_v2'
 import elementList from './blocs/list_elements_v1'
 import headerCh from './common/header/Header_v5'
+import shares from './common/shares/Shares_v1'
 
 import chList from './common/content_list/Content_list_v1'
 
 export default {
-    components: { headerCh, sidebarCh, elementList, chList},
+    components: { headerCh, sidebarCh, elementList, chList, shares },
     data () {
         return {
             videos : [
@@ -146,9 +146,16 @@ export default {
         }
     },
     methods : {
+<<<<<<< HEAD
         goViewingVideoPage() {
             this.$router.push('/video')
         }
+=======
+        go : function () {
+            this.$router.push('/repaire/media/video')
+        }
+
+>>>>>>> 391789cc27d09a3bec4617930f5981aa7af92860
     }
     
 }
