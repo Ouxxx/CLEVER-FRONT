@@ -7,6 +7,7 @@
             <div style="margin-left : 100px">
 
                 <ch-list :contents="videos" contentType="video" />
+                <div @click="goViewingVideoPage()" style="color:blue" class="test">fsdkdskljdfsk</div>
                 <ch-list :contents="ecrits" contentType="ecrit" />
 
             </div>
@@ -145,7 +146,9 @@ export default {
         }
     },
     methods : {
-
+        goViewingVideoPage() {
+            this.$router.push('/video')
+        }
     }
     
 }

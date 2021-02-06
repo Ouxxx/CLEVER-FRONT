@@ -36,6 +36,10 @@
                 </postOne>
             </div>
 
+            <div class="button-profile">
+                <div class="style-button-profile manage" @click="goToManagementProfile()">GERER MON PROFIL</div>
+            </div>
+
             <div class="contents-profile content-block-property">
                 <div class="contents">
                     <div class="search-bar">
@@ -137,15 +141,9 @@ export default {
         }
     },
     methods: {
-        /*gotoecrit() {
-            this.$router.push('/repaire/media/ecrit')
-        },
-        gotoimage() {
-            this.$router.push('/repaire/media/image')
-        },
-        gotovideo() {
-            this.$router.push('/repaire/media/video')
-        }*/
+        goToManagementProfile: function () {
+            this.$router.push('/repaire/gerermonprofil')
+        }
     }
 }
 </script>
@@ -197,6 +195,33 @@ export default {
     width:30px;
     height:30px;
     cursor: pointer;
+}
+
+/* BUTTON */
+
+.button-profile {
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    justify-content: flex-end;
+    right: 30px;
+    bottom: 30px;
+    z-index: 522;
+}
+
+.style-button-profile {
+    color: white;
+    background-color: blue;
+    border-radius: 5px;
+    line-height: 40px; /*A VOIR SI CEST LA MEILLEURE OPTION, c'est pour centrer verticalement*/
+    text-align: center;
+    width: 180px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.style-button-profil:hover {
+    background-color: rgb(124, 124, 182);
 }
 
 /*post*/

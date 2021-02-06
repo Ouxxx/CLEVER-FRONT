@@ -101,6 +101,7 @@ export default {
     padding: 5px;
     min-height: 150px;
     min-width: 250px;
+    cursor: pointer;
 }
 .list-btn {
     width: 100px;

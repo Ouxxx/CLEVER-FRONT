@@ -42,9 +42,9 @@ export default {
     border-radius: 5px;
 }
 
-.textarea:focus {
-    border: 0.6mm solid rgba(189, 17, 205, 0.5) ;
-}
+/* .textarea:focus {
+    border: 0.4mm solid rgba(189, 17, 205, 0.5) ;
+} */
 
 
 </style>
