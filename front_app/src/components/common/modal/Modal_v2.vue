@@ -44,7 +44,7 @@ export default {
     right: 0;
     left: 0;
     padding-top: 200px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .overlay{
@@ -59,6 +59,7 @@ export default {
 .modal{
     background: white;
     width: 50%;
+    min-width: 500px;
     margin-right: auto;
     margin-left: auto;
 }
