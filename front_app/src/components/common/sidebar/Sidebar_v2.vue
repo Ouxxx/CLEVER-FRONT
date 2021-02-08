@@ -48,6 +48,7 @@
     z-index: 2021;
     height: 100vh;
     width: 200px;
+    cursor: pointer;
     transition: transform 500ms ease-out, 
                 background-color 500ms ease-out, 
                 border-right-style 500ms ease-out;

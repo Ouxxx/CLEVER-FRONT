@@ -21,6 +21,9 @@ const router = new VueRouter({
     path: '/home',
     component: require('./components/Home_v1').default,
   },{
+    path: '/video',
+    component: require('./components/viewing_video/viewing_video_v1').default,
+  },{
     path: '/visitor',
     component: require('./components/Home_v1').default,
   },{
@@ -31,7 +34,7 @@ const router = new VueRouter({
     component: require('./components/repaire/Repaire_v2').default,
     children: [
       {
-       path: 'profil',
+        path: 'profil',
         component: require('./components/repaire/mon_profil/mon_profil_v2').default,
        },
       {
