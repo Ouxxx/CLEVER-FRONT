@@ -1,5 +1,5 @@
 <template>
-    <div class="sidebar-root" :class="{ 'opened' : opened, 'closed' : !opened} " 
+    <div class="sidebar-root z-index-h1" :class="{ 'opened' : opened, 'closed' : !opened} " 
             @mouseenter="open" @mouseleave="close" >
         <div class="sidebar-opened" v-if="opened">
             <div class="sidebar-group-fonctions" >
@@ -45,7 +45,6 @@
 
 .sidebar-root {
     position: fixed;
-    z-index: 2021;
     height: 100vh;
     width: 200px;
     cursor: pointer;

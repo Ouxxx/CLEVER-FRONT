@@ -1,10 +1,13 @@
 <template>
     <div class="shares-root">
-        <modal v-if="true" ></modal>
+        <modal v-if="isModalOpen" title="Titre" submit-label="Valider" cancel-label="Annuler"
+            @modal-submit="addLink" @modal-cancel="closeModal" >
+            Ici j'ai plus qu a mettre le contenu
+        </modal>
         <div class="shares-item">
             <img src="@/assets/test.png" alt="">
         </div>
-        <div class="shares-item">
+        <div class="shares-item" @click="openModal">
             <img src="@/assets/testp.png" alt="">
         </div>
     </div>
@@ -16,7 +19,18 @@ export default {
     components : { modal },
     data() {
         return {
-            
+            isModalOpen : false
+        }
+    },
+    methods: {
+        addLink : function () {
+            this.isModalOpen = false
+        },
+        closeModal : function () {
+            this.isModalOpen = false
+        },
+        openModal : function () {
+            this.isModalOpen = true
         }
     }
     
