@@ -1,6 +1,6 @@
 <template>
     <div class="shares-root">
-        <modal v-if="false" ></modal>
+        <modal v-if="true" ></modal>
         <div class="shares-item">
             <img src="@/assets/test.png" alt="">
         </div>
@@ -11,9 +11,14 @@
 </template>
 
 <script>
-import modal from '../modal/Modal_v1'
+import modal from '../modal/Modal_v2'
 export default {
-    components : { modal }
+    components : { modal },
+    data() {
+        return {
+            
+        }
+    }
     
 }
 </script>

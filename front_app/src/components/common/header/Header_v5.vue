@@ -1,5 +1,5 @@
 <template>
-    <div class="header-root">
+    <div class="header-root z-index-h2">
         <div class="header-top">
             <div class="header-left" >
                 <img src="../../../assets/img/logoCH.png" alt="Logo CH" @click="goHome()">
@@ -56,7 +56,7 @@ export default {
 
 .header-root {
     position: fixed;
-    z-index: 2020;
+    /* z-index: 2020; */
     width: 100%;
 }
 
