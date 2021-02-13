@@ -146,16 +146,10 @@ export default {
         }
     },
     methods : {
-<<<<<<< HEAD
         goViewingVideoPage() {
             this.$router.push('/video')
         }
-=======
-        go : function () {
-            this.$router.push('/repaire/media/video')
-        }
 
->>>>>>> 391789cc27d09a3bec4617930f5981aa7af92860
     }
     
 }

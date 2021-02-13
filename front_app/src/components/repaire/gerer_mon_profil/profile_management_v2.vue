@@ -25,7 +25,7 @@
                 <div class="post-area">
                     <h1>Posts</h1>
                     <post-one :postText="textExample"></post-one>
-                    
+                    <post-one :postText="textExample"></post-one>
                     <modal class="post-area-modal" v-if="isModalOpen" @close-modal="closeModal">
                         <p>Publier un nouveau post</p>
                         <div class="border-top"></div>
@@ -58,6 +58,10 @@
                     </div>
 
                 </div>
+            </div>
+            <div class="info-post-block">
+                <div class="info-area"></div>
+                <div class="post-area"></div>
             </div>
 
             <div class="buttons-management">
@@ -179,12 +183,11 @@ export default {
 
 .info-post-block {
     display: flex;
-    flex-direction: row;
 }
 
 .info-area {
     background-color: rgb(21, 29, 41);
-    width: 3000px;
+    flex-grow: 6;
     padding: 0 40px;
 }
 
@@ -197,8 +200,8 @@ export default {
 /* Posts */
 
 .post-area {
+    display: block;
     background-color: rgb(25, 34, 48);
-    width: 1000px;
     padding: 0 40px;
 }
 
