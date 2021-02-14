@@ -27,7 +27,6 @@
 </template>
 
 <script>
-//import headerCh from './blocs/header_v3'
 import sidebarCh from './common/sidebar/Sidebar_v2'
 import elementList from './blocs/list_elements_v1'
 import headerCh from './common/header/Header_v5'
@@ -149,7 +148,6 @@ export default {
         goViewingVideoPage() {
             this.$router.push('/video')
         }
-
     }
     
 }

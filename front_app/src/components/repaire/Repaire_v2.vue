@@ -4,8 +4,6 @@
         <ch-header>
             <ch-header-button @button-selected="move('/repaire/profil')" 
                     buttonName="Mon profil" :selected="$route.fullPath === '/repaire/profil'" />
-            <ch-header-button @button-selected="move('/repaire/gerermonprofil')" 
-                    buttonName="Gérer mon profil" :selected="$route.fullPath === '/repaire/gerermonprofil'" />
             <ch-header-button @button-selected="move('/repaire/dashboard')" 
                     buttonName="Dashboard" :selected="$route.fullPath === '/repaire/dashboard'" />
             <ch-header-button @button-selected="move('/repaire/soutiens')" 

@@ -74,5 +74,31 @@ font-family: 'Avenir', Helvetica, Arial, sans-serif;
   */
 }
 
+
+/* Gestion et definitions des niveaux possible pour la propriete z-index */
+/* 
+  z-index-h1 : niverau le plus haut 
+  composants avec cette propriete:
+  - sidebar
+*/
+.z-index-h1 {
+  z-index: 10;
+}
+
+/* 
+  composants avec cette propriete:
+  - header
+*/
+.z-index-h2 {
+  z-index: 9;
+}
+
+/* 
+  composants avec cette propriete:
+  - modal
+*/
+.z-index-h3 {
+  z-index: 8;
+}
 </style>
 
