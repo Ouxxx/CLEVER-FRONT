@@ -145,6 +145,12 @@ export default {
 
 /* Informations générales */
 
+@media (max-width: 1000px) {
+    .info-post-block {
+        flex-direction: column;
+    }
+}
+
 .info-post-block {
     display: flex;
 }

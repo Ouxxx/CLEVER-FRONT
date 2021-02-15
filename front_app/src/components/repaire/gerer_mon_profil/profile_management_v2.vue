@@ -27,24 +27,24 @@
                     <post-one :postText="textExample"></post-one>
                     <post-one :postText="textExample"></post-one>
                     <modal class="post-area-modal" v-if="isModalOpen" @close-modal="closeModal">
-                        <p>Publier un nouveau post</p>
-                        <div class="border-top"></div>
                         <!-- TODO INSERER ICI: composant Timer 
                         En attendant je laisse l'image du timer.
                         Image qui sera placée à gauche du composant-->
                         
-                        <div class="form-new-post">
-                            <div class="form-new-post-timer">
+                        <div class="top-new-post">
+                            <div class="top-new-post-timer">
                                 <img class="timer-post" src="../../../assets/img/icon_timer.png" alt="timer">
                             </div>
-                            <img class="img-sender" src="../../../assets/img/user-test.png" alt="senders-img">
-                            <select class="choice-sender" name="senders">
-                                <option value="">Concernés</option>
-                                <option value="everybody">Tout le monde</option>
-                                <option value="supporters">Ceux qui me soutiennent</option>
-                            </select>
+                            <div class="test">
+                                <img class="img-sender" src="../../../assets/img/user-test.png" alt="senders-img">
+                                <select class="choice-sender" name="senders">
+                                    <option value="">Concernés</option>
+                                    <option value="everybody">Tout le monde</option>
+                                    <option value="supporters">Ceux qui me soutiennent</option>
+                                </select>
+                            </div>
                         </div>
-                        <autosize-textarea name="y" placeholder="Ecrivez votre post, ici." />
+                        <autosize-textarea placeholder="Que souhaitez-vous publier ?" />
                         <img src="../../../assets/img/icon_smiley.png" alt="smiley">
                         <div class="link-bar">
                             <img ckass="link-bar-img" src="../../../assets/img/icon_link.png" @click="clickOnLink"  alt="link">
@@ -85,7 +85,7 @@
 import banner from '../../common/banner/Banner_v1'
 import autosizeTextarea from '../../common/autosize_textarea/autosize_textarea_v1'
 import postOne from '../../common/profile_gestion/postOne'
-import modal from '../../common/modal/Modal_v1'
+import modal from '../../common/modal/Modal_v2'
 import chPicker from '../../common/content_picker/Picker_v2'
 import chMosaique from '../../common/mosaique/Mosaique_v1'
 
@@ -289,14 +289,17 @@ export default {
     width: 400px;
 }
 
-.form-new-post {
-    padding: 5px;
-    display: flex;
+.top-new-post {
+    display: inline;
     flex-direction: row;
 }
 
+.test {
+    display: inline;
+}
+
 .timer-post {
-    
+    display: inline;
 }
 
 .img-sender {

@@ -1,6 +1,6 @@
 <template>
     <div class="shares-root">
-        <modal v-if="isModalOpen" title="Titre" submit-label="Valider" cancel-label="Annuler"
+        <modal v-if="isModalOpen" title="coucou ceci est mon titre" submit-label="Clique ici c'est ok" cancel-label="Annuler"
             @modal-submit="addLink" @modal-cancel="closeModal" >
             Ici j'ai plus qu a mettre le contenu
         </modal>
