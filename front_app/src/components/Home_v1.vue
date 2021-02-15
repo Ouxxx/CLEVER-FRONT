@@ -14,7 +14,6 @@
 
             <div style="margin: 150px; background: red">
                 <shares />
-                <shares />
             </div>
             
             <element-list category="En cours de visionnage"></element-list>

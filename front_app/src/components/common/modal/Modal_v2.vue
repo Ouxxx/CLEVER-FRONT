@@ -8,7 +8,7 @@
             </div>
             <div class="modal-functions modal-marge">
                 <div class="modal-functions-position">
-                    <div class="modal-button" @click="$emit('modal-submit')"><p class="modal-p">{{submitLabel}}</p></div>
+                    <div class="modal-button" @click="$emit('modal-submit')" v-if="withSubmit"><p class="modal-p">{{submitLabel}}</p></div>
                     <div class="modal-button" @click="$emit('modal-cancel')"><p class="modal-p">{{cancelLabel}}</p></div>
                 </div>
             </div>
@@ -25,10 +25,14 @@ export default {
         },
         submitLabel: {
             type: String,
-            required: true
+            required: false
         },
         cancelLabel: {
             type: String,
+            required: true
+        },
+        withSubmit: {
+            type: Boolean,
             required: true
         }
     }
@@ -70,7 +74,12 @@ export default {
 }
 
 .modal-title {
+    cursor: default;
     background-color: rgb(216, 216, 216);
+}
+
+.modal-title p {
+    text-transform: uppercase;
 }
 
 .modal-functions {
@@ -82,6 +91,7 @@ export default {
     display: inline-block;
     padding: 16px;
     margin: 16px;
+    cursor: pointer;
     background-color: rgb(216, 216, 216);
 }
 
