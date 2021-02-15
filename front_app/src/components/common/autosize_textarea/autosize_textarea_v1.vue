@@ -31,6 +31,9 @@ export default {
 .textarea {
     display: block;
     width: 100%;
+    border: none;
+    background-color: rgb(21, 29, 41);
+    color: white;
     resize: none;
     font-size: inherit;
     outline: none;

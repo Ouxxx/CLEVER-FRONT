@@ -50,6 +50,7 @@ export default {
 <style scoped>
 .sorter-root {
     display: inline-block;
+    position: relative;
     cursor: pointer;
     height: 40px;
     -moz-user-select: none;

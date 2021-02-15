@@ -60,11 +60,11 @@ export default {
     border: 0.5mm solid rgba(27,37,48,.8);
     margin: 5px;
     border-radius: 5px;
-    max-width:2000px;
+    max-width:1000px;
 }
 
 .post-root-closed {
-    display: inline-block;
+    display: block;
     height: 150px;
 }
 

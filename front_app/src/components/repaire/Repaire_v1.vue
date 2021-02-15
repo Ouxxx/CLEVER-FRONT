@@ -5,12 +5,10 @@
         <menu-haut>
             <menu-haut-button @button-selected="selectPage(0)" 
                     buttonName="Mon profil" :selected="pageSelected === 0" />
-            <menu-haut-button @button-selected="selectPage(1)" 
-                    buttonName="Gérer ma page" :selected="pageSelected === 1" />
+            <menu-haut-button @button-selected="selectPage(1)"  
+                    buttonName="Dashboard" :selected="pageSelected === 1" />
             <menu-haut-button @button-selected="selectPage(2)" 
-                    buttonName="Dashboard" :selected="pageSelected === 2" />
-            <menu-haut-button @button-selected="selectPage(3)" 
-                    buttonName="Mes soutiens" :selected="pageSelected === 3" />
+                    buttonName="Mes soutiens" :selected="pageSelected === 2" />
         </menu-haut>
         <ch-banner ></ch-banner>
         <div class="repaire-content">
