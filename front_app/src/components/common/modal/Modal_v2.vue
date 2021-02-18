@@ -3,7 +3,7 @@
         <div class="overlay" @click="$emit('modal-cancel')"></div>
         <div class="modal">
             <div class="modal-title modal-marge"><p class="modal-p">{{title}}</p></div>
-            <div class="modal-content modal-marge">
+            <div>
                 <slot></slot>
             </div>
             <div class="modal-functions modal-marge">

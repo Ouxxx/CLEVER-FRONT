@@ -2,7 +2,7 @@
     <div class="shares-root">
         <modal v-if="isAddModalOpen" title="Ajouter un lien" submit-label="Valider" cancel-label="Annuler" :with-submit="isSubmitEnable"
                 @modal-submit="addLink" @modal-cancel="closeAddModal" >
-            <div class="add-modal-root">
+            <div class="modal-padding">
                 <div class="modal-section">
                     <div class="modal-section-form">Choisissez le type de lien à ajouter</div>
                     <div class="modal-section-content">
@@ -23,7 +23,7 @@
         </modal>
         <modal v-if="isDeleteModalOpen" title="Supprimer un lien" submit-label="Confirmer" cancel-label="Annuler" :with-submit="true"
                 @modal-submit="deleteShare" @modal-cancel="closeDeleteModal" >
-                <div class="delete-modale-root">
+                <div class="modal-padding">
                     <div class="modal-section">
                         <div class="modal-section-form">Voulez-vous supprimer le lien suivant ?</div>
                         <div class="modal-section-content modal-delete-container">
@@ -38,7 +38,7 @@
         <div class="shares-item img-container" v-for="share in sharedLinks" :key="share.url">
             <img :src="share.path" :alt="share.name" @click="openDeleteModal(share)">
         </div>
-        <div class="shares-item img-container" @click="openAddModal">
+        <div class="shares-item img-container" v-if="isEditable" @click="openAddModal">
             <img :src="getLogoByName('Plus').path" :alt="getLogoByName('Plus').name">
         </div>
     </div>
@@ -49,6 +49,17 @@ import {mapGetters} from 'vuex'
 import modal from '../modal/Modal_v2'
 export default {
     components : { modal },
+    props : {
+        sharedLinks : {
+            type: Array,
+            required: true
+        },
+        isEditable: {
+            type: Boolean,
+            required: false,
+            default : false
+        }
+    },
     data() {
         return {
             isAddModalOpen : false,
@@ -56,9 +67,8 @@ export default {
             inputLink : '',
 
             isDeleteModalOpen : false,
-            currentShareToDelete : {},
+            currentShareToDelete : {}
 
-            sharedLinks : []
         }
     },
     computed: {
@@ -71,32 +81,32 @@ export default {
     methods: {
         isObjEmpty: (obj) => Object.keys(obj).length === 0,
         addLink : function () {
+            console.log('signal "modal-submit" recu')
             if(this.currentLogoSelected.name === 'Autre') { 
                 // TODO : en terme de securite faut peut etre verifier quelque chose? Car on ne sait pas vers quoi pointe ce lien
                 if(this.inputLink != '' && this.sharedLinks.filter(link => link.url === this.inputLink).length === 0) {
-                    this.sharedLinks.push({
+                    this.$emit('add-share', {
                         name : this.currentLogoSelected.name,
                         path : this.currentLogoSelected.path,
                         url : this.inputLink
-                    }) 
+                    })
                 }
             } else if(this.currentLogoSelected.name != '') {
                 if(this.inputLink != '' 
                         && this.sharedLinks.filter(link => link.url === (this.currentLogoSelected.url + this.inputLink)).length === 0){
-                    this.sharedLinks.push({
+                    this.$emit('add-share',{
                         name : this.currentLogoSelected.name,
                         path : this.currentLogoSelected.path,
                         url : this.currentLogoSelected.url + this.inputLink
-                    })
+                     })
                 }
             }
             this.closeAddModal()
-            console.log(this.sharedLinks)
+            
         },
         deleteShare : function () {
-            this.sharedLinks = this.sharedLinks.filter(item => item.url !== this.currentShareToDelete.url)
+            this.$emit('delete-share', this.currentShareToDelete)
             this.closeDeleteModal()
-            console.log(this.sharedLinks)
         },
         openAddModal : function () {
             this.isAddModalOpen = true
@@ -107,8 +117,10 @@ export default {
             this.inputLink = ''
         },
         openDeleteModal : function (share) {
-            this.currentShareToDelete = share
-            this.isDeleteModalOpen = true
+            if(this.isEditable){
+                this.currentShareToDelete = share
+                this.isDeleteModalOpen = true
+            }
         },
         closeDeleteModal : function () {
             this.isDeleteModalOpen = false
@@ -123,6 +135,10 @@ export default {
 </script>
 
 <style scoped>
+
+.modal-padding {
+    padding: 24px;
+}
 
 .modal-section {
     padding-bottom: 16px;

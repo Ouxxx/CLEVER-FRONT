@@ -6,14 +6,14 @@
         <div class="home-main">
             <div style="margin-left : 100px">
 
-                <ch-list :contents="videos" contentType="video" />
+                <ch-list :contents="getVideos" contentType="video" />
                 <div @click="goViewingVideoPage()" style="color:blue" class="test">fsdkdskljdfsk</div>
-                <ch-list :contents="ecrits" contentType="ecrit" />
+                <ch-list :contents="getEcrits" contentType="ecrit" />
 
             </div>
 
             <div style="margin: 150px; background: red">
-                <shares />
+                <shares :shared-links="shares" :is-editable="true" @add-share="addShare" @delete-share="deleteShare" />
             </div>
             
             <element-list category="En cours de visionnage"></element-list>
@@ -26,6 +26,8 @@
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
+
 import sidebarCh from './common/sidebar/Sidebar_v2'
 import elementList from './blocs/list_elements_v1'
 import headerCh from './common/header/Header_v5'
@@ -37,116 +39,24 @@ export default {
     components: { headerCh, sidebarCh, elementList, chList, shares },
     data () {
         return {
-            videos : [
-                {
-                    docId : "111",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.111",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "222",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.222",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "333",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.333",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "444",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.444",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "555",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.555",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "666",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.666",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "777",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.777",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "888",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.888",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "999",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.999",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                }
-            ],
-            ecrits : [
-                {
-                    docId : "111",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.111",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "222",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.222",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "333",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.333",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "444",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.444",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "555",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.555",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                }
-            ]
+            shares : [],
         }
     },
     methods : {
+        addShare(share) {
+            this.shares.push(share)
+            console.log(this.shares)
+        },
+        deleteShare(share) {
+            this.shares = this.shares.filter(item => item.url !== share.url)
+            console.log(this.shares)
+        },
         goViewingVideoPage() {
             this.$router.push('/video')
         }
+    },
+    computed : {
+        ...mapGetters([ 'getVideos' , 'getEcrits' ])
     }
     
 }
