@@ -45,10 +45,13 @@
                             </div>
                         </div>
                         <autosize-textarea placeholder="Que souhaitez-vous publier ?" />
-                        <img src="../../../assets/img/icon_smiley.png" alt="smiley">
-                        <div class="link-bar">
-                            <img ckass="link-bar-img" src="../../../assets/img/icon_link.png" @click="clickOnLink"  alt="link">
-                            <textarea name="link-textarea" id="" cols="30" rows="10" v-if="isLinkOpen"></textarea>
+                        
+                        <div class="icon-bar" >
+                            <img class="icon-bar-img" @click="openIcon('smiley')" v-bind:class="{'icon-open': iconOpened == 'smiley'}" src="../../../assets/img/icon_smiley.png" alt="smiley">
+                            <img class="icon-bar-img" @click="openIcon('link')" v-bind:class="{'icon-open': iconOpened == 'link'}" src="../../../assets/img/icon_link.png" alt="link">
+                            <!-- <textarea name="link-textarea" id="" cols="30" rows="10" v-if="isLinkOpen"></textarea> -->
+                            <img class="icon-bar-img" @click="openIcon('img')" v-bind:class="{'icon-open': iconOpened == 'img'}" src="../../../assets/img/icon_img.png" alt="img">
+                            <img class="icon-bar-img" @click="openIcon('survey')" v-bind:class="{'icon-open': iconOpened == 'survey'}" src="../../../assets/img/icon_survey2.png" alt="survey">   
                         </div>
                         
                     </modal>
@@ -95,6 +98,7 @@ export default {
         return {
             isModalOpen : false,
             isLinkOpen : false,
+            iconOpened : "",
             videos : [
                 {
                     docId : "111",
@@ -164,12 +168,12 @@ export default {
         closeModal : function () {
             this.isModalOpen = false
         },
-        clickOnLink : function () {
-            this.isLinkOpen = true
-        },
         getBackToProfile : function () {
             this.$router.push('/repaire/profil')
-        }
+        },
+        openIcon : function (x) {
+            this.iconOpened = x
+            }
     }
 }
 </script>
@@ -310,8 +314,17 @@ export default {
     
 }
 
-.link-bar-img {
+.icon-bar {
+    background-color: rgb(2, 133, 255);
+    height: 80px;
+}
+
+.icon-bar-img {
     cursor: pointer;
+}
+
+.icon-open {
+    background-color: red;
 }
 
 </style>

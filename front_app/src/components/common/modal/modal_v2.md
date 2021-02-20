@@ -2,7 +2,7 @@
 
 ## Description :
 
-Le composant Modal_v2 permet d'ouvrir une modale sur la page. La modale contient un titre, un corps determiné par ses blocs enfants ainsi que 2 boutons : 1 bouton present en fonction de la props *withSubmit* emmetant un signal *modal-submit* lorsqu'on clique dessus; 1 bouton toujours présent emmetant un signal 'modal-cancel'
+Le composant Modal_v2 permet d'ouvrir une modale sur la page. La modale contient un titre, un corps determiné par ses blocs enfants ainsi que 2 boutons : 1 bouton present en fonction de la prop *withSubmit* emetant un signal *modal-submit* lorsqu'on clique dessus; 1 bouton toujours présent emetant un signal 'modal-cancel'.
 
 ## Props :
 
