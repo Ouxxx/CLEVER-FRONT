@@ -183,7 +183,7 @@ export default {
 
 img {
     /* width : 40px; */
-    background-color: blueviolet
+    /* background-color: blueviolet */
 }
 
 .img-container {

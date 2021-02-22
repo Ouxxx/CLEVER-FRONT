@@ -1,8 +1,6 @@
 <template>
     <div class="survey-root">
-
-        
-
+        <div class="test">AHAHAH</div>
     </div>
 </template>
 

@@ -20,6 +20,7 @@
                     <!-- COF : Dans le rendu/aperçu, le texte doit être encadré par des guillemets
                     Div IMG guillemets :<img src="../../../assets/img/guillemets-test.png" alt="quote-mark"> -->
                     <autosize-textarea name="y" placeholder="Ajouter une description, ici." />
+                    <div class="survey-test" @click="lookSurvey()">AHAHAH JE SUIS LA</div>
                 </div>
 
                 <div class="post-area">
@@ -48,10 +49,22 @@
                         
                         <div class="icon-bar" >
                             <img class="icon-bar-img" @click="openIcon('smiley')" v-bind:class="{'icon-open': iconOpened == 'smiley'}" src="../../../assets/img/icon_smiley.png" alt="smiley">
+                            <!-- bibliotheque de smileys -->
                             <img class="icon-bar-img" @click="openIcon('link')" v-bind:class="{'icon-open': iconOpened == 'link'}" src="../../../assets/img/icon_link.png" alt="link">
-                            <!-- <textarea name="link-textarea" id="" cols="30" rows="10" v-if="isLinkOpen"></textarea> -->
+                            <!-- <input type="text"> -->
                             <img class="icon-bar-img" @click="openIcon('img')" v-bind:class="{'icon-open': iconOpened == 'img'}" src="../../../assets/img/icon_img.png" alt="img">
+                            <!-- <div>Ajouter un fichier de type X :
+                                <file-selector max="5" v-model="files">
+                                    <input type="file"/>
+                                </file-selector>
+                            </div> -->
                             <img class="icon-bar-img" @click="openIcon('survey')" v-bind:class="{'icon-open': iconOpened == 'survey'}" src="../../../assets/img/icon_survey2.png" alt="survey">   
+                            <!-- composant survey -->
+                        </div>
+                        <div>
+                            <div v-if="iconOpened==='link'">
+                                coucou
+                            </div>
                         </div>
                         
                     </modal>
@@ -173,7 +186,10 @@ export default {
         },
         openIcon : function (x) {
             this.iconOpened = x
-            }
+        },
+        lookSurvey : function () {
+            this.$router.push('/repaire/survey')
+        }
     }
 }
 </script>

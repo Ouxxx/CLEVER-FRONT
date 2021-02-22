@@ -6,7 +6,27 @@ const state = {
             name : 'Twitter',
             path : require('@/assets/img/logos/twitter.png'),
             url : 'https://twitter.com/'
-        }
+        },{
+            name : 'Instagram',
+            path : require('@/assets/img/logos/instagram.png'),
+            url : 'https://instagram.com/'
+        },{
+            name : 'Linkedin',
+            path : require('@/assets/img/logos/linkedin.png'),
+            url : 'https://linkedin.com/'
+        },{
+            name : 'Discord',
+            path : require('@/assets/img/logos/discord.png'),
+            url : 'https://discord.com/'
+        },{
+            name : 'Twitch',
+            path : require('@/assets/img/logos/twitch.png'),
+            url : 'https://twitch.com/'
+        },{
+            name : 'Facebook',
+            path : require('@/assets/img/logos/facebook.png'),
+            url : 'https://facebook.com/'
+        },
     ],
     logos : [
         {

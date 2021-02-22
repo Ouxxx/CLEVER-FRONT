@@ -36,8 +36,10 @@ const router = new VueRouter({
       {
         path: 'profil',
         component: require('./components/repaire/mon_profil/mon_profil_v2').default,
-       },
-      {
+       },{
+        path: 'survey',
+        component: require('./components/common/survey/survey_v1').default,
+       },{
         path: 'gerermonprofil',
         component: require('./components/repaire/gerer_mon_profil/profile_management_v2').default,
       },{
