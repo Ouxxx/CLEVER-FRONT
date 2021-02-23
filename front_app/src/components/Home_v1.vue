@@ -45,11 +45,9 @@ export default {
     methods : {
         addShare(share) {
             this.shares.push(share)
-            console.log(this.shares)
         },
         deleteShare(share) {
             this.shares = this.shares.filter(item => item.url !== share.url)
-            console.log(this.shares)
         },
         goViewingVideoPage() {
             this.$router.push('/video')

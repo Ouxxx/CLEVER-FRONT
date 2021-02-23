@@ -35,8 +35,10 @@
                     </div>
                 </div>
         </modal>
-        <div class="shares-item img-container" v-for="share in sharedLinks" :key="share.url">
-            <img :src="share.path" :alt="share.name" @click="openDeleteModal(share)">
+        <div class="shares-item img-container img-relative-container" v-for="share in sharedLinks" :key="share.url"
+            @mouseover="f(share.url)" @mouseout="f('')" >
+            <img :src="share.path" :alt="share.name" >
+            <img v-show="deleteButtonOnHover == share.url" class="img-over" :src="getLogoByName('Plus').path" @click="openDeleteModal(share)">
         </div>
         <div class="shares-item img-container" v-if="isEditable" @click="openAddModal">
             <img :src="getLogoByName('Plus').path" :alt="getLogoByName('Plus').name">
@@ -66,6 +68,7 @@ export default {
             currentLogoSelected : {},
             inputLink : '',
 
+            deleteButtonOnHover : '',
             isDeleteModalOpen : false,
             currentShareToDelete : {}
 
@@ -81,7 +84,6 @@ export default {
     methods: {
         isObjEmpty: (obj) => Object.keys(obj).length === 0,
         addLink : function () {
-            console.log('signal "modal-submit" recu')
             if(this.currentLogoSelected.name === 'Autre') { 
                 // TODO : en terme de securite faut peut etre verifier quelque chose? Car on ne sait pas vers quoi pointe ce lien
                 if(this.inputLink != '' && this.sharedLinks.filter(link => link.url === this.inputLink).length === 0) {
@@ -129,6 +131,9 @@ export default {
         
         selectLogo : function (logo) {
             this.currentLogoSelected = logo
+        },
+        f : function (urlLogo) {
+            this.deleteButtonOnHover = urlLogo
         }
     }
 }
@@ -181,13 +186,15 @@ export default {
     opacity: 0;
 }
 
-img {
-    /* width : 40px; */
-    /* background-color: blueviolet */
-}
-
 .img-container {
     padding: 5px
+}
+.img-relative-container{
+    position : relative;
+}
+.img-over {
+    position: absolute;
+    left: 5px;
 }
 
 </style>
