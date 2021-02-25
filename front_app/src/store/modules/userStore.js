@@ -43,11 +43,16 @@ const mutations = {
 
     setToken (state, token) {
         state.token = token
+    },
+    cleanUser (state) {
+        state.id = '';
+        state.email = '';
+        state.token = ''
+        state.phone = '';
     }
 }
 
 export default {
-    //namespaced: true,
     state,
     getters,
     mutations

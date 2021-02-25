@@ -2,15 +2,15 @@
     <div class="header-root z-index-h2">
         <div class="header-top">
             <div class="header-left" >
-                <img src="../../../assets/img/logoCH.png" alt="Logo CH" @click="goHome()">
+                <img src="../../../assets/img/logoCH.png" alt="Logo CH" @click="goToHomePage()">
             </div>
             <div class="header-center" >
                 <input type="text" v-model="search" >
             </div>
             <div class="header-right" >
                 <div v-if="$store.getters.getToken">
-                    <button class="exit-button" @click="goWelcome()">A bientôt</button>
-                    <div class="header-avatar" >
+                    <!-- <button class="exit-button" @click="goToWelcomePage()">A bientôt</button> -->
+                    <div class="header-avatar" @click="showOptions(true)">
                         <div class="header-avatar-img" >
                             <img src="../../../assets/img/avatar-circle-user.png" alt="avatar" >
                         </div>
@@ -18,12 +18,12 @@
                             <p>{{$store.getters.getId}}</p>
                         </div>
                     </div>
+                    <headerModal v-if="isModalOpen" @header-modal-cancel="showOptions(false)" @header-modal-submit="disconnect()" />
                 </div>
                 <div v-else>
-                    <div class="header-connexion" @click="goWelcome()">
+                    <div class="header-connexion" @click="goToWelcomePage()">
                         <p>Connexion</p>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -35,18 +35,30 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+import headerModal from './Header_modal_v5'
 export default {
+    components: { headerModal },
     data () {
         return {
-            search: ''
+            search: '',
+            isModalOpen : false
         }
     },
     methods: {
-        goHome () {
+        ...mapMutations([ 'cleanUser' ]),
+        goToHomePage () {
             this.$router.push('/home')
         },
-        goWelcome () {
+        goToWelcomePage () {
             this.$router.push('/')
+        },
+        showOptions ( b ) {
+            this.isModalOpen = b;
+        },
+        disconnect() {
+            this.cleanUser();
+            this.goToWelcomePage();
         }
     }
 }
@@ -56,7 +68,6 @@ export default {
 
 .header-root {
     position: fixed;
-    /* z-index: 2020; */
     width: 100%;
 }
 
