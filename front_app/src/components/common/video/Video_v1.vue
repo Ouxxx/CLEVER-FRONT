@@ -11,11 +11,16 @@
                 <p>{{ this.author }}</p>
             </div>
         </div>
+        <div class="video-fav">
+            <favorite :fav="favorite"  @click-on-star="switchFavorite" />
+        </div>
     </div>
 </template>
 
 <script>
+import favorite from '../button/Button_fav_v1'
 export default {
+    components: { favorite },
     props: {
         docid: {
             type: String,
@@ -34,9 +39,18 @@ export default {
             type: String,
             required: true
         },
+        favorite: {
+            type: Boolean,
+            required: true
+        },
         width: {
             type: Number,
             required: true
+        }
+    },
+    methods : {
+        switchFavorite : function () {
+            this.$emit('click-on-star')
         }
     },
     computed : {
@@ -60,15 +74,6 @@ export default {
     cursor: pointer;
 }
 
-/*
-.video-background img:hover {
-    position: relative;
-    z-index: 1;
-    transform: scale(1.2);
-    cursor: pointer;
-}
-*/
-
 .video-background img{
     width: 100%;
     height: 100%;
@@ -76,9 +81,9 @@ export default {
 
 .video-desc {
     position: absolute;
-    top: 0;
+    top: 5px;
     bottom: 0;
-    left: 0;
+    left: 5px;
     right: 0;
     opacity: 1;
     transition: .5s ease;
@@ -96,6 +101,11 @@ export default {
 .video-desc-title p{
     font-size: 1.3em;
     font-weight: bold;
+}
+.video-fav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 </style>

@@ -7,7 +7,8 @@
     <div class="content-list-main" :style="styleListContent">
         <div v-if="contentType == 'video'">
             <ch-video v-for="video in postedContent" :key="video.docId" 
-                :docid="video.docId" :title="video.title" :author="video.author" :width="contentWidth" />
+                :docid="video.docId" :title="video.title" :author="video.author" :favorite="video.isFavorite" :width="contentWidth"
+                @click-on-star="switchFavorite(video.docId)" />
         </div>
         <div v-if="contentType == 'ecrit'">
             <ch-ecrit v-for="ecrit in postedContent" :key="ecrit.docId" 
@@ -49,6 +50,9 @@ export default {
         }
     },
     methods : {
+        switchFavorite : function (docId) {
+            this.$emit('click-on-star', docId)
+        },
         onResize : function () {
             this.listWidth = list.offsetWidth - (2 * this.listBtnWidth)
             this.nbElems = Math.floor(this.listWidth / this.minWidth)

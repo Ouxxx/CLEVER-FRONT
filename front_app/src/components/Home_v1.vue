@@ -6,9 +6,8 @@
         <div class="home-main">
             <div style="margin-left : 100px">
 
-                <ch-list :contents="getVideos" contentType="video" />
-                <div @click="goViewingVideoPage()" style="color:blue" class="test">fsdkdskljdfsk</div>
-                <ch-list :contents="getEcrits" contentType="ecrit" />
+                <ch-list :contents="getVideos" contentType="video" @click-on-star="switchFavorite" />
+                <ch-list :contents="getEcrits" contentType="ecrit"  />
 
             </div>
 
@@ -27,6 +26,7 @@
 
 <script>
 import {mapGetters} from 'vuex'
+import { mapMutations } from 'vuex'
 
 import sidebarCh from './common/sidebar/Sidebar_v2'
 import elementList from './blocs/list_elements_v1'
@@ -43,11 +43,15 @@ export default {
         }
     },
     methods : {
+        ...mapMutations([ 'changeVideoFavorite' ]),
         addShare(share) {
             this.shares.push(share)
         },
         deleteShare(share) {
             this.shares = this.shares.filter(item => item.url !== share.url)
+        },
+        switchFavorite(docId) {
+            this.changeVideoFavorite(docId)
         },
         goViewingVideoPage() {
             this.$router.push('/video')

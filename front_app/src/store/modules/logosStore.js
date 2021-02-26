@@ -30,11 +30,17 @@ const state = {
     ],
     logos : [
         {
+            name : "Autre",
+            path : require('@/assets/img/logos/plus.png')
+        },{
             name : "Plus",
             path : require('@/assets/img/logos/plus.png')
         },{
-            name : "Autre",
-            path : require('@/assets/img/logos/plus.png')
+            name : "Star-empty",
+            path : require('@/assets/img/logos/star-empty.png')
+        },{
+            name : "Star-full",
+            path : require('@/assets/img/logos/star-full.png')
         }
     ]
 }
