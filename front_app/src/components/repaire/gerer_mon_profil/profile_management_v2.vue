@@ -166,7 +166,7 @@ export default {
             this.isOpenCreateLinkForm = ! this.isOpenCreateLinkForm
         },
         addLinkv2 : function () {
-            const myeditor = document.getElementsByClassName('create-post-editor')[0]
+            const myeditor =  
             console.log('this.linkValue ' + this.linkValue)
             myeditor.document.execCommand('createlink', false, '<a href="' + this.linkValue + '" >' + this.linkValue + '</a>');
         }
