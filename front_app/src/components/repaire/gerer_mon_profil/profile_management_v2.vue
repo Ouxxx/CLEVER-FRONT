@@ -20,56 +20,78 @@
                     <!-- COF : Dans le rendu/aperçu, le texte doit être encadré par des guillemets
                     Div IMG guillemets :<img src="../../../assets/img/guillemets-test.png" alt="quote-mark"> -->
                     <autosize-textarea name="y" placeholder="Ajouter une description, ici." />
-                    <div class="survey-test" @click="lookSurvey()">AHAHAH JE SUIS LA</div>
                 </div>
 
                 <div class="post-area">
                     <h1>Posts</h1>
                     <post-one :postText="textExample"></post-one>
                     <post-one :postText="textExample"></post-one>
-                    <modal class="post-area-modal" v-if="isModalOpen" @close-modal="closeModal">
+                    <modal class="post-area-modal" v-if="isModalOpen" @close-modal="closeModal" 
+                    title="Publier un nouveau post" submit-label="Valider" cancel-label="Annuler" :with-submit="true">
                         <!-- TODO INSERER ICI: composant Timer 
                         En attendant je laisse l'image du timer.
                         Image qui sera placée à gauche du composant-->
                         
-                        <div class="top-new-post">
-                            <div class="top-new-post-timer">
-                                <img class="timer-post" src="../../../assets/img/icon_timer.png" alt="timer">
+                        <div class="new-post top">
+                            <div class="top-timer">
+                                <img src="../../../assets/img/icon_timer.png" alt="timer">
                             </div>
-                            <div class="test">
-                                <img class="img-sender" src="../../../assets/img/user-test.png" alt="senders-img">
-                                <select class="choice-sender" name="senders">
-                                    <option value="">Concernés</option>
+                            <div class="top-concerns">
+                                <img src="../../../assets/img/user-test.png" alt="concerns-img">
+                                <select name="concerns">
+                                    <option value="who">Concernés</option>
                                     <option value="everybody">Tout le monde</option>
                                     <option value="supporters">Ceux qui me soutiennent</option>
                                 </select>
                             </div>
                         </div>
-                        <autosize-textarea placeholder="Que souhaitez-vous publier ?" />
-                        
-                        <div class="icon-bar" >
-                            <img class="icon-bar-img" @click="openIcon('smiley')" v-bind:class="{'icon-open': iconOpened == 'smiley'}" src="../../../assets/img/icon_smiley.png" alt="smiley">
-                            <!-- bibliotheque de smileys -->
-                            <img class="icon-bar-img" @click="openIcon('link')" v-bind:class="{'icon-open': iconOpened == 'link'}" src="../../../assets/img/icon_link.png" alt="link">
-                            <!-- <input type="text"> -->
-                            <img class="icon-bar-img" @click="openIcon('img')" v-bind:class="{'icon-open': iconOpened == 'img'}" src="../../../assets/img/icon_img.png" alt="img">
-                            <!-- <div>Ajouter un fichier de type X :
-                                <file-selector max="5" v-model="files">
-                                    <input type="file"/>
-                                </file-selector>
-                            </div> -->
-                            <img class="icon-bar-img" @click="openIcon('survey')" v-bind:class="{'icon-open': iconOpened == 'survey'}" src="../../../assets/img/icon_survey2.png" alt="survey">   
-                            <!-- composant survey -->
+                        <!-- <autosize-textarea class="new-post" placeholder="Que souhaitez-vous publier ?" /> -->
+                        <div class="content-editable" contenteditable="true" aria-placeholder="Ecrivez votre post ici">
+                            
                         </div>
-                        <div>
-                            <div v-if="iconOpened==='link'">
-                                coucou
+                        <div class="items-added" v-for="link in links" :key="link">
+                            <div class="links">{{ link }}</div>
+                            <button class="btn link" @click="deleteLink(link)">Supprimer</button>
+                        </div>
+                        <div class="new-post bot">
+                            <div class="icon-bar" >
+                                <img @click="openIcon('smiley')" v-bind:class="{'icon-open': iconOpened == 'smiley'}" src="../../../assets/img/icon_smiley.png" alt="smiley">
+                                <!-- bibliotheque de smileys -->
+                                <img @click="openIcon('link')" v-bind:class="{'icon-open': iconOpened == 'link'}" src="../../../assets/img/icon_link.png" alt="link">
+                                <img @click="openIcon('img')" v-bind:class="{'icon-open': iconOpened == 'img'}" src="../../../assets/img/icon_img.png" alt="img">
+                                <img @click="openIcon('survey')" v-bind:class="{'icon-open': iconOpened == 'survey'}" src="../../../assets/img/icon_survey2.png" alt="survey">   
+                            </div>
+                            <div class="items-opened">
+                                <div class="link-opened" v-if="iconOpened==='link'">
+                                    <input type="url" placeholder="Entrez votre URL" v-model="linkText">
+                                    <button class="btn link" @click="addLink(linkText)" aria-autocomplete="off">Insérer</button>
+                                </div>
+                                <div class="img-opened" v-if="iconOpened==='img'">
+                                    <input type="file" id="img" name="img" accept="image/png, image/jpeg"> 
+                                </div>
+                                <div class="survey-opened" v-if="iconOpened==='survey'">
+                                    <survey></survey>
+                                </div>
                             </div>
                         </div>
-                        
+                        <div>
+                            <div class="create-post-editor" contenteditable style="background-color : red">
+
+                            </div>
+                            <div class="create-post-functions">
+                                <button @click="openAddLinkForm()" >Inserer un lien</button>
+                            </div>
+                            <div class="current-function-active" v-if="isOpenCreateLinkForm">
+                                <div>
+                                    Lien : <input type="text" v-model="linkValue">
+                                </div>
+                                <button @click="addLinkv2()">Confirmer</button>
+
+                            </div>
+                        </div>
                     </modal>
                     <div class="post-area-new" @click="openModal">
-                        <img class="post-area-new-img" src="../../../assets/img/post-img-test-whiteback.png" @click="openModal" alt="post-img">
+                        <img class="post-area-new-img" src="" @click="openModal" alt="post-img">
                         <p>Publier un nouveau post</p>
                     </div>
 
@@ -90,88 +112,35 @@
             <div class="content">
                 <h1>Mon contenu</h1>
                 <ch-picker></ch-picker>
-                <ch-mosaique :contents="videos" contentType="video"></ch-mosaique>
+                <ch-mosaique :contents="getVideos" contentType="video"></ch-mosaique>
             </div>
         </div>
 
     </div>
 </template>
 <script>
+import {mapGetters} from 'vuex'
 
 import banner from '../../common/banner/Banner_v1'
 import autosizeTextarea from '../../common/autosize_textarea/autosize_textarea_v1'
 import postOne from '../../common/profile_gestion/postOne'
 import modal from '../../common/modal/Modal_v2'
+import survey from '../../common/survey/survey_v1'
 import chPicker from '../../common/content_picker/Picker_v2'
 import chMosaique from '../../common/mosaique/Mosaique_v1'
 
 export default {
-    components : {banner, autosizeTextarea, postOne, modal, chPicker,chMosaique},
+    components : {banner, autosizeTextarea, postOne, modal, survey, chPicker,chMosaique},
     data () {
         return {
             isModalOpen : false,
             isLinkOpen : false,
             iconOpened : "",
-            videos : [
-                {
-                    docId : "111",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.111",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "222",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.222",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "333",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.333",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "444",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.444",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "555",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.555",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "666",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.666",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "777",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.777",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                },{
-                    docId : "888",
-                    title : "Titre de ma vidéo",
-                    author : "100.AAA.888",
-                    views : "4142",
-                    since : "il y a 2 mois",
-                    description : "Ceci est la description de ma video. Elle est super géniale vous allez tout savoir. Peace"
-                }
-            ],
             textExample : "Coucou les loulous Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots latins les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les usages de ce mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient en fait des sections 1.10.32 et 1.10.33 du (Des Suprêmes Biens et des Suprêmes Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la théorie de l'éthique. Les premières lignes du Lorem Ipsum, , proviennent de la section 1.10.32.",
+            links : [],
+            linkText : '',
+            isOpenCreateLinkForm : false,
+            linkValue : ''
         }
     },
     methods : {
@@ -187,12 +156,27 @@ export default {
         openIcon : function (x) {
             this.iconOpened = x
         },
-        lookSurvey : function () {
-            this.$router.push('/repaire/survey')
+        deleteLink : function (link) {
+            this.links = this.links.filter(item => item !== link)
+        },
+        addLink : function (link) {
+            this.links.push(link)
+        },
+        openAddLinkForm : function () {
+            this.isOpenCreateLinkForm = ! this.isOpenCreateLinkForm
+        },
+        addLinkv2 : function () {
+            const myeditor = document.getElementsByClassName('create-post-editor')[0]
+            console.log('this.linkValue ' + this.linkValue)
+            myeditor.document.execCommand('createlink', false, '<a href="' + this.linkValue + '" >' + this.linkValue + '</a>');
         }
+    },
+    computed : {
+        ...mapGetters([ 'getVideos' ])
     }
 }
 </script>
+
 <style scoped>
 
 .profil-management-root {
@@ -299,6 +283,81 @@ export default {
     z-index: 520;
 }
 
+.new-post {
+    padding: 10px;
+}
+    /* -TOP */
+
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-concerns {
+    display: flex;
+    height: 80%;
+}
+
+.top-concerns select {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+    /* -CONTENTEDITABLE */ 
+
+.content-editable {
+    min-height: 150px;
+    padding: 10px;
+    outline: none;
+}
+
+[contenteditable=true]:empty:before {
+  content: attr(aria-placeholder);
+  cursor: text;
+ }
+
+
+    /* -BOT */
+
+.icon-bar {
+    display: inline-block;
+}
+
+.icon-bar img{
+    cursor: pointer;
+    margin: 8px;
+}
+
+.icon-bar img:hover {
+    
+}
+
+.icon-bar img::selection {
+
+}
+
+.btn {
+    cursor: pointer;
+    margin: 5px;
+}
+
+.items-added {
+    display: flex;
+}
+
+.link-opened button {
+    cursor: pointer;
+}
+
+.link-opened input {
+    margin-right: 5px;
+    outline: none;
+}
+
+
+
+
+
 .post-area-modal p {
     font-weight: bold;
     font-size: 1.3em;
@@ -322,25 +381,10 @@ export default {
     display: inline;
 }
 
-.img-sender {
-    
+.bot {
+    background-color: rgb(143, 3, 143);
 }
 
-.choice-sender {
-    
-}
 
-.icon-bar {
-    background-color: rgb(2, 133, 255);
-    height: 80px;
-}
-
-.icon-bar-img {
-    cursor: pointer;
-}
-
-.icon-open {
-    background-color: red;
-}
 
 </style>
