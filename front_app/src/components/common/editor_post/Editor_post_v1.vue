@@ -10,7 +10,7 @@
             <div v-if="activeFunction === 'add-link'">
                 <div>
                     <p>libellé du lien : </p>
-                    <input type="text" v-model="labelLink" :value="labelLink" >
+                    <input type="text" v-model="labelLink" >
                 </div>
                 <div>
                     <p>lien : </p>
