@@ -7,10 +7,10 @@
             <button @click="addLinkFonction()">Ajouter un lien</button>
         </div>
         <div class="post-editor-function-form">
-            <div v-if="activeFunction === 'add-link'">
+            <div v-show="activeFunction === 'add-link'">
                 <div>
                     <p>libellé du lien : </p>
-                    <input type="text" v-model="labelLink" :value="labelLink" >
+                    <input class="post-editor-add-link-input" type="text" v-model="labelLink" >
                 </div>
                 <div>
                     <p>lien : </p>
@@ -34,11 +34,18 @@ export default {
         }
     },
     methods : {
+        createLink(url) {
+            var link = document.createElement('a');
+            link.href = url;
+        }
         addLink() {
+
             
         },
         addLinkFonction() {
             var selection = window.getSelection();
+
+            //todo c : verifier qu'on est bien juste sur du texte
             this.selectionContext = {
                 text : selection.toString(),
                 offSet : selection.anchorOffset,
@@ -46,6 +53,7 @@ export default {
             };
             this.activeFunction = 'add-link';
             this.labelLink = this.selectionContext.text
+
 
             
             // var functionZone = document.getElementsByClassName('post-editor-function-form')[0];
