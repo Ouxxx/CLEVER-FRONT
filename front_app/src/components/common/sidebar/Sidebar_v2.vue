@@ -12,6 +12,9 @@
                 <sidebar-button name="Ajout" moveTo="/ajout" :selected="$route.matched[0].path === '/ajout'">
                     <img class="button-img" src="../../../assets/img/forms_bouton.png" alt="Ajout">
                 </sidebar-button>
+                <sidebar-button name="New" moveTo="/ajoutnew" :selected="$route.matched[0].path === '/ajoutNew'">
+                    <img class="button-img" src="../../../assets/img/forms_bouton.png" alt="New">
+                </sidebar-button>
                 <sidebar-button name="Favoris" moveTo="/favoris" :selected="$route.matched[0].path === '/favoris'">
                     <img class="button-img" src="../../../assets/img/forms_bouton.png" alt="Favoris">
                 </sidebar-button>
