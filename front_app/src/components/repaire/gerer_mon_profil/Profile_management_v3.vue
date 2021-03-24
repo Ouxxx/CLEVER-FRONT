@@ -53,27 +53,6 @@
                         <div>
                             <editor textcolor="black" />
                         </div>
-                        <div class="new-post bot">
-                            <div class="icon-bar" >
-                                <img @click="openIcon('smiley')" v-bind:class="{'icon-open': iconOpened == 'smiley'}" src="../../../assets/img/icon_smiley.png" alt="smiley">
-                                <!-- bibliotheque de smileys -->
-                                <img @click="openIcon('link')" v-bind:class="{'icon-open': iconOpened == 'link'}" src="../../../assets/img/icon_link.png" alt="link">
-                                <img @click="openIcon('img')" v-bind:class="{'icon-open': iconOpened == 'img'}" src="../../../assets/img/icon_img.png" alt="img">
-                                <img @click="openIcon('survey')" v-bind:class="{'icon-open': iconOpened == 'survey'}" src="../../../assets/img/icon_survey2.png" alt="survey">   
-                            </div>
-                            <div class="items-opened">
-                                <div class="link-opened" v-if="iconOpened==='link'">
-                                    <input type="url" placeholder="Entrez votre URL" v-model="linkText">
-                                    <button class="btn link" @click="addLink(linkText)" aria-autocomplete="off">Insérer</button>
-                                </div>
-                                <div class="img-opened" v-if="iconOpened==='img'">
-                                    <input type="file" id="img" name="img" accept="image/png, image/jpeg"> 
-                                </div>
-                                <div class="survey-opened" v-if="iconOpened==='survey'">
-                                    <survey></survey>
-                                </div>
-                            </div>
-                        </div>
                     </modal>
                     <div class="post-area-new" @click="openModal">
                         <img class="post-area-new-img" src="" @click="openModal" alt="post-img">
@@ -109,13 +88,12 @@ import {mapGetters} from 'vuex'
 import banner from '../../common/banner/Banner_v1'
 import postOne from '../../common/profile_gestion/postOne'
 import modal from '../../common/modal/Modal_v2'
-import survey from '../../common/survey/survey_v1'
 import chPicker from '../../common/content_picker/Picker_v2'
 import chMosaique from '../../common/mosaique/Mosaique_v1'
 import editor from '../../common/editor/Editor_v1'
 
 export default {
-    components : {banner, postOne, modal, survey, chPicker,chMosaique, editor},
+    components : {banner, postOne, modal, chPicker,chMosaique, editor},
     data () {
         return {
             isModalOpen : false,
@@ -303,9 +281,6 @@ export default {
   color: white;
  }
 
-
-    /* -BOT */
-
 .icon-bar {
     display: inline-block;
 }
@@ -315,13 +290,6 @@ export default {
     margin: 8px;
 }
 
-.icon-bar img:hover {
-    
-}
-
-.icon-bar img::selection {
-
-}
 
 .btn {
     cursor: pointer;
