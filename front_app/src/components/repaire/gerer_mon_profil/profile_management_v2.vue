@@ -19,7 +19,8 @@
                     </div>
                     <!-- COF : Dans le rendu/aperçu, le texte doit être encadré par des guillemets
                     Div IMG guillemets :<img src="../../../assets/img/guillemets-test.png" alt="quote-mark"> -->
-                    <autosize-textarea name="y" placeholder="Ajouter une description, ici." />
+                    <div class="content-editable" contenteditable="true" aria-placeholder="Ajouter une description ici.">
+                    </div>
                 </div>
 
                 <div class="post-area">
@@ -45,7 +46,7 @@
                                 </select>
                             </div>
                         </div>
-                        <!-- <autosize-textarea class="new-post" placeholder="Que souhaitez-vous publier ?" /> -->
+                        
                         <div class="content-editable" contenteditable="true" aria-placeholder="Ecrivez votre post ici">
                             
                         </div>
@@ -122,7 +123,6 @@
 import {mapGetters} from 'vuex'
 
 import banner from '../../common/banner/Banner_v1'
-import autosizeTextarea from '../../common/autosize_textarea/autosize_textarea_v1'
 import postOne from '../../common/profile_gestion/postOne'
 import modal from '../../common/modal/Modal_v2'
 import survey from '../../common/survey/survey_v1'
@@ -130,7 +130,7 @@ import chPicker from '../../common/content_picker/Picker_v2'
 import chMosaique from '../../common/mosaique/Mosaique_v1'
 
 export default {
-    components : {banner, autosizeTextarea, postOne, modal, survey, chPicker,chMosaique},
+    components : {banner, postOne, modal, survey, chPicker,chMosaique},
     data () {
         return {
             isModalOpen : false,
@@ -309,11 +309,13 @@ export default {
     min-height: 150px;
     padding: 10px;
     outline: none;
+    color: white;
 }
 
 [contenteditable=true]:empty:before {
   content: attr(aria-placeholder);
   cursor: text;
+  color: white;
  }
 
 

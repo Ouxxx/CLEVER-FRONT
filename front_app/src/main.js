@@ -87,6 +87,12 @@ const router = new VueRouter({
     path: '/ajout',
     component: require('./components/ajout/ajout_v2').default,
   },{
+    path: '/ajoutnew',
+    component: require('./components/ajout/ajout_v3').default,
+  },{
+    path: '/addformone',
+    component: require('./components/ajout/add_form_one_v1').default,
+  },{
     path: '/create/user',
     component: require('./components/create_user/Create_user_v1').default,
     children: [
