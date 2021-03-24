@@ -37,10 +37,6 @@ export default {
         createLink(url) {
             var link = document.createElement('a');
             link.href = url;
-        }
-        addLink() {
-
-            
         },
         addLinkFonction() {
             var selection = window.getSelection();
@@ -72,17 +68,11 @@ export default {
 
 <style scoped>
 
-.post-editor-root {
-}
-
 .post-editor-input {
     background-color: aqua;
 
 }
 
-.post-editor-functions {
-
-}
 
 .post-editor-function-form {
     background-color: blueviolet;
