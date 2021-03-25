@@ -90,6 +90,9 @@ const router = new VueRouter({
     path: '/ajoutnew',
     component: require('./components/ajout/ajout_v3').default,
   },{
+    path: '/composant',
+    component: require('./components/ajout/ajout_v3').default,
+  },{
     path: '/addformone',
     component: require('./components/ajout/add_form_one_v1').default,
   },{
