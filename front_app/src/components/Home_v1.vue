@@ -9,7 +9,7 @@
                 <ch-list :contents="getVideos" contentType="video" @click-on-star="switchFavorite" />
                 <ch-list :contents="getEcrits" contentType="ecrit"  />
 
-                <editorPost />
+                <editor textcolor="black" />
 
             </div>
             
@@ -29,11 +29,11 @@ import { mapMutations } from 'vuex'
 import sidebarCh from './common/sidebar/Sidebar_v2'
 import elementList from './blocs/list_elements_v1'
 import headerCh from './common/header/Header_v5'
-import editorPost from './common/editor_post/Editor_post_v1'
+import editor from './common/editor/Editor_v1'
 import chList from './common/content_list/Content_list_v1'
 
 export default {
-    components: { headerCh, sidebarCh, elementList, chList, editorPost },
+    components: { headerCh, sidebarCh, elementList, chList, editor },
     data () {
         return {
             shares : [],
