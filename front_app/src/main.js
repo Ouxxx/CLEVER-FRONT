@@ -27,6 +27,9 @@ const router = new VueRouter({
     path: '/visitor',
     component: require('./components/Home_v1').default,
   },{
+    path: '/search',
+    component: require('./components/search/Search_v1').default,
+  },{
     path: '/favoris',
     component: require('./components/favoris/Favoris_v1').default,
   },{
