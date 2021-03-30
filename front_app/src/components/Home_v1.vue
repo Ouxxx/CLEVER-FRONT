@@ -9,7 +9,7 @@
                 <ch-list :contents="getVideos" contentType="video" @click-on-star="switchFavorite" />
                 <ch-list :contents="getEcrits" contentType="ecrit"  />
 
-                <editor textcolor="black" />
+                <editor />
 
             </div>
             

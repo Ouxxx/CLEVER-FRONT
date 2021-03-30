@@ -5,7 +5,7 @@
                 <img src="../../../assets/img/logoCH.png" alt="Logo CH" @click="goToHomePage()">
             </div>
             <div class="header-center" >
-                <input type="text" v-model="search" >
+                <input type="text" v-model="search" @keyup="onKeyUp" >
             </div>
             <div class="header-right" >
                 <div v-if="$store.getters.getToken">
@@ -59,6 +59,12 @@ export default {
         disconnect() {
             this.cleanUser();
             this.goToWelcomePage();
+        },
+        onKeyUp (event) {
+            console.log(event.key);
+            if(event.key == 'Enter'){
+                this.$router.push('/search')
+            }
         }
     }
 }
