@@ -9,7 +9,7 @@
                 <div class="button video" @click="selectFormat('video')">Vidéo</div>
                 <div class="button writing" @click="selectFormat('writing')">Écrit</div>
                 <div class="button img" @click="selectFormat('img')">Image</div>
-                <div class="button img" @click="selectFormat('img')">composant</div>
+                <div class="button img" @click="goToComposant()">composant</div>
             </div>
 
             <div class="format-selected">
@@ -120,6 +120,9 @@ export default {
     methods : {
         selectFormat : function (format) {
             this.selectedFormat=format
+        },
+        goToComposant : function () {
+             this.$router.push('/composant')
         }
     }
 }
