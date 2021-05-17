@@ -4,6 +4,8 @@
         <ch-header />
 
         <div class="search-content">
+            <h1>Resultat pour : {{ this.getSearch }}</h1>
+
             <div class="search-functions">
                 <ch-picker @picker-selected="changeDocuments" @sorter="changeSort" :selected="this.docType" />
             </div>
@@ -71,7 +73,7 @@ export default {
         }
     },
     computed : {
-        ...mapGetters([ 'getVideos' , 'getEcrits' ])
+        ...mapGetters([ 'getVideos' , 'getEcrits', 'getSearch' ])
     }
 }
 </script>

@@ -46,7 +46,7 @@ export default {
         }
     },
     methods: {
-        ...mapMutations([ 'cleanUser' ]),
+        ...mapMutations([ 'cleanUser', 'setSearch' ]),
         goToHomePage () {
             this.$router.push('/home')
         },
@@ -63,7 +63,9 @@ export default {
         onKeyUp (event) {
             console.log(event.key);
             if(event.key == 'Enter'){
-                this.$router.push('/search')
+                console.log('-' + this.search +'-');
+                this.setSearch(this.search);
+                this.$router.push('/search');
             }
         }
     }
