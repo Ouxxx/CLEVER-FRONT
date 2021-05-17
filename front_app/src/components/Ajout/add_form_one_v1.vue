@@ -14,33 +14,8 @@
 
             <div class="format-selected">
                 <div class="button-video-selected" v-if="selectedFormat=='video'">
-                    <div class="type">
-                        <p>Genre</p>
-                        <select>
-                                <option value="0">Architecture</option>
-                                <option value="1">Beauté</option>
-                                <option value="2">Cuisine</option>
-                                <option value="3">Design</option>
-                                <option value="4">Géographie</option>
-                                <option value="5">Histoire</option>
-                                <option value="6">Jeu</option>
-                                <option value="7">Langues</option>
-                                <option value="8">Mécanique</option>
-                                <option value="9">Mode</option>
-                                <option value="10">Musique</option>
-                                <option value="11">Politique</option>
-                                <option value="12">Religion</option>
-                                <option value="13">Sciences</option>
-                                <option value="14">Sport</option>
-                                <option value="15">Technologies</option>
-                            </select>
-                    </div>
+                    <title-descr></title-descr>
                     <form action="">
-                        <div class="title">
-                            <label for="title">Entrer un titre:</label>
-                            <input type="text" id="title" name="title" required
-                            minlength="4" maxlength="30" size="30">
-                        </div>
                         <div class="file">
                             <label for="file">Importer une image de présentation: </label>
                             <input type="file" id="myFile" name="filename" accept="">
@@ -110,8 +85,9 @@
 <script>
 import headerCh from '../common/header/Header_v5'
 import sidebarCh from '../common/sidebar/Sidebar_v2'
+import titleDescr from '../common/title_descr/title_descr_v1'
 export default {
-    components : {headerCh, sidebarCh},
+    components : {headerCh, sidebarCh, titleDescr},
     data () {
         return {
             selectedFormat: '',
