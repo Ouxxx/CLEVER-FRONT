@@ -1,5 +1,6 @@
 <template>
-    <div class="video-root" :style="styleSize">
+<div class="video-root">
+    <div class="video-left" :style="styleSize">
         <div class="video-background">
             <img :src="image" >
         </div>
@@ -15,6 +16,8 @@
             <favorite :fav="favorite"  @click-on-star="switchFavorite" />
         </div>
     </div>
+</div>
+    
 </template>
 
 <script>
@@ -29,7 +32,7 @@ export default {
         image: {
             type: String,
             required: false,
-            default: require('@/assets/img/livre_img_default.png')
+            default: require('@/assets/img/video_img_default.jpg')
         },
         title: {
             type: String,
@@ -60,7 +63,6 @@ export default {
                 height : this.width * 9 / 16 + 'px',
             }
         }
-
     }
 }
 </script>
@@ -70,27 +72,13 @@ export default {
 .video-root {
     position: relative;
     display: inline-block;
+    padding: 4px;
     cursor: pointer;
 }
 
-.video-background {
-    position: relative;
+.video-background img{
     width: 100%;
     height: 100%;
-    overflow : hidden;
-    background-color: black;
-}
-
-.video-background img{
-    position: absolute;
-    max-width: 100%;
-    height: 100%;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .video-desc {
@@ -101,7 +89,7 @@ export default {
     right: 0;
     opacity: 1;
     transition: .5s ease;
-    /* margin: 5px; */
+    margin: 5px;
 }
 .video-desc:hover {
     opacity: 0;

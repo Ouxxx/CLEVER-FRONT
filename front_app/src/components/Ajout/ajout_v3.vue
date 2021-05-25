@@ -101,27 +101,27 @@ export default {
 }
 
 .lesson {
-    background-color: rgb(221, 15, 221);   
+    background-color: darkorchid;   
 }
 
 .tutorial {
-    background-color: rgb(226, 223, 13);   
+    background-color: yellow;
 }
 
 .popular {
-    background-color: rgb(11, 192, 35);   
+    background-color: greenyellow;   
 }
 
 .exercises {
-    background-color: rgb(228, 172, 19);   
+    background-color: orange;   
 }
 
 .training {
-    background-color: rgb(35, 108, 142);   
+    background-color: darkturquoise;
 }
 
 .book {
-    background-color: rgb(175, 11, 240);   
+    background-color: rgb(139, 0, 139);   
 }
 
 .title {

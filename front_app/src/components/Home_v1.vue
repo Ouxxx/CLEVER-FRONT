@@ -5,6 +5,10 @@
 
         <div class="home-main">
             <div style="margin-left : 100px">
+                <!-- <video-box :docid="getVideos[0].docId" :title="getVideos[0].title" :author="getVideos[0].author" :favorite="getVideos[0].isFavorite" :width="400"
+                @click-on-star="switchFavorite" /> -->
+
+                <list-box :contents="getVideos" contentType="video" @click-on-star="switchFavorite" />
 
                 <ch-list :contents="getVideos" contentType="video" @click-on-star="switchFavorite" />
                 <ch-list :contents="getEcrits" contentType="ecrit"  />
@@ -31,9 +35,12 @@ import elementList from './blocs/list_elements_v1'
 import headerCh from './common/header/Header_v5'
 import editor from './common/editor/Editor_v1'
 import chList from './common/content_list/Content_list_v1'
+import listBox from './common/content_list/Content_box_list_v1'
+
+// import videoBox from './common/video/Video_box_v1'
 
 export default {
-    components: { headerCh, sidebarCh, elementList, chList, editor },
+    components: { headerCh, sidebarCh, elementList, chList, editor, listBox },
     data () {
         return {
             shares : [],

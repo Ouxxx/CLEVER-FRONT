@@ -1,20 +1,22 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import user from './modules/userStore'
-import server from './modules/serverStore'
-import search from './modules/searchStore'
+import categoties from './modules/categorieStore'
 import logos from './modules/logosStore'
+import search from './modules/searchStore'
+import server from './modules/serverStore'
 import tests from './modules/testsStore'
+import user from './modules/userStore'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
     modules: {
-        user,
-        server,
-        search,
+        categoties,
         logos,
-        tests
+        search,
+        server,
+        tests,
+        user
     }
 })
