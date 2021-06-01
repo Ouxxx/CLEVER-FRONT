@@ -132,6 +132,12 @@ const router = new VueRouter({
       }
     ]
   },{
+    path: '/testd',
+    component: require('./components/pages/testd/Test_d').default,
+  },{
+    path: '/testh',
+    component: require('./components/pages/testh/Test_h').default,
+  },{
     path: '*',
     redirect: '/'
   }]   

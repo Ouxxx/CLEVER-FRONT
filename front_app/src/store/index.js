@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import categoties from './modules/categorieStore'
+import categories from './modules/categorieStore'
 import logos from './modules/logosStore'
 import search from './modules/searchStore'
 import server from './modules/serverStore'
@@ -12,7 +12,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     modules: {
-        categoties,
+        categories,
         logos,
         search,
         server,

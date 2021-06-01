@@ -72,8 +72,6 @@ export default {
         ...mapGetters([ 'getCategorieByName' ]),
         styleRoot : function () {
             var color = this.getCategorieByName(this.categorie).colorRef;
-            console.log('coucou')
-            console.log(color);
             return {
                 'width' : this.width - 2 * this.marginSize + 'px',
                 'margin-right' : this.marginSize + 'px',

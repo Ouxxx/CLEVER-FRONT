@@ -21,6 +21,12 @@
                 <sidebar-button name="Paramètres" moveTo="/parametres/account" :selected="$route.matched[0].path === '/parametres'">
                     <img class="button-img" src="../../../assets/img/forms_bouton.png" alt="Paramètres">
                 </sidebar-button>
+                <sidebar-button name="Tests D" moveTo="/testd" :selected="$route.matched[0].path === '/testd'">
+                    <img class="button-img" src="../../../assets/img/forms_bouton.png" alt="Tests D">
+                </sidebar-button>
+                <sidebar-button name="Tests H" moveTo="/testh" :selected="$route.matched[0].path === '/testh'">
+                    <img class="button-img" src="../../../assets/img/forms_bouton.png" alt="Tests H">
+                </sidebar-button>
             </div>
             
 
