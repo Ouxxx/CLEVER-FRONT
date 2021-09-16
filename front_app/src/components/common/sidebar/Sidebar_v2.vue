@@ -43,7 +43,9 @@
 .opened {    
     background-color: rgba(5, 7, 21, 0.88);
     border-right-style: solid;
-    border-right-color: rgba(218,165, 32, 1);
+    border-right-width: 2px;
+    /* border-right-color: rgba(218,165, 32, 1); */
+    border-right-color: rgba(224, 226, 232, 1);
 }
 .closed {
     background-color: rgba(5, 7, 21, 0.5);

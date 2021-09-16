@@ -10,6 +10,7 @@
                     buttonName="Mes soutiens" :selected="$route.fullPath === '/repaire/soutiens'" />
             <ch-header-button @button-selected="move('/repaire/media/video')" 
                     buttonName="Médiathèque" :selected="$route.fullPath === '/repaire/media/video'" />
+            <div class="exemple">toto jzejzejzerjfqsdfqsmdlfk qsdfklmqsdfkl qsdfklmqsdfklq sdfkq sdmfklqs dlfkmq sdlmkf qsmdklf qsmldkfqskldfqksmdfk</div>
         </ch-header>
 
         <div class="repaire-content">

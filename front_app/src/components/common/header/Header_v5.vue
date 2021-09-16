@@ -9,7 +9,6 @@
             </div>
             <div class="header-right" >
                 <div v-if="$store.getters.getToken">
-                    <!-- <button class="exit-button" @click="goToWelcomePage()">A bientôt</button> -->
                     <div class="header-avatar" @click="showOptions(true)">
                         <div class="header-avatar-img" >
                             <img src="../../../assets/img/avatar-circle-user.png" alt="avatar" >
@@ -77,15 +76,19 @@ export default {
 .header-root {
     position: fixed;
     width: 100%;
+    /* background-color: rgb(22,24,35); */
+    background-color: #00112B;
+    background-color:#0D1B2B;
+
 }
 
 .header-top {
     position: relative;
     display: flex;
     align-items: center;
-    background-color: rgb(22,24,35);
     border-bottom-style: solid;
     border-color:rgb(71, 71, 71);
+
     border-width: 1px;
 }
 
@@ -106,23 +109,6 @@ export default {
     border-color: rgb(0, 0, 0);
     border-radius: 6px;
 }
-
-.exit-button {
-    float: left;
-    margin-top: 10px;
-    margin-right: 20px;
-    cursor: pointer;
-    border-color: #f44336;
-    color: white;
-    background-color: rgb(4, 32, 78);
-}
-
-.exit-button:hover {
-    background: #f44336;
-    color: whitesmoke;
-}
-
-
 .header-right {
     padding: 0 10px;
 }
@@ -151,7 +137,7 @@ export default {
 
 .header-bottom {
     position: relative;
-    background-color: rgb(22,24,35);
+    
 
     width: 100%;
     padding-left: 40px;

@@ -6,8 +6,9 @@
         </ch-header>
 
         <div class="default-temp-main">
-            <div class="default-tempp-body">
+            <div class="default-temp-body">
                 <slot></slot>
+                <div class="bloc"></div>
             </div>
             <div class="default-temp-right-sidebar">
                 <slot name="right-sidebar"></slot>
@@ -21,26 +22,35 @@
 </template>
 
 <style scoped>
+.bloc {
+    height: 80vh;
+}
 .default-temp-root {
     min-height: 100vh;
-    background-color: blueviolet;
+    background-color: rgb(238, 255, 0);
 }
 .default-temp-main {
     padding-top: 50px;
     min-height: 70vh;
 
-    background-color: darkslategrey;
+    background-color: #000A1A;
 }
-.default-tempp-body {
-
+.default-temp-body {
+    max-width: 9000px;
 }
 .default-temp-right-sidebar {
 
 }
 .default-temp-footer {
-    position: relative;
-    bottom: 0px;
-    background-color: olive;
+    min-height: 30vh;
+    
+    background-color: #E0E2E8;
+    background-color:#2d325e;
+    background-color: #00112B;
+    background-color:#232322;
+
+
+
 }
 </style>
 
